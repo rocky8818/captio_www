@@ -1,0 +1,415 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout
+  title="Captio — Demo"
+  description="Ve Captio en acción. Intake estructurado, brief con IA y gestión de casos para despachos legales."
+  activePage="video"
+>
+
+<!-- ═══════════════════════════════════════════
+     HERO
+═══════════════════════════════════════════ -->
+<section class="pt-32 pb-6 px-6 text-center">
+  <div class="max-w-3xl mx-auto">
+    <div class="inline-flex items-center gap-2 bg-[#EEF1F8] text-[#3B6FE8] text-xs font-bold px-3 py-1.5 rounded-full mb-6 fade-up">
+      <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20">
+        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"/>
+      </svg>
+      <span class="t-es">Demo en vivo</span><span class="t-en">Live demo</span>
+    </div>
+    <h1 class="text-4xl sm:text-5xl font-black tracking-[-0.04em] text-[#1B2E5E] mb-4 fade-up d1">
+      <span class="t-es">Captio en acción</span>
+      <span class="t-en">Captio in action</span>
+    </h1>
+    <p class="text-lg text-[#6B7694] fade-up d2">
+      <span class="t-es">Ve el flujo completo — desde el enlace de intake hasta el brief generado por IA.</span>
+      <span class="t-en">See the full flow — from the intake link to the AI-generated brief.</span>
+    </p>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     VIDEO
+═══════════════════════════════════════════ -->
+<section class="py-8 px-6">
+  <div class="max-w-5xl mx-auto">
+
+    <div class="bg-[#1B2E5E] rounded-3xl overflow-hidden shadow-2xl shadow-[#1B2E5E]/30">
+      <!--
+        ════════════════════════════════════════
+        INSERTAR VIDEO — instrucciones
+        ════════════════════════════════════════
+
+        OPCIÓN 1 — YouTube:
+        Reemplaza el bloque <div id="video-placeholder"> con:
+
+        <div class="video-wrapper">
+          <iframe
+            src="https://www.youtube.com/embed/TU_VIDEO_ID?rel=0&modestbranding=1"
+            title="Demo Captio"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+
+        OPCIÓN 2 — Video propio (MP4):
+        <div class="video-wrapper">
+          <video controls poster="/assets/video-poster.jpg">
+            <source src="/assets/demo.mp4" type="video/mp4" />
+          </video>
+        </div>
+        ════════════════════════════════════════
+      -->
+      <div id="video-placeholder" class="aspect-video flex flex-col items-center justify-center gap-5 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10" style="background-image: linear-gradient(#3B6FE8 1px, transparent 1px), linear-gradient(90deg, #3B6FE8 1px, transparent 1px); background-size: 40px 40px;"></div>
+        <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+          <div class="w-80 h-80 rounded-full bg-[#3B6FE8]/20 blur-3xl"></div>
+        </div>
+        <div class="relative text-center">
+          <div class="w-20 h-20 rounded-full bg-[#3B6FE8] flex items-center justify-center mx-auto mb-5 shadow-2xl shadow-[#3B6FE8]/50">
+            <svg class="w-9 h-9 text-white ml-1" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"/>
+            </svg>
+          </div>
+          <p class="text-white font-bold text-lg mb-1">
+            <span class="t-es">Video próximamente</span><span class="t-en">Video coming soon</span>
+          </p>
+          <p class="text-white/50 text-sm mb-4">
+            <span class="t-es">Mientras tanto, agenda una demo en vivo</span>
+            <span class="t-en">In the meantime, schedule a live demo</span>
+          </p>
+          <a
+            href="mailto:rickyglz.1318@gmail.com?subject=Quiero%20agendar%20una%20demo%20de%20Captio"
+            class="inline-flex items-center gap-2 bg-white/15 hover:bg-white/25 text-white text-sm font-semibold px-5 py-2.5 rounded-xl transition-colors"
+          >
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+            </svg>
+            <span class="t-es">Agendar demo</span><span class="t-en">Schedule demo</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <p class="text-center text-sm text-[#A0A8BF] mt-4">
+      <span class="t-es">Flujo completo: generación de enlace → formulario del cliente → brief con IA → edición y descarga</span>
+      <span class="t-en">Full flow: link generation → client form → AI brief → editing and download</span>
+    </p>
+
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     FEATURES DETAIL
+═══════════════════════════════════════════ -->
+<section id="features" class="py-16 px-6">
+  <div class="max-w-6xl mx-auto">
+
+    <div class="text-center mb-12">
+      <h2 class="text-3xl sm:text-4xl font-black tracking-[-0.03em] text-[#1B2E5E] mb-4">
+        <span class="t-es">Cada función, explicada</span>
+        <span class="t-en">Every feature, explained</span>
+      </h2>
+      <p class="text-[#6B7694] text-lg">
+        <span class="t-es">Ocho herramientas diseñadas para el flujo de trabajo del abogado.</span>
+        <span class="t-en">Eight tools designed for the lawyer's workflow.</span>
+      </p>
+    </div>
+
+    <div class="space-y-5">
+
+      <!-- 1. Intake link -->
+      <div class="bg-white rounded-2xl border border-[#EEF1F8] shadow-sm hover:shadow-md hover:shadow-[#3B6FE8]/5 transition-shadow p-7 grid md:grid-cols-[auto_1fr] gap-6 items-start">
+        <div class="w-12 h-12 rounded-2xl bg-[#3B6FE8]/10 flex items-center justify-center shrink-0">
+          <svg class="w-6 h-6 text-[#3B6FE8]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/>
+          </svg>
+        </div>
+        <div>
+          <div class="flex items-center gap-3 mb-2">
+            <h3 class="text-lg font-bold text-[#1B2E5E]">
+              <span class="t-es">Enlace de intake para el cliente</span>
+              <span class="t-en">Client intake link</span>
+            </h3>
+            <span class="text-xs font-bold text-[#3B6FE8] bg-[#EEF1F8] px-2 py-0.5 rounded-full">
+              <span class="t-es">1 clic</span><span class="t-en">1 click</span>
+            </span>
+          </div>
+          <p class="text-[#6B7694] text-sm leading-relaxed mb-4">
+            <span class="t-es">El abogado genera un enlace único por cliente nuevo desde la sección "Nuevo Cliente". El enlace se puede enviar por correo, WhatsApp, SMS o cualquier canal. El cliente lo abre en su navegador sin necesidad de crear una cuenta ni descargar ninguna app. Una vez enviado el formulario, el caso aparece automáticamente en el panel del abogado.</span>
+            <span class="t-en">The lawyer generates a unique link per new client from the "New Client" section. The link can be sent by email, WhatsApp, SMS, or any channel. The client opens it in their browser without needing to create an account or download any app. Once the form is submitted, the case automatically appears in the lawyer's dashboard.</span>
+          </p>
+          <div class="flex flex-wrap gap-2">
+            {[
+              ['Sin cuenta para el cliente', 'No client account'],
+              ['Cualquier miembro del equipo puede generarlo', 'Any team member can generate it'],
+              ['Panel de enlaces pendientes', 'Pending links panel'],
+            ].map(([es, en]) => (
+              <span class="inline-flex items-center gap-1.5 text-xs font-medium text-[#6B7694] bg-[#F8F9FC] border border-[#EEF1F8] rounded-lg px-3 py-1.5">
+                <svg class="w-3.5 h-3.5 text-[#22C55E]" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <span class="t-es">{es}</span><span class="t-en">{en}</span>
+              </span>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. Client form -->
+      <div class="bg-white rounded-2xl border border-[#EEF1F8] shadow-sm hover:shadow-md hover:shadow-[#3B6FE8]/5 transition-shadow p-7 grid md:grid-cols-[auto_1fr] gap-6 items-start">
+        <div class="w-12 h-12 rounded-2xl bg-[#3B6FE8]/10 flex items-center justify-center shrink-0">
+          <svg class="w-6 h-6 text-[#3B6FE8]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/>
+          </svg>
+        </div>
+        <div>
+          <div class="flex items-center gap-3 mb-2">
+            <h3 class="text-lg font-bold text-[#1B2E5E]">
+              <span class="t-es">Formulario de ingreso del cliente</span>
+              <span class="t-en">Client intake form</span>
+            </h3>
+            <span class="text-xs font-bold text-[#3B6FE8] bg-[#EEF1F8] px-2 py-0.5 rounded-full">
+              <span class="t-es">6 secciones</span><span class="t-en">6 sections</span>
+            </span>
+          </div>
+          <p class="text-[#6B7694] text-sm leading-relaxed mb-4">
+            <span class="t-es">Un formulario estructurado en 6 secciones que captura todo lo que el abogado necesita antes de la primera llamada. El cliente lo llena en 10–15 minutos desde cualquier dispositivo. Cada campo tiene texto de ayuda contextual y barra de progreso en tiempo real.</span>
+            <span class="t-en">A structured form in 6 sections that captures everything the lawyer needs before the first call. The client fills it in 10–15 minutes from any device. Each field has contextual help text and a real-time progress bar.</span>
+          </p>
+          <div class="grid sm:grid-cols-2 gap-2">
+            <div class="bg-[#F8F9FC] rounded-xl p-3 border border-[#EEF1F8]">
+              <p class="text-xs font-bold text-[#3B6FE8] mb-1.5">
+                <span class="t-es">Las 6 secciones</span><span class="t-en">The 6 sections</span>
+              </p>
+              <ol class="space-y-1">
+                {[
+                  ['Información básica',    'Basic information'],
+                  ['Resumen del caso',      'Case summary'],
+                  ['Objetivos y resultado', 'Goals and outcome'],
+                  ['Documentos',            'Documents'],
+                  ['Conflicto de interés',  'Conflict of interest'],
+                  ['Información adicional', 'Additional information'],
+                ].map(([es, en], i) => (
+                  <li class="text-xs text-[#6B7694] flex items-center gap-1.5">
+                    <span class="font-bold text-[#A0A8BF]">{i + 1}.</span>
+                    <span class="t-es">{es}</span><span class="t-en">{en}</span>
+                  </li>
+                ))}
+              </ol>
+            </div>
+            <div class="bg-[#F8F9FC] rounded-xl p-3 border border-[#EEF1F8]">
+              <p class="text-xs font-bold text-[#3B6FE8] mb-1.5">
+                <span class="t-es">Características</span><span class="t-en">Features</span>
+              </p>
+              <ul class="space-y-1">
+                {[
+                  ['Móvil, tablet y desktop', 'Mobile, tablet, and desktop'],
+                  ['Español e inglés (toggle)', 'Spanish and English (toggle)'],
+                  ['Barra de progreso',        'Progress bar'],
+                  ['Sin cuenta ni app',        'No account or app'],
+                ].map(([es, en]) => (
+                  <li class="text-xs text-[#6B7694] flex items-center gap-1.5">
+                    <svg class="w-3 h-3 text-[#22C55E] shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                    <span class="t-es">{es}</span><span class="t-en">{en}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. Case dashboard -->
+      <div class="bg-white rounded-2xl border border-[#EEF1F8] shadow-sm hover:shadow-md hover:shadow-[#3B6FE8]/5 transition-shadow p-7 grid md:grid-cols-[auto_1fr] gap-6 items-start">
+        <div class="w-12 h-12 rounded-2xl bg-[#3B6FE8]/10 flex items-center justify-center shrink-0">
+          <svg class="w-6 h-6 text-[#3B6FE8]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2"/>
+          </svg>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold text-[#1B2E5E] mb-2">
+            <span class="t-es">Panel de casos</span><span class="t-en">Case dashboard</span>
+          </h3>
+          <p class="text-[#6B7694] text-sm leading-relaxed mb-4">
+            <span class="t-es">El centro de operaciones del despacho. Muestra todos los casos con su estado, estadísticas en tiempo real y búsqueda. Cada caso avanza por un flujo de estados claro.</span>
+            <span class="t-en">The firm's operations center. Shows all cases with their status, real-time statistics, and search. Each case advances through a clear status flow.</span>
+          </p>
+          <div class="flex flex-wrap gap-2">
+            {[
+              { label: ['Invitado', 'Invited'],                color: 'bg-[#3B6FE8]/8 text-[#3B6FE8] border-[#3B6FE8]/20' },
+              { label: ['Nuevo', 'New'],                        color: 'bg-[#F59E0B]/8 text-[#d97706] border-[#F59E0B]/20' },
+              { label: ['En revisión', 'Under review'],         color: 'bg-[#8B5CF6]/8 text-[#7c3aed] border-[#8B5CF6]/20' },
+              { label: ['Consulta agendada', 'Consultation scheduled'], color: 'bg-[#3B6FE8]/8 text-[#3B6FE8] border-[#3B6FE8]/20' },
+              { label: ['Aceptado ✓', 'Accepted ✓'],           color: 'bg-[#22C55E]/8 text-[#16a34a] border-[#22C55E]/20' },
+              { label: ['Rechazado', 'Rejected'],               color: 'bg-[#EF4444]/8 text-[#dc2626] border-[#EF4444]/20' },
+            ].map(({ label: [es, en], color }) => (
+              <span class={`inline-flex items-center text-xs font-semibold px-3 py-1.5 rounded-full border ${color}`}>
+                <span class="t-es">{es}</span><span class="t-en">{en}</span>
+              </span>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <!-- 4. AI Brief -->
+      <div class="bg-white rounded-2xl border border-[#EEF1F8] shadow-sm hover:shadow-md hover:shadow-[#3B6FE8]/5 transition-shadow p-7 grid md:grid-cols-[auto_1fr] gap-6 items-start">
+        <div class="w-12 h-12 rounded-2xl bg-[#3B6FE8]/10 flex items-center justify-center shrink-0">
+          <svg class="w-6 h-6 text-[#3B6FE8]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+          </svg>
+        </div>
+        <div>
+          <div class="flex items-center gap-3 mb-2">
+            <h3 class="text-lg font-bold text-[#1B2E5E]">
+              <span class="t-es">Brief del caso con IA</span><span class="t-en">AI case brief</span>
+            </h3>
+            <span class="text-xs font-bold text-[#3B6FE8] bg-[#EEF1F8] px-2 py-0.5 rounded-full">
+              <span class="t-es">10 secciones</span><span class="t-en">10 sections</span>
+            </span>
+          </div>
+          <p class="text-[#6B7694] text-sm leading-relaxed mb-4">
+            <span class="t-es">Claude (Anthropic) genera el brief en segundos. Nunca inventa — si algo falta, lo marca con <code class="bg-[#EEF1F8] px-1 rounded">[FALTA]</code> para que el abogado sepa exactamente qué preguntar.</span>
+            <span class="t-en">Claude (Anthropic) generates the brief in seconds. Never fabricates — if something is missing, it marks it with <code class="bg-[#EEF1F8] px-1 rounded">[MISSING]</code> so the lawyer knows exactly what to ask.</span>
+          </p>
+          <div class="bg-[#F8F9FC] rounded-xl p-4 border border-[#EEF1F8]">
+            <p class="text-xs font-bold text-[#3B6FE8] mb-3">
+              <span class="t-es">Las 10 secciones</span><span class="t-en">The 10 sections</span>
+            </p>
+            <div class="grid grid-cols-2 sm:grid-cols-5 gap-1.5">
+              {[
+                ['1', 'Puntos clave',          'Key points'],
+                ['2', 'Versión del cliente',   "Client's version"],
+                ['3', 'Resumen del caso',       'Case summary'],
+                ['4', 'Objetivos',              'Goals'],
+                ['5', 'Info de apoyo',          'Support info'],
+                ['6', 'Conflicto interés',      'Conflict of interest'],
+                ['7', 'Riesgos clave',          'Key risks'],
+                ['8', 'Info pendiente',         'Missing info'],
+                ['9', 'Consideraciones legales','Legal notes'],
+                ['10','Encabezado',             'Header'],
+              ].map(([n, es, en]) => (
+                <div class="flex items-center gap-1.5 text-xs text-[#6B7694]">
+                  <span class="font-bold text-[#3B6FE8]">{n}.</span>
+                  <span class="t-es">{es}</span><span class="t-en">{en}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5. Brief editor -->
+      <div class="bg-white rounded-2xl border border-[#EEF1F8] shadow-sm hover:shadow-md hover:shadow-[#3B6FE8]/5 transition-shadow p-7 grid md:grid-cols-[auto_1fr] gap-6 items-start">
+        <div class="w-12 h-12 rounded-2xl bg-[#3B6FE8]/10 flex items-center justify-center shrink-0">
+          <svg class="w-6 h-6 text-[#3B6FE8]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/>
+          </svg>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold text-[#1B2E5E] mb-2">
+            <span class="t-es">Editor de brief</span><span class="t-en">Brief editor</span>
+          </h3>
+          <p class="text-[#6B7694] text-sm leading-relaxed mb-4">
+            <span class="t-es">El abogado puede editar cualquier parte del brief directamente en la app. El editor inline permite modificar texto, resaltar en 5 colores y exportar como HTML para imprimir o compartir.</span>
+            <span class="t-en">The lawyer can edit any part of the brief directly in the app. The inline editor allows modifying text, highlighting in 5 colors, and exporting as HTML to print or share.</span>
+          </p>
+          <div class="flex flex-wrap gap-2">
+            {[
+              { style: 'background:#FEF9C3;border-color:#FDE047;color:#854d0e', es: 'Amarillo — seguimiento', en: 'Yellow — follow-up' },
+              { style: 'background:#DCFCE7;border-color:#86EFAC;color:#166534', es: 'Verde — fortalezas',    en: 'Green — strengths' },
+              { style: 'background:#FEE2E2;border-color:#FCA5A5;color:#991b1b', es: 'Rojo — riesgos',        en: 'Red — risks' },
+              { style: 'background:#DBEAFE;border-color:#93C5FD;color:#1e40af', es: 'Azul — verificar',      en: 'Blue — verify' },
+              { style: 'background:#EDE9FE;border-color:#C4B5FD;color:#4c1d95', es: 'Morado — estrategia',   en: 'Purple — strategy' },
+            ].map(({ style, es, en }) => (
+              <span class="inline-flex items-center gap-1.5 text-xs font-medium px-3 py-1.5 rounded-lg border" style={style}>
+                <span class="t-es">{es}</span><span class="t-en">{en}</span>
+              </span>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <!-- 6–8: Timeline, Notes, Reference files (compact row) -->
+      <div class="grid md:grid-cols-3 gap-5">
+        {[
+          {
+            icon: 'M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z',
+            es: 'Línea de tiempo',
+            en: 'Case timeline',
+            descEs: 'Historial cronológico por caso. Eventos automáticos + notas manuales del equipo. Ideal para delegar sin perder contexto.',
+            descEn: 'Chronological history per case. Automatic events + manual team notes. Ideal for delegating without losing context.',
+          },
+          {
+            icon: 'M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253',
+            es: 'Notas del caso',
+            en: 'Case notes',
+            descEs: 'Cuaderno interno vinculado al expediente. Soporte para jerarquía de notas: estrategia general → sub-notas por audiencia.',
+            descEn: 'Internal notebook linked to the case file. Hierarchical note support: general strategy → sub-notes per hearing.',
+          },
+          {
+            icon: 'M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z',
+            es: 'Archivos de referencia',
+            en: 'Reference files',
+            descEs: 'Sube tarifas, políticas y plantillas del despacho. Claude los usa como contexto al generar cada brief.',
+            descEn: 'Upload firm rates, policies, and templates. Claude uses them as context when generating each brief.',
+          },
+        ].map(({ icon, es, en, descEs, descEn }) => (
+          <div class="bg-white rounded-2xl border border-[#EEF1F8] shadow-sm p-6 hover:shadow-md hover:shadow-[#3B6FE8]/5 transition-shadow">
+            <div class="w-10 h-10 rounded-xl bg-[#3B6FE8]/10 flex items-center justify-center mb-4">
+              <svg class="w-5 h-5 text-[#3B6FE8]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={icon}/>
+              </svg>
+            </div>
+            <h3 class="font-bold text-[#1B2E5E] mb-2">
+              <span class="t-es">{es}</span><span class="t-en">{en}</span>
+            </h3>
+            <p class="text-[#6B7694] text-sm leading-relaxed">
+              <span class="t-es">{descEs}</span><span class="t-en">{descEn}</span>
+            </p>
+          </div>
+        ))}
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     CTA
+═══════════════════════════════════════════ -->
+<section class="py-16 px-6 bg-white">
+  <div class="max-w-2xl mx-auto text-center">
+    <h2 class="text-3xl font-black tracking-[-0.03em] text-[#1B2E5E] mb-4">
+      <span class="t-es">¿Listo para la primera llamada sin sorpresas?</span>
+      <span class="t-en">Ready for the first call without surprises?</span>
+    </h2>
+    <p class="text-[#6B7694] text-lg mb-8">
+      <span class="t-es">Agenda una demo de 20 minutos y activa tu trial de 7 días gratis.</span>
+      <span class="t-en">Schedule a 20-minute demo and activate your free 7-day trial.</span>
+    </p>
+    <div class="flex flex-col sm:flex-row gap-3 justify-center">
+      <a
+        href="mailto:rickyglz.1318@gmail.com?subject=Quiero%20agendar%20una%20demo%20de%20Captio"
+        class="inline-flex items-center justify-center gap-2 bg-[#3B6FE8] hover:bg-[#2d5fd4] text-white font-bold px-7 py-3.5 rounded-xl transition-all hover:shadow-xl hover:shadow-[#3B6FE8]/30"
+      >
+        <svg class="w-5 h-5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+        </svg>
+        <span class="t-es">Agendar demo</span><span class="t-en">Schedule demo</span>
+      </a>
+      <a
+        href="/pricing/"
+        class="inline-flex items-center justify-center gap-2 border border-[#d4daf0] text-[#1B2E5E] font-semibold px-7 py-3.5 rounded-xl hover:bg-[#EEF1F8] transition-all"
+      >
+        <span class="t-es">Ver precios</span><span class="t-en">View pricing</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+</Layout>

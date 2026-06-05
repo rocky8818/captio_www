@@ -1,0 +1,107 @@
+---
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+
+interface Props {
+  title: string;
+  description?: string;
+  activePage?: 'home' | 'pricing' | 'video';
+}
+
+const {
+  title,
+  description = 'Captio convierte el primer contacto con un cliente en un proceso estructurado. El cliente llena el formulario. La IA genera el brief. El abogado llega listo.',
+  activePage = 'home',
+} = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+</head>
+<body class="bg-[#F8F9FC] text-[#1A1F36] antialiased">
+  <Nav activePage={activePage} />
+  <slot />
+  <Footer />
+</body>
+</html>
+
+<style is:global>
+  *, *::before, *::after { font-family: 'Inter', sans-serif; }
+  html { scroll-behavior: smooth; }
+
+  /* ── Bilingual toggle ─────────────────────── */
+  .t-en { display: none; }
+  body.en .t-es { display: none; }
+  body.en .t-en { display: inline; }
+
+  .b-en { display: none; }
+  body.en .b-es { display: none; }
+  body.en .b-en { display: block; }
+
+  /* ── Scroll animations ────────────────────── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .fade-up { animation: fadeUp 0.6s ease-out forwards; }
+  .d1 { animation-delay: 0.1s; opacity: 0; }
+  .d2 { animation-delay: 0.2s; opacity: 0; }
+  .d3 { animation-delay: 0.3s; opacity: 0; }
+  .d4 { animation-delay: 0.4s; opacity: 0; }
+
+  /* ── Nav backdrop ─────────────────────────── */
+  .nav-blur {
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+  }
+
+  /* ── FAQ accordion ────────────────────────── */
+  details summary { cursor: pointer; list-style: none; }
+  details summary::-webkit-details-marker { display: none; }
+  details summary .icon { transition: transform 0.2s ease; }
+  details[open] summary .icon { transform: rotate(45deg); }
+
+  /* ── Video embed ──────────────────────────── */
+  .video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+  }
+  .video-wrapper iframe,
+  .video-wrapper video {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+  }
+</style>
+
+<script>
+  // Expose globally so inline onclick handlers can call them
+  window.toggleLang = function () {
+    document.body.classList.toggle('en');
+    document.documentElement.lang = document.body.classList.contains('en') ? 'en' : 'es';
+  };
+
+  // Scroll-reveal
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) {
+          e.target.classList.add('fade-up');
+          observer.unobserve(e.target);
+        }
+      });
+    },
+    { threshold: 0.08 }
+  );
+  document.querySelectorAll('section > div').forEach((el) => observer.observe(el));
+</script>

@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Captio — Demo</title>
+  <meta name="description" content="Ve Captio en acción. Intake estructurado, brief con IA y gestión de casos para despachos legales." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { font-family: 'Inter', sans-serif; }
+    html { scroll-behavior: smooth; }
+
+    /* Bilingual */
+    .t-en { display: none; }
+    body.en .t-es { display: none; }
+    body.en .t-en { display: inline; }
+    .b-en { display: none; }
+    body.en .b-es { display: none; }
+    body.en .b-en { display: block; }
+
+    /* Nav blur */
+    .nav-blur { backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(16px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .fade-up { animation: fadeUp 0.5s ease-out forwards; }
+    .d1 { animation-delay: 0.1s; opacity: 0; }
+    .d2 { animation-delay: 0.2s; opacity: 0; }
+
+    /* Video container */
+    .video-wrapper {
+      position: relative;
+      padding-bottom: 56.25%; /* 16:9 */
+      height: 0;
+      overflow: hidden;
+    }
+    .video-wrapper iframe,
+    .video-wrapper video {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+    }
+
+    /* Feature tab */
+    .feature-tab { cursor: pointer; }
+    .feature-tab.active { background-color: #EEF1F8; color: #1B2E5E; }
+    .feature-panel { display: none; }
+    .feature-panel.active { display: block; }
+
+    /* Details/FAQ */
+    details summary { cursor: pointer; list-style: none; }
+    details summary::-webkit-details-marker { display: none; }
+    details summary .icon { transition: transform 0.2s; }
+    details[open] summary .icon { transform: rotate(45deg); }
+  </style>
+</head>
+<body class="bg-[#F8F9FC] text-[#1A1F36] antialiased">
+
+<!-- NAV -->
+<nav class="fixed top-0 left-0 right-0 z-50 nav-blur bg-[#F8F9FC]/90 border-b border-[#EEF1F8]">
+  <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+    <a href="/" class="select-none" aria-label="Captio">
+      <span class="text-[22px] font-black tracking-[-0.05em] text-[#1B2E5E]">capt<span class="text-[#3B6FE8]">·</span>o</span>
+    </a>
+    <div class="hidden md:flex items-center gap-1">
+      <a href="/#how-it-works" class="text-sm font-medium text-[#6B7694] hover:text-[#1A1F36] px-3 py-2 rounded-lg hover:bg-[#EEF1F8] transition-colors">
+        <span class="t-es">Cómo funciona</span><span class="t-en">How it works</span>
+      </a>
+      <a href="/video/" class="text-sm font-medium text-[#1B2E5E] px-3 py-2 rounded-lg bg-[#EEF1F8]">
+        <span class="t-es">Demo</span><span class="t-en">Demo</span>
+      </a>
+      <a href="/pricing/" class="text-sm font-medium text-[#6B7694] hover:text-[#1A1F36] px-3 py-2 rounded-lg hover:bg-[#EEF1F8] transition-colors">
+        <span class="t-es">Precios</span><span class="t-en">Pricing</span>
+      </a>
+    </div>
+    <div class="flex items-center gap-3">
+      <button onclick="toggleLang()" class="text-sm font-semibold text-[#6B7694] hover:text-[#1A1F36] px-3 py-1.5 rounded-lg hover:bg-[#EEF1F8] transition-colors">
+        <span class="t-es">EN</span><span class="t-en">ES</span>
+      </button>
+      <a href="/pricing/#trial" class="hidden sm:inline-flex items-center gap-1.5 bg-[#3B6FE8] hover:bg-[#2d5fd4] text-white text-sm font-semibold px-4 py-2 rounded-lg transition-all hover:shadow-md hover:shadow-[#3B6FE8]/30">
+        <span class="t-es">Probar gratis</span><span class="t-en">Try for free</span>
+      </a>
+    </div>
+  </div>
+</nav>
+
+
+<!-- HERO -->
+<section class="pt-32 pb-6 px-6 text-center">
+  <div class="max-w-3xl mx-auto">
+    <div class="inline-flex items-center gap-2 bg-[#EEF1F8] text-[#3B6FE8] text-xs font-bold px-3 py-1.5 rounded-full mb-6 fade-up">
+      <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"/></svg>
+      <span class="t-es">Demo en vivo</span><span class="t-en">Live demo</span>
+    </div>
+    <h1 class="text-4xl sm:text-5xl font-black tracking-[-0.04em] text-[#1B2E5E] mb-4 fade-up d1">
+      <span class="t-es">Captio en acción</span>
+      <span class="t-en">Captio in action</span>
+    </h1>
+    <p class="text-lg text-[#6B7694] fade-up d2">
+      <span class="t-es">Ve el flujo completo — desde el enlace de intake hasta el brief generado por IA.</span>
+      <span class="t-en">See the full flow — from the intake link to the AI-generated brief.</span>
+    </p>
+  </div>
+</section>
+
+
+<!-- VIDEO -->
+<section class="py-8 px-6">
+  <div class="max-w-5xl mx-auto">
+
+    <div class="bg-[#1B2E5E] rounded-3xl overflow-hidden shadow-2xl shadow-[#1B2E5E]/30">
+
+      <!--
+        ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+        INSTRUCCIONES PARA INSERTAR EL VIDEO
+        ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+        OPCIÓN 1 — YouTube:
+        1. Sube el video a YouTube
+        2. Reemplaza el bloque <div id="video-placeholder"> con:
+
+        <div class="video-wrapper">
+          <iframe
+            src="https://www.youtube.com/embed/TU_VIDEO_ID?rel=0&modestbranding=1"
+            title="Demo Captio"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+
+        OPCIÓN 2 — Video propio (MP4):
+        <div class="video-wrapper">
+          <video controls poster="/assets/video-poster.jpg">
+            <source src="/assets/demo.mp4" type="video/mp4" />
+          </video>
+        </div>
+        ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+      -->
+
+      <!-- VIDEO PLACEHOLDER — reemplazar con el bloque de arriba cuando el video esté listo -->
+      <div id="video-placeholder" class="aspect-video flex flex-col items-center justify-center gap-5 relative overflow-hidden">
+        <!-- Grid bg -->
+        <div class="absolute inset-0 opacity-10" style="background-image: linear-gradient(#3B6FE8 1px, transparent 1px), linear-gradient(90deg, #3B6FE8 1px, transparent 1px); background-size: 40px 40px;"></div>
+        <!-- Glow -->
+        <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+          <div class="w-80 h-80 rounded-full bg-[#3B6FE8]/20 blur-3xl"></div>
+        </div>
+        <!-- Content -->
+        <div class="relative text-center">
+          <button class="w-20 h-20 rounded-full bg-[#3B6FE8] hover:bg-[#2d5fd4] flex items-center justify-center mx-auto mb-5 shadow-2xl shadow-[#3B6FE8]/50 transition-all hover:scale-105">
+            <svg class="w-9 h-9 text-white ml-1" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"/></svg>
+          </button>
+          <p class="text-white font-bold text-lg mb-1">
+            <span class="t-es">Video próximamente</span><span class="t-en">Video coming soon</span>
+          </p>
+          <p class="text-white/50 text-sm">
+            <span class="t-es">Mientras tanto, agenda una demo en vivo</span>
+            <span class="t-en">In the meantime, schedule a live demo</span>
+          </p>
+          <a href="mailto:rickyglz.1318@gmail.com?subject=Quiero%20agendar%20una%20demo%20de%20Captio"
+             class="inline-flex items-center gap-2 mt-4 bg-white/15 hover:bg-white/25 text-white text-sm font-semibold px-5 py-2.5 rounded-xl transition-colors">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+            <span class="t-es">Agendar demo</span><span class="t-en">Schedule demo</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Video caption -->
+    <p class="text-center text-sm text-[#A0A8BF] mt-4">
+      <span class="t-es">Flujo completo: generación de enlace → formulario del cliente → brief con IA → edición y descarga</span>
+      <span class="t-en">Full flow: link generation → client form → AI brief → editing and download</span>
+    </p>
+
+  </div>
+</section>
+
+
+<!-- FEATURES DETAIL -->
+<section id="features" class="py-16 px-6">
+  <div class="max-w-6xl mx-auto">
+
+    <div class="text-center mb-12">
+      <h2 class="text-3xl sm:text-4xl font-black tracking-[-0.03em] text-[#1B2E5E] mb-4">
+        <span class="t-es">Cada función, explicada</span>
+        <span class="t-en">Every feature, explained</span>
+      </h2>
+      <p class="text-[#6B7694] text-lg">
+        <span class="t-es">Ocho herramientas diseñadas para el flujo de trabajo del abogado.</span>
+        <span class="t-en">Eight tools designed for the lawyer's workflow.</span>
+      </p>
+    </div>
+
+    <!-- Feature grid -->
+    <div class="space-y-5">
+
+      <!-- Feature 1: Intake link -->
+      <div class="bg-white rounded-2xl border border-[#EEF1F8] overflow-hidden shadow-sm hover:shadow-md hover:shadow-[#3B6FE8]/5 transition-shadow">
+        <div class="p-7 grid md:grid-cols-[auto_1fr] gap-6 items-start">
+          <div class="w-12 h-12 rounded-2xl bg-[#3B6FE8]/10 flex items-center justify-center shrink-0">
+            <svg class="w-6 h-6 text-[#3B6FE8]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/>
+            </svg>
+          </div>
+          <div>
+            <div class="flex items-center gap-3 mb-2">
+              <h3 class="text-lg font-bold text-[#1B2E5E]">
+                <span class="t-es">Enlace de intake para el cliente</span>
+                <span class="t-en">Client intake link</span>
+              </h3>
+              <span class="text-xs font-bold text-[#3B6FE8] bg-[#EEF1F8] px-2 py-0.5 rounded-full">
+                <span class="t-es">1 clic</span><span class="t-en">1 click</span>
+              </span>
+            </div>
+            <p class="text-[#6B7694] text-sm leading-relaxed mb-4">
+              <span class="t-es">El abogado genera un enlace único por cliente nuevo desde la sección "Nuevo Cliente". El enlace se puede enviar por correo, WhatsApp, SMS o cualquier canal. El cliente lo abre en su navegador sin necesidad de crear una cuenta ni descargar ninguna app. Una vez enviado el formulario, el caso aparece automáticamente en el panel del abogado.</span>
+              <span class="t-en">The lawyer generates a unique link per new client from the "New Client" section. The link can be sent by email, WhatsApp, SMS, or any channel. The client opens it in their browser without needing to create an account or download any app. Once the form is submitted, the case automatically appears in the lawyer's dashboard.</span>
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="inline-flex items-center gap-1.5 text-xs font-medium text-[#6B7694] bg-[#F8F9FC] border border-[#EEF1F8] rounded-lg px-3 py-1.5">
+                <svg class="w-3.5 h-3.5 text-[#22C55E]" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <span class="t-es">Sin cuenta para el cliente</span><span class="t-en">No client account</span>
+              </span>
+              <span class="inline-flex items-center gap-1.5 text-xs font-medium text-[#6B7694] bg-[#F8F9FC] border border-[#EEF1F8] rounded-lg px-3 py-1.5">
+                <svg class="w-3.5 h-3.5 text-[#22C55E]" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <span class="t-es">Cualquier miembro del equipo puede generarlo</span><span class="t-en">Any team member can generate it</span>
+              </span>
+              <span class="inline-flex items-center gap-1.5 text-xs font-medium text-[#6B7694] bg-[#F8F9FC] border border-[#EEF1F8] rounded-lg px-3 py-1.5">
+                <svg class="w-3.5 h-3.5 text-[#22C55E]" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <span class="t-es">Panel de enlaces pendientes</span><span class="t-en">Pending links panel</span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feature 2: Client form -->
+      <div class="bg-white rounded-2xl border border-[#EEF1F8] overflow-hidden shadow-sm hover:shadow-md hover:shadow-[#3B6FE8]/5 transition-shadow">
+        <div class="p-7 grid md:grid-cols-[auto_1fr] gap-6 items-start">
+          <div class="w-12 h-12 rounded-2xl bg-[#3B6FE8]/10 flex items-center justify-center shrink-0">
+            <svg class="w-6 h-6 text-[#3B6FE8]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/>
+            </svg>
+          </div>
+          <div>
+            <div class="flex items-center gap-3 mb-2">
+              <h3 class="text-lg font-bold text-[#1B2E5E]">
+                <span class="t-es">Formulario de ingreso del cliente</span>
+                <span class="t-en">Client intake form</span>
+              </h3>
+              <span class="text-xs font-bold text-[#3B6FE8] bg-[#EEF1F8] px-2 py-0.5 rounded-full">
+                <span class="t-es">6 secciones</span><span class="t-en">6 sections</span>
+              </span>
+            </div>
+            <p class="text-[#6B7694] text-sm leading-relaxed mb-4">
+              <span class="t-es">Un formulario estructurado en 6 secciones que captura todo lo que el abogado necesita saber antes de la primera llamada. El cliente lo llena en 10–15 minutos desde cualquier dispositivo. Cada campo tiene texto de ayuda contextual. Barra de progreso en tiempo real. Validación con scroll automático al primer error.</span>
+              <span class="t-en">A structured form in 6 sections that captures everything the lawyer needs to know before the first call. The client fills it in 10–15 minutes from any device. Each field has contextual help text. Real-time progress bar. Validation with automatic scroll to the first error.</span>
+            </p>
+            <div class="grid sm:grid-cols-2 gap-2">
+              <div class="bg-[#F8F9FC] rounded-xl p-3 border border-[#EEF1F8]">
+                <p class="text-xs font-bold text-[#3B6FE8] mb-1.5">
+                  <span class="t-es">Las 6 secciones</span><span class="t-en">The 6 sections</span>
+                </p>
+                <ol class="space-y-1">
+                  <li class="text-xs text-[#6B7694] flex items-center gap-1.5"><span class="font-bold text-[#A0A8BF]">1.</span><span class="t-es">Información básica</span><span class="t-en">Basic information</span></li>
+                  <li class="text-xs text-[#6B7694] flex items-center gap-1.5"><span class="font-bold text-[#A0A8BF]">2.</span><span class="t-es">Resumen del caso</span><span class="t-en">Case summary</span></li>
+                  <li class="text-xs text-[#6B7694] flex items-center gap-1.5"><span class="font-bold text-[#A0A8BF]">3.</span><span class="t-es">Objetivos y resultado</span><span class="t-en">Goals and outcome</span></li>
+                  <li class="text-xs text-[#6B7694] flex items-center gap-1.5"><span class="font-bold text-[#A0A8BF]">4.</span><span class="t-es">Documentos</span><span class="t-en">Documents</span></li>
+                  <li class="text-xs text-[#6B7694] flex items-center gap-1.5"><span class="font-bold text-[#A0A8BF]">5.</span><span class="t-es">Conflicto de interés</span><span class="t-en">Conflict of interest</span></li>
+                  <li class="text-xs text-[#6B7694] flex items-center gap-1.5"><span class="font-bold text-[#A0A8BF]">6.</span><span class="t-es">Información adicional</span><span class="t-en">Additional information</span></li>
+                </ol>
+              </div>
+              <div class="bg-[#F8F9FC] rounded-xl p-3 border border-[#EEF1F8]">
+                <p class="text-xs font-bold text-[#3B6FE8] mb-1.5">
+                  <span class="t-es">Características</span><span class="t-en">Features</span>
+                </p>
+                <ul class="space-y-1">
+                  <li class="text-xs text-[#6B7694] flex items-center gap-1.5">
+                    <svg class="w-3 h-3 text-[#22C55E] shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                    <span class="t-es">Móvil, tablet y desktop</span><span class="t-en">Mobile, tablet, and desktop</span>
+                  </li>
+                  <li class="text-xs text-[#6B7694] flex items-center gap-1.5">
+                    <svg class="w-3 h-3 text-[#22C55E] shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                    <span class="t-es">Español e inglés (toggle)</span><span class="t-en">Spanish and English (toggle)</span>
+                  </li>
+                  <li class="text-xs text-[#6B7694] flex items-center gap-1.5">
+                    <svg class="w-3 h-3 text-[#22C55E] shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                    <span class="t-es">Barra de progreso</span><span class="t-en">Progress bar</span>
+                  </li>
+                  <li class="text-xs text-[#6B7694] flex items-center gap-1.5">
+                    <svg class="w-3 h-3 text-[#22C55E] shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                    <span class="t-es">Sin cuenta ni app</span><span class="t-en">No account or app</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feature 3: Case panel -->
+      <div class="bg-white rounded-2xl border border-[#EEF1F8] overflow-hidden shadow-sm hover:shadow-md hover:shadow-[#3B6FE8]/5 transition-shadow">
+        <div class="p-7 grid md:grid-cols-[auto_1fr] gap-6 items-start">
+          <div class="w-12 h-12 rounded-2xl bg-[#3B6FE8]/10 flex items-center justify-center shrink-0">
+            <svg class="w-6 h-6 text-[#3B6FE8]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2"/>
+            </svg>
+          </div>
+          <div>
+            <div class="flex items-center gap-3 mb-2">
+              <h3 class="text-lg font-bold text-[#1B2E5E]">
+                <span class="t-es">Panel de casos</span>
+                <span class="t-en">Case dashboard</span>
+              </h3>
+            </div>
+            <p class="text-[#6B7694] text-sm leading-relaxed mb-4">
+              <span class="t-es">El centro de operaciones del despacho. Muestra todos los casos con su estado, estadísticas en tiempo real y búsqueda por nombre o tipo de caso. Cada caso avanza por un flujo de estados claro: Invitado → Nuevo → En revisión → Consulta agendada → Aceptado (o Rechazado / Cerrado).</span>
+              <span class="t-en">The firm's operations center. Shows all cases with their status, real-time statistics, and search by name or case type. Each case advances through a clear status flow: Invited → New → Under review → Consultation scheduled → Accepted (or Rejected / Closed).</span>
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-full bg-[#3B6FE8]/8 text-[#3B6FE8] border border-[#3B6FE8]/20">
+                <span class="t-es">Invitado</span><span class="t-en">Invited</span>
+              </span>
+              <span class="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-full bg-[#F59E0B]/8 text-[#d97706] border border-[#F59E0B]/20">
+                <span class="t-es">Nuevo</span><span class="t-en">New</span>
+              </span>
+              <span class="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-full bg-[#8B5CF6]/8 text-[#7c3aed] border border-[#8B5CF6]/20">
+                <span class="t-es">En revisión</span><span class="t-en">Under review</span>
+              </span>
+              <span class="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-full bg-[#3B6FE8]/8 text-[#3B6FE8] border border-[#3B6FE8]/20">
+                <span class="t-es">Consulta agendada</span><span class="t-en">Consultation scheduled</span>
+              </span>
+              <span class="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-full bg-[#22C55E]/8 text-[#16a34a] border border-[#22C55E]/20">
+                <span class="t-es">Aceptado ✓</span><span class="t-en">Accepted ✓</span>
+              </span>
+              <span class="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-full bg-[#EF4444]/8 text-[#dc2626] border border-[#EF4444]/20">
+                <span class="t-es">Rechazado</span><span class="t-en">Rejected</span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feature 4: AI Brief -->
+      <div class="bg-white rounded-2xl border border-[#EEF1F8] overflow-hidden shadow-sm hover:shadow-md hover:shadow-[#3B6FE8]/5 transition-shadow">
+        <div class="p-7 grid md:grid-cols-[auto_1fr] gap-6 items-start">
+          <div class="w-12 h-12 rounded-2xl bg-[#3B6FE8]/10 flex items-center justify-center shrink-0">
+            <svg class="w-6 h-6 text-[#3B6FE8]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+            </svg>
+          </div>
+          <div>
+            <div class="flex items-center gap-3 mb-2">
+              <h3 class="text-lg font-bold text-[#1B2E5E]">
+                <span class="t-es">Brief del caso con IA</span>
+                <span class="t-en">AI case brief</span>
+              </h3>
+              <span class="text-xs font-bold text-[#3B6FE8] bg-[#EEF1F8] px-2 py-0.5 rounded-full">
+                <span class="t-es">10 secciones</span><span class="t-en">10 sections</span>
+              </span>
+            </div>
+            <p class="text-[#6B7694] text-sm leading-relaxed mb-4">
+              <span class="t-es">Al abrir un caso, el abogado puede generar el brief con un clic. Claude (Anthropic) analiza las respuestas del formulario y produce un documento estructurado en segundos. La IA nunca inventa información — si algo falta, lo marca con <code class="bg-[#EEF1F8] px-1 rounded">[FALTA: descripción]</code> para que el abogado sepa exactamente qué preguntar en la primera llamada.</span>
+              <span class="t-en">When opening a case, the lawyer can generate the brief with one click. Claude (Anthropic) analyzes the form responses and produces a structured document in seconds. AI never fabricates information — if something is missing, it marks it with <code class="bg-[#EEF1F8] px-1 rounded">[MISSING: description]</code> so the lawyer knows exactly what to ask in the first call.</span>
+            </p>
+            <div class="bg-[#F8F9FC] rounded-xl p-4 border border-[#EEF1F8]">
+              <p class="text-xs font-bold text-[#3B6FE8] mb-3">
+                <span class="t-es">Las 10 secciones del brief</span><span class="t-en">The 10 brief sections</span>
+              </p>
+              <div class="grid grid-cols-2 sm:grid-cols-5 gap-1.5">
+                <div class="flex items-center gap-1.5 text-xs text-[#6B7694]"><span class="font-bold text-[#3B6FE8]">1.</span><span class="t-es">Puntos clave</span><span class="t-en">Key points</span></div>
+                <div class="flex items-center gap-1.5 text-xs text-[#6B7694]"><span class="font-bold text-[#3B6FE8]">2.</span><span class="t-es">Versión del cliente</span><span class="t-en">Client's version</span></div>
+                <div class="flex items-center gap-1.5 text-xs text-[#6B7694]"><span class="font-bold text-[#3B6FE8]">3.</span><span class="t-es">Resumen del caso</span><span class="t-en">Case summary</span></div>
+                <div class="flex items-center gap-1.5 text-xs text-[#6B7694]"><span class="font-bold text-[#3B6FE8]">4.</span><span class="t-es">Objetivos</span><span class="t-en">Goals</span></div>
+                <div class="flex items-center gap-1.5 text-xs text-[#6B7694]"><span class="font-bold text-[#3B6FE8]">5.</span><span class="t-es">Info de apoyo</span><span class="t-en">Support info</span></div>
+                <div class="flex items-center gap-1.5 text-xs text-[#6B7694]"><span class="font-bold text-[#3B6FE8]">6.</span><span class="t-es">Conflicto interés</span><span class="t-en">Conflict of interest</span></div>
+                <div class="flex items-center gap-1.5 text-xs text-[#6B7694]"><span class="font-bold text-[#3B6FE8]">7.</span><span class="t-es">Riesgos clave</span><span class="t-en">Key risks</span></div>
+                <div class="flex items-center gap-1.5 text-xs text-[#6B7694]"><span class="font-bold text-[#3B6FE8]">8.</span><span class="t-es">Info pendiente</span><span class="t-en">Missing info</span></div>
+                <div class="flex items-center gap-1.5 text-xs text-[#6B7694]"><span class="font-bold text-[#3B6FE8]">9.</span><span class="t-es">Consideraciones legales</span><span class="t-en">Legal notes</span></div>
+                <div class="flex items-center gap-1.5 text-xs text-[#6B7694]"><span class="font-bold text-[#3B6FE8]">10.</span><span class="t-es">Encabezado</span><span class="t-en">Header</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feature 5: Brief editor -->
+      <div class="bg-white rounded-2xl border border-[#EEF1F8] overflow-hidden shadow-sm hover:shadow-md hover:shadow-[#3B6FE8]/5 transition-shadow">
+        <div class="p-7 grid md:grid-cols-[auto_1fr] gap-6 items-start">
+          <div class="w-12 h-12 rounded-2xl bg-[#3B6FE8]/10 flex items-center justify-center shrink-0">
+            <svg class="w-6 h-6 text-[#3B6FE8]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/>
+            </svg>
+          </div>
+          <div>
+            <div class="flex items-center gap-3 mb-2">
+              <h3 class="text-lg font-bold text-[#1B2E5E]">
+                <span class="t-es">Editor de brief</span>
+                <span class="t-en">Brief editor</span>
+              </h3>
+            </div>
+            <p class="text-[#6B7694] text-sm leading-relaxed mb-4">
+              <span class="t-es">El abogado puede editar cualquier parte del brief directamente en la app, sin salir ni abrir otro programa. El editor inline permite modificar texto, resaltar en 5 colores para marcar zonas de atención, y exportar el brief como HTML para imprimirlo o compartirlo. Los cambios se guardan en el expediente.</span>
+              <span class="t-en">The lawyer can edit any part of the brief directly in the app, without leaving or opening another program. The inline editor allows modifying text, highlighting in 5 colors to mark areas of attention, and exporting the brief as HTML to print or share. Changes are saved to the case file.</span>
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="inline-flex items-center gap-1.5 text-xs font-medium px-3 py-1.5 rounded-lg border" style="background: #FEF9C3; border-color: #FDE047; color: #854d0e;">
+                <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M17.707 9.293a1 1 0 010 1.414l-7 7a1 1 0 01-1.414 0l-7-7A.997.997 0 012 10V5a3 3 0 013-3h5c.256 0 .512.098.707.293l7 7zM5 6a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"/></svg>
+                <span class="t-es">Amarillo — seguimiento</span><span class="t-en">Yellow — follow-up</span>
+              </span>
+              <span class="inline-flex items-center gap-1.5 text-xs font-medium px-3 py-1.5 rounded-lg border" style="background: #DCFCE7; border-color: #86EFAC; color: #166534;">
+                <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M17.707 9.293a1 1 0 010 1.414l-7 7a1 1 0 01-1.414 0l-7-7A.997.997 0 012 10V5a3 3 0 013-3h5c.256 0 .512.098.707.293l7 7zM5 6a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"/></svg>
+                <span class="t-es">Verde — fortalezas</span><span class="t-en">Green — strengths</span>
+              </span>
+              <span class="inline-flex items-center gap-1.5 text-xs font-medium px-3 py-1.5 rounded-lg border" style="background: #FEE2E2; border-color: #FCA5A5; color: #991b1b;">
+                <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M17.707 9.293a1 1 0 010 1.414l-7 7a1 1 0 01-1.414 0l-7-7A.997.997 0 012 10V5a3 3 0 013-3h5c.256 0 .512.098.707.293l7 7zM5 6a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"/></svg>
+                <span class="t-es">Rojo — riesgos</span><span class="t-en">Red — risks</span>
+              </span>
+              <span class="inline-flex items-center gap-1.5 text-xs font-medium px-3 py-1.5 rounded-lg border" style="background: #DBEAFE; border-color: #93C5FD; color: #1e40af;">
+                <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M17.707 9.293a1 1 0 010 1.414l-7 7a1 1 0 01-1.414 0l-7-7A.997.997 0 012 10V5a3 3 0 013-3h5c.256 0 .512.098.707.293l7 7zM5 6a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"/></svg>
+                <span class="t-es">Azul — verificar</span><span class="t-en">Blue — verify</span>
+              </span>
+              <span class="inline-flex items-center gap-1.5 text-xs font-medium px-3 py-1.5 rounded-lg border" style="background: #EDE9FE; border-color: #C4B5FD; color: #4c1d95;">
+                <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M17.707 9.293a1 1 0 010 1.414l-7 7a1 1 0 01-1.414 0l-7-7A.997.997 0 012 10V5a3 3 0 013-3h5c.256 0 .512.098.707.293l7 7zM5 6a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"/></svg>
+                <span class="t-es">Morado — estrategia</span><span class="t-en">Purple — strategy</span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feature 6: Timeline -->
+      <div class="bg-white rounded-2xl border border-[#EEF1F8] overflow-hidden shadow-sm hover:shadow-md hover:shadow-[#3B6FE8]/5 transition-shadow">
+        <div class="p-7 grid md:grid-cols-[auto_1fr] gap-6 items-start">
+          <div class="w-12 h-12 rounded-2xl bg-[#3B6FE8]/10 flex items-center justify-center shrink-0">
+            <svg class="w-6 h-6 text-[#3B6FE8]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold text-[#1B2E5E] mb-2">
+              <span class="t-es">Línea de tiempo del caso</span>
+              <span class="t-en">Case timeline</span>
+            </h3>
+            <p class="text-[#6B7694] text-sm leading-relaxed">
+              <span class="t-es">Historial cronológico por caso. Eventos como "Enlace generado", "Formulario enviado" o "Brief generado" se registran automáticamente. El equipo puede agregar notas o eventos manuales en cualquier momento ("Consulta agendada para el martes", "Cliente envió documentos"). Los cambios de estado también quedan registrados. Ideal para delegar casos sin perder contexto.</span>
+              <span class="t-en">Chronological history per case. Events like "Link generated", "Form submitted", or "Brief generated" are automatically logged. The team can add manual notes or events at any time ("Consultation scheduled for Tuesday", "Client sent documents"). Status changes are also logged. Ideal for delegating cases without losing context.</span>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feature 7: Case notes -->
+      <div class="bg-white rounded-2xl border border-[#EEF1F8] overflow-hidden shadow-sm hover:shadow-md hover:shadow-[#3B6FE8]/5 transition-shadow">
+        <div class="p-7 grid md:grid-cols-[auto_1fr] gap-6 items-start">
+          <div class="w-12 h-12 rounded-2xl bg-[#3B6FE8]/10 flex items-center justify-center shrink-0">
+            <svg class="w-6 h-6 text-[#3B6FE8]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+            </svg>
+          </div>
+          <div>
+            <div class="flex items-center gap-3 mb-2">
+              <h3 class="text-lg font-bold text-[#1B2E5E]">
+                <span class="t-es">Notas del caso (Cuaderno)</span>
+                <span class="t-en">Case notes (Notebook)</span>
+              </h3>
+            </div>
+            <p class="text-[#6B7694] text-sm leading-relaxed">
+              <span class="t-es">Cuaderno interno vinculado al expediente. Cada nota se asocia a un caso específico. Soporta jerarquía: una nota "Estrategia general" puede tener notas hijo como "Estrategia audiencia inicial" o "Investigación jurídica capítulo 3". Las notas muestran sus relaciones (de qué dependen / qué depende de ellas). Búsqueda por texto dentro del caso.</span>
+              <span class="t-en">Internal notebook linked to the case file. Each note is associated with a specific case. Supports hierarchy: a "General strategy" note can have child notes like "Initial hearing strategy" or "Legal research chapter 3". Notes show their relationships (what they depend on / what depends on them). Text search within the case.</span>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feature 8: Reference files -->
+      <div class="bg-white rounded-2xl border border-[#EEF1F8] overflow-hidden shadow-sm hover:shadow-md hover:shadow-[#3B6FE8]/5 transition-shadow">
+        <div class="p-7 grid md:grid-cols-[auto_1fr] gap-6 items-start">
+          <div class="w-12 h-12 rounded-2xl bg-[#3B6FE8]/10 flex items-center justify-center shrink-0">
+            <svg class="w-6 h-6 text-[#3B6FE8]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"/>
+            </svg>
+          </div>
+          <div>
+            <div class="flex items-center gap-3 mb-2">
+              <h3 class="text-lg font-bold text-[#1B2E5E]">
+                <span class="t-es">Archivos de referencia del despacho</span>
+                <span class="t-en">Firm reference files</span>
+              </h3>
+            </div>
+            <p class="text-[#6B7694] text-sm leading-relaxed mb-4">
+              <span class="t-es">El despacho puede subir documentos internos — tarifas de honorarios, políticas de conflicto, plantillas de brief, perfil de áreas de práctica — que Claude usa como contexto al generar cada brief. El resultado es un brief alineado con los estándares del despacho, no genérico. La barra lateral muestra siempre cuántos archivos de referencia están activos.</span>
+              <span class="t-en">The firm can upload internal documents — fee schedules, conflict policies, brief templates, practice area profiles — that Claude uses as context when generating each brief. The result is a brief aligned with the firm's standards, not a generic one. The sidebar always shows how many reference files are active.</span>
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="inline-flex items-center gap-1.5 text-xs font-medium text-[#6B7694] bg-[#F8F9FC] border border-[#EEF1F8] rounded-lg px-3 py-1.5">
+                <span class="t-es">Tarifas de honorarios</span><span class="t-en">Fee schedules</span>
+              </span>
+              <span class="inline-flex items-center gap-1.5 text-xs font-medium text-[#6B7694] bg-[#F8F9FC] border border-[#EEF1F8] rounded-lg px-3 py-1.5">
+                <span class="t-es">Política de conflicto</span><span class="t-en">Conflict policy</span>
+              </span>
+              <span class="inline-flex items-center gap-1.5 text-xs font-medium text-[#6B7694] bg-[#F8F9FC] border border-[#EEF1F8] rounded-lg px-3 py-1.5">
+                <span class="t-es">Plantillas de brief</span><span class="t-en">Brief templates</span>
+              </span>
+              <span class="inline-flex items-center gap-1.5 text-xs font-medium text-[#6B7694] bg-[#F8F9FC] border border-[#EEF1F8] rounded-lg px-3 py-1.5">
+                <span class="t-es">Perfil del despacho</span><span class="t-en">Firm profile</span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- CTA -->
+<section class="py-16 px-6 bg-white">
+  <div class="max-w-2xl mx-auto text-center">
+    <h2 class="text-3xl font-black tracking-[-0.03em] text-[#1B2E5E] mb-4">
+      <span class="t-es">¿Listo para la primera llamada sin sorpresas?</span>
+      <span class="t-en">Ready for the first call without surprises?</span>
+    </h2>
+    <p class="text-[#6B7694] text-lg mb-8">
+      <span class="t-es">Agenda una demo de 20 minutos y activa tu trial de 7 días gratis.</span>
+      <span class="t-en">Schedule a 20-minute demo and activate your free 7-day trial.</span>
+    </p>
+    <div class="flex flex-col sm:flex-row gap-3 justify-center">
+      <a href="mailto:rickyglz.1318@gmail.com?subject=Quiero%20agendar%20una%20demo%20de%20Captio"
+         class="inline-flex items-center justify-center gap-2 bg-[#3B6FE8] hover:bg-[#2d5fd4] text-white font-bold px-7 py-3.5 rounded-xl transition-all hover:shadow-xl hover:shadow-[#3B6FE8]/30">
+        <svg class="w-5 h-5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+        <span class="t-es">Agendar demo</span><span class="t-en">Schedule demo</span>
+      </a>
+      <a href="/pricing/"
+         class="inline-flex items-center justify-center gap-2 border border-[#d4daf0] text-[#1B2E5E] font-semibold px-7 py-3.5 rounded-xl hover:bg-[#EEF1F8] transition-all">
+        <span class="t-es">Ver precios</span><span class="t-en">View pricing</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<!-- FOOTER -->
+<footer class="bg-[#1B2E5E] text-white py-10 px-6">
+  <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+    <div class="flex items-center gap-3">
+      <a href="/" class="text-xl font-black tracking-[-0.05em]">capt<span class="text-[#3B6FE8]">·</span>o</a>
+      <span class="text-[#6B7694] text-sm">
+        <span class="t-es">intake · brief · equipo</span><span class="t-en">intake · brief · team</span>
+      </span>
+    </div>
+    <p class="text-[#6B7694] text-sm">
+      © 2025 Captio.
+      <span class="t-es">Todos los derechos reservados.</span>
+      <span class="t-en">All rights reserved.</span>
+    </p>
+  </div>
+</footer>
+
+
+<script>
+  function toggleLang() {
+    document.body.classList.toggle('en');
+    document.documentElement.lang = document.body.classList.contains('en') ? 'en' : 'es';
+  }
+</script>
+
+</body>
+</html>

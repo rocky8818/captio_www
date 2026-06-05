@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Captio — Precios</title>
+  <meta name="description" content="Planes mensuales y anuales para despachos legales. Intake estructurado y brief con IA desde $45/mes." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { font-family: 'Inter', sans-serif; }
+    html { scroll-behavior: smooth; }
+
+    /* Bilingual */
+    .t-en { display: none; }
+    body.en .t-es { display: none; }
+    body.en .t-en { display: inline; }
+    .b-en { display: none; }
+    body.en .b-es { display: none; }
+    body.en .b-en { display: block; }
+
+    /* Pricing toggle */
+    .plan-annual { display: none; }
+    body.annual .plan-monthly { display: none; }
+    body.annual .plan-annual { display: block; }
+
+    /* Details/FAQ */
+    details summary { cursor: pointer; list-style: none; }
+    details summary::-webkit-details-marker { display: none; }
+    details summary .icon { transition: transform 0.2s; }
+    details[open] summary .icon { transform: rotate(45deg); }
+
+    /* Nav blur */
+    .nav-blur { backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(16px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .fade-up { animation: fadeUp 0.5s ease-out forwards; }
+    .d1 { animation-delay: 0.1s; opacity: 0; }
+    .d2 { animation-delay: 0.2s; opacity: 0; }
+    .d3 { animation-delay: 0.3s; opacity: 0; }
+  </style>
+</head>
+<body class="bg-[#F8F9FC] text-[#1A1F36] antialiased">
+
+<!-- NAV -->
+<nav class="fixed top-0 left-0 right-0 z-50 nav-blur bg-[#F8F9FC]/90 border-b border-[#EEF1F8]">
+  <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+    <a href="/" class="select-none" aria-label="Captio">
+      <span class="text-[22px] font-black tracking-[-0.05em] text-[#1B2E5E]">capt<span class="text-[#3B6FE8]">·</span>o</span>
+    </a>
+    <div class="hidden md:flex items-center gap-1">
+      <a href="/#how-it-works" class="text-sm font-medium text-[#6B7694] hover:text-[#1A1F36] px-3 py-2 rounded-lg hover:bg-[#EEF1F8] transition-colors">
+        <span class="t-es">Cómo funciona</span><span class="t-en">How it works</span>
+      </a>
+      <a href="/video/" class="text-sm font-medium text-[#6B7694] hover:text-[#1A1F36] px-3 py-2 rounded-lg hover:bg-[#EEF1F8] transition-colors">
+        <span class="t-es">Demo</span><span class="t-en">Demo</span>
+      </a>
+      <a href="/pricing/" class="text-sm font-medium text-[#1B2E5E] px-3 py-2 rounded-lg bg-[#EEF1F8]">
+        <span class="t-es">Precios</span><span class="t-en">Pricing</span>
+      </a>
+    </div>
+    <div class="flex items-center gap-3">
+      <button onclick="toggleLang()" class="text-sm font-semibold text-[#6B7694] hover:text-[#1A1F36] px-3 py-1.5 rounded-lg hover:bg-[#EEF1F8] transition-colors">
+        <span class="t-es">EN</span><span class="t-en">ES</span>
+      </button>
+      <a href="#trial" class="hidden sm:inline-flex items-center gap-1.5 bg-[#3B6FE8] hover:bg-[#2d5fd4] text-white text-sm font-semibold px-4 py-2 rounded-lg transition-all hover:shadow-md hover:shadow-[#3B6FE8]/30">
+        <span class="t-es">Probar gratis</span><span class="t-en">Try for free</span>
+      </a>
+    </div>
+  </div>
+</nav>
+
+
+<!-- HERO -->
+<section class="pt-32 pb-12 px-6 text-center relative overflow-hidden">
+  <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
+    <div class="absolute -top-40 left-1/2 -translate-x-1/2 w-[800px] h-[400px] rounded-full bg-[#3B6FE8]/5 blur-3xl"></div>
+  </div>
+  <div class="max-w-3xl mx-auto relative">
+    <div class="inline-flex items-center gap-2 bg-[#EEF1F8] text-[#3B6FE8] text-xs font-bold px-3 py-1.5 rounded-full mb-6 fade-up">
+      <span class="w-1.5 h-1.5 rounded-full bg-[#3B6FE8]"></span>
+      <span class="t-es">Precio por firma, no por usuario</span>
+      <span class="t-en">Price per firm, not per user</span>
+    </div>
+    <h1 class="text-4xl sm:text-5xl font-black tracking-[-0.04em] text-[#1B2E5E] mb-4 fade-up d1">
+      <span class="t-es">Pricing simple.<br>Sin sorpresas.</span>
+      <span class="t-en">Simple pricing.<br>No surprises.</span>
+    </h1>
+    <p class="text-lg text-[#6B7694] mb-10 fade-up d2">
+      <span class="t-es">Un plan. Todos los miembros de tu firma. Uso ilimitado.</span>
+      <span class="t-en">One plan. All your firm's members. Unlimited use.</span>
+    </p>
+
+    <!-- Billing toggle -->
+    <div class="inline-flex items-center bg-[#EEF1F8] rounded-xl p-1 gap-1 fade-up d3" role="group" aria-label="Billing period">
+      <button
+        id="btn-monthly"
+        onclick="setPricing('monthly')"
+        class="px-5 py-2 rounded-lg text-sm font-semibold transition-all bg-white text-[#1B2E5E] shadow-sm"
+      >
+        <span class="t-es">Mensual</span><span class="t-en">Monthly</span>
+      </button>
+      <button
+        id="btn-annual"
+        onclick="setPricing('annual')"
+        class="px-5 py-2 rounded-lg text-sm font-semibold transition-all text-[#6B7694] flex items-center gap-2"
+      >
+        <span class="t-es">Anual</span><span class="t-en">Annual</span>
+        <span class="bg-[#22C55E]/15 text-[#16a34a] text-xs font-bold px-2 py-0.5 rounded-full">
+          <span class="t-es">-25%</span><span class="t-en">-25%</span>
+        </span>
+      </button>
+    </div>
+  </div>
+</section>
+
+
+<!-- PLANS -->
+<section class="pb-16 px-6">
+  <div class="max-w-4xl mx-auto">
+    <div class="grid md:grid-cols-2 gap-6">
+
+      <!-- Plan Mensual -->
+      <div class="bg-white rounded-3xl border border-[#EEF1F8] p-8 shadow-sm hover:shadow-lg hover:shadow-[#3B6FE8]/5 transition-shadow relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-24 h-24 bg-[#F8F9FC] rounded-bl-full pointer-events-none"></div>
+        <div class="mb-7">
+          <p class="text-xs font-bold text-[#6B7694] uppercase tracking-widest mb-3">
+            <span class="t-es">Mensual</span><span class="t-en">Monthly</span>
+          </p>
+          <div class="flex items-end gap-1 mb-1">
+            <span class="text-5xl font-black text-[#1B2E5E] tracking-tight">$60</span>
+            <span class="text-[#6B7694] font-medium mb-2">
+              <span class="t-es">/ mes</span><span class="t-en">/ month</span>
+            </span>
+          </div>
+          <p class="text-sm text-[#A0A8BF]">
+            <span class="t-es">Facturado mensualmente · Cancela cuando quieras</span>
+            <span class="t-en">Billed monthly · Cancel anytime</span>
+          </p>
+        </div>
+
+        <ul class="space-y-3 mb-8">
+          <li class="flex items-start gap-2.5 text-sm text-[#1A1F36]">
+            <svg class="w-4 h-4 text-[#22C55E] mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+            <span class="t-es">Casos y briefs ilimitados</span><span class="t-en">Unlimited cases and briefs</span>
+          </li>
+          <li class="flex items-start gap-2.5 text-sm text-[#1A1F36]">
+            <svg class="w-4 h-4 text-[#22C55E] mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+            <span class="t-es">Todos los miembros del equipo incluidos</span><span class="t-en">All team members included</span>
+          </li>
+          <li class="flex items-start gap-2.5 text-sm text-[#1A1F36]">
+            <svg class="w-4 h-4 text-[#22C55E] mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+            <span class="t-es">Brief con IA — 10 secciones</span><span class="t-en">AI brief — 10 sections</span>
+          </li>
+          <li class="flex items-start gap-2.5 text-sm text-[#1A1F36]">
+            <svg class="w-4 h-4 text-[#22C55E] mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+            <span class="t-es">Línea de tiempo y notas de caso</span><span class="t-en">Case timeline and notes</span>
+          </li>
+          <li class="flex items-start gap-2.5 text-sm text-[#1A1F36]">
+            <svg class="w-4 h-4 text-[#22C55E] mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+            <span class="t-es">Español e inglés</span><span class="t-en">Spanish and English</span>
+          </li>
+          <li class="flex items-start gap-2.5 text-sm text-[#1A1F36]">
+            <svg class="w-4 h-4 text-[#22C55E] mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+            <span class="t-es">Archivos de referencia del despacho</span><span class="t-en">Firm reference files</span>
+          </li>
+          <li class="flex items-start gap-2.5 text-sm text-[#1A1F36]">
+            <svg class="w-4 h-4 text-[#22C55E] mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+            <span class="t-es">Sin contrato anual</span><span class="t-en">No annual contract</span>
+          </li>
+        </ul>
+
+        <a href="mailto:rickyglz.1318@gmail.com?subject=Solicitud%20de%20acceso%20a%20Captio%20%E2%80%94%20Plan%20mensual"
+           class="block w-full border-2 border-[#3B6FE8] text-[#3B6FE8] hover:bg-[#3B6FE8] hover:text-white font-bold py-3.5 rounded-xl text-center transition-all text-sm">
+          <span class="t-es">Empezar — $60 / mes</span><span class="t-en">Get started — $60 / month</span>
+        </a>
+      </div>
+
+      <!-- Plan Anual -->
+      <div class="bg-[#1B2E5E] rounded-3xl border border-[#1B2E5E] p-8 shadow-2xl shadow-[#1B2E5E]/30 relative overflow-hidden">
+        <!-- Recommended badge -->
+        <div class="absolute top-5 right-5 bg-[#3B6FE8] text-white text-xs font-bold px-3 py-1 rounded-full">
+          <span class="t-es">Recomendado</span><span class="t-en">Recommended</span>
+        </div>
+        <div class="absolute -bottom-10 -right-10 w-48 h-48 rounded-full bg-[#3B6FE8]/10 pointer-events-none"></div>
+
+        <div class="mb-7">
+          <p class="text-xs font-bold text-[#6B7694] uppercase tracking-widest mb-3">
+            <span class="t-es">Anual</span><span class="t-en">Annual</span>
+          </p>
+          <div class="flex items-end gap-1 mb-1">
+            <span class="text-5xl font-black text-white tracking-tight">$45</span>
+            <span class="text-[#6B7694] font-medium mb-2">
+              <span class="t-es">/ mes</span><span class="t-en">/ month</span>
+            </span>
+          </div>
+          <div class="flex items-center gap-2 mb-1">
+            <span class="text-sm text-[#6B7694] line-through">$60</span>
+            <span class="bg-[#22C55E]/15 text-[#22C55E] text-xs font-bold px-2 py-0.5 rounded-full">
+              <span class="t-es">Ahorras $180 / año</span><span class="t-en">Save $180 / year</span>
+            </span>
+          </div>
+          <p class="text-sm text-[#6B7694]">
+            <span class="t-es">$540 facturado anualmente</span>
+            <span class="t-en">$540 billed annually</span>
+          </p>
+        </div>
+
+        <ul class="space-y-3 mb-8">
+          <li class="flex items-start gap-2.5 text-sm text-white/80">
+            <svg class="w-4 h-4 text-[#22C55E] mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+            <span class="t-es">Todo lo del plan mensual</span><span class="t-en">Everything in the monthly plan</span>
+          </li>
+          <li class="flex items-start gap-2.5 text-sm text-white/80">
+            <svg class="w-4 h-4 text-[#22C55E] mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+            <span class="t-es">25% de descuento — $180 de ahorro al año</span>
+            <span class="t-en">25% discount — $180 saved per year</span>
+          </li>
+          <li class="flex items-start gap-2.5 text-sm text-white/80">
+            <svg class="w-4 h-4 text-[#22C55E] mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+            <span class="t-es">Soporte prioritario</span><span class="t-en">Priority support</span>
+          </li>
+          <li class="flex items-start gap-2.5 text-sm text-white/80">
+            <svg class="w-4 h-4 text-[#22C55E] mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+            <span class="t-es">Onboarding personalizado para el equipo</span>
+            <span class="t-en">Personalized onboarding for your team</span>
+          </li>
+          <li class="flex items-start gap-2.5 text-sm text-white/80">
+            <svg class="w-4 h-4 text-[#22C55E] mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+            <span class="t-es">Acceso anticipado a nuevas funciones</span>
+            <span class="t-en">Early access to new features</span>
+          </li>
+        </ul>
+
+        <a href="mailto:rickyglz.1318@gmail.com?subject=Solicitud%20de%20acceso%20a%20Captio%20%E2%80%94%20Plan%20anual"
+           class="block w-full bg-[#3B6FE8] hover:bg-[#2d5fd4] text-white font-bold py-3.5 rounded-xl text-center transition-all hover:shadow-xl hover:shadow-[#3B6FE8]/40 text-sm">
+          <span class="t-es">Empezar — $540 / año</span><span class="t-en">Get started — $540 / year</span>
+        </a>
+      </div>
+
+    </div>
+
+    <!-- Feature comparison note -->
+    <p class="text-center text-sm text-[#A0A8BF] mt-6">
+      <span class="t-es">Ambos planes incluyen todas las funciones. La diferencia es solo el ciclo de facturación.</span>
+      <span class="t-en">Both plans include all features. The only difference is the billing cycle.</span>
+    </p>
+
+  </div>
+</section>
+
+
+<!-- TRIAL SECTION -->
+<section id="trial" class="py-16 px-6">
+  <div class="max-w-4xl mx-auto">
+
+    <div class="bg-gradient-to-br from-[#3B6FE8] to-[#1B2E5E] rounded-3xl p-10 text-white text-center relative overflow-hidden shadow-2xl shadow-[#1B2E5E]/30">
+      <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
+        <div class="absolute -top-20 -right-20 w-64 h-64 rounded-full bg-white/5"></div>
+        <div class="absolute -bottom-16 -left-16 w-48 h-48 rounded-full bg-white/5"></div>
+      </div>
+      <div class="relative">
+        <div class="inline-flex items-center gap-2 bg-white/15 text-white text-xs font-bold px-3 py-1.5 rounded-full mb-5">
+          <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/></svg>
+          <span class="t-es">Trial gratuito · 7 días</span>
+          <span class="t-en">Free trial · 7 days</span>
+        </div>
+
+        <h2 class="text-3xl sm:text-4xl font-black tracking-[-0.03em] mb-4">
+          <span class="t-es">¿No estás seguro aún?<br>Pruébalo durante 7 días.</span>
+          <span class="t-en">Not sure yet?<br>Try it for 7 days.</span>
+        </h2>
+        <p class="text-white/70 text-lg mb-8 max-w-xl mx-auto">
+          <span class="t-es">Agenda una demo de 20 minutos y te activamos un trial completo de 7 días para tu firma. Sin tarjeta de crédito. Sin compromiso.</span>
+          <span class="t-en">Schedule a 20-minute demo and we'll activate a full 7-day trial for your firm. No credit card. No commitment.</span>
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-3 justify-center">
+          <!-- Replace href with your Calendly / cal.com link -->
+          <a href="mailto:rickyglz.1318@gmail.com?subject=Quiero%20agendar%20una%20demo%20de%20Captio"
+             class="inline-flex items-center justify-center gap-2 bg-white text-[#1B2E5E] font-bold px-7 py-3.5 rounded-xl transition-all hover:shadow-xl hover:scale-[1.02] text-base">
+            <svg class="w-5 h-5 text-[#3B6FE8] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+            <span class="t-es">Agendar demo y empezar trial</span>
+            <span class="t-en">Schedule demo and start trial</span>
+          </a>
+        </div>
+
+        <div class="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 mt-6 text-sm text-white/60">
+          <span class="flex items-center gap-1.5">
+            <svg class="w-4 h-4 text-[#22C55E]" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+            <span class="t-es">Sin tarjeta de crédito</span><span class="t-en">No credit card</span>
+          </span>
+          <span class="flex items-center gap-1.5">
+            <svg class="w-4 h-4 text-[#22C55E]" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+            <span class="t-es">Sin compromiso</span><span class="t-en">No commitment</span>
+          </span>
+          <span class="flex items-center gap-1.5">
+            <svg class="w-4 h-4 text-[#22C55E]" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+            <span class="t-es">Demo de 20 min</span><span class="t-en">20 min demo</span>
+          </span>
+          <span class="flex items-center gap-1.5">
+            <svg class="w-4 h-4 text-[#22C55E]" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+            <span class="t-es">Acceso completo por 7 días</span><span class="t-en">Full access for 7 days</span>
+          </span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- FAQ BILLING -->
+<section class="py-12 pb-20 px-6 bg-white">
+  <div class="max-w-2xl mx-auto">
+    <h2 class="text-2xl font-black tracking-[-0.03em] text-[#1B2E5E] mb-8 text-center">
+      <span class="t-es">Preguntas sobre facturación</span>
+      <span class="t-en">Billing questions</span>
+    </h2>
+    <div class="space-y-3">
+
+      <details class="bg-[#F8F9FC] rounded-2xl border border-[#EEF1F8] overflow-hidden">
+        <summary class="flex items-center justify-between gap-4 p-5 font-semibold text-[#1B2E5E] hover:text-[#3B6FE8] transition-colors">
+          <span class="t-es">¿Cuántos usuarios incluye el plan?</span>
+          <span class="t-en">How many users does the plan include?</span>
+          <svg class="icon w-5 h-5 text-[#6B7694] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/></svg>
+        </summary>
+        <div class="px-5 pb-5 text-[#6B7694] text-sm leading-relaxed border-t border-[#EEF1F8] pt-4">
+          <span class="t-es">Todos. El precio es por firma, no por usuario. Un abogado, diez — mismo precio. Abogados titulares, asociados, asistentes y recepcionistas pueden usar Captio sin costo adicional.</span>
+          <span class="t-en">All of them. The price is per firm, not per user. One lawyer, ten — same price. Partners, associates, assistants, and receptionists can use Captio at no extra cost.</span>
+        </div>
+      </details>
+
+      <details class="bg-[#F8F9FC] rounded-2xl border border-[#EEF1F8] overflow-hidden">
+        <summary class="flex items-center justify-between gap-4 p-5 font-semibold text-[#1B2E5E] hover:text-[#3B6FE8] transition-colors">
+          <span class="t-es">¿Puedo cambiar de mensual a anual después?</span>
+          <span class="t-en">Can I switch from monthly to annual later?</span>
+          <svg class="icon w-5 h-5 text-[#6B7694] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/></svg>
+        </summary>
+        <div class="px-5 pb-5 text-[#6B7694] text-sm leading-relaxed border-t border-[#EEF1F8] pt-4">
+          <span class="t-es">Sí. Puedes hacer el cambio en cualquier momento y el descuento del 25% se aplica desde el siguiente ciclo de facturación.</span>
+          <span class="t-en">Yes. You can switch at any time and the 25% discount applies from the next billing cycle.</span>
+        </div>
+      </details>
+
+      <details class="bg-[#F8F9FC] rounded-2xl border border-[#EEF1F8] overflow-hidden">
+        <summary class="flex items-center justify-between gap-4 p-5 font-semibold text-[#1B2E5E] hover:text-[#3B6FE8] transition-colors">
+          <span class="t-es">¿Qué incluye el trial de 7 días?</span>
+          <span class="t-en">What does the 7-day trial include?</span>
+          <svg class="icon w-5 h-5 text-[#6B7694] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/></svg>
+        </summary>
+        <div class="px-5 pb-5 text-[#6B7694] text-sm leading-relaxed border-t border-[#EEF1F8] pt-4">
+          <span class="t-es">Acceso completo a todas las funciones — sin restricciones. Casos ilimitados, briefs con IA, todos los miembros del equipo. Al finalizar los 7 días puedes elegir el plan que prefieras o cancelar sin cargo.</span>
+          <span class="t-en">Full access to all features — no restrictions. Unlimited cases, AI briefs, all team members. After 7 days you can choose a plan or cancel with no charge.</span>
+        </div>
+      </details>
+
+      <details class="bg-[#F8F9FC] rounded-2xl border border-[#EEF1F8] overflow-hidden">
+        <summary class="flex items-center justify-between gap-4 p-5 font-semibold text-[#1B2E5E] hover:text-[#3B6FE8] transition-colors">
+          <span class="t-es">¿Qué pasa con mis datos si cancelo?</span>
+          <span class="t-en">What happens to my data if I cancel?</span>
+          <svg class="icon w-5 h-5 text-[#6B7694] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/></svg>
+        </summary>
+        <div class="px-5 pb-5 text-[#6B7694] text-sm leading-relaxed border-t border-[#EEF1F8] pt-4">
+          <span class="t-es">Tus datos permanecen disponibles durante 30 días después de la cancelación. Puedes exportar tus briefs en cualquier momento como archivos HTML. Después del período de retención los datos se eliminan de forma segura.</span>
+          <span class="t-en">Your data remains available for 30 days after cancellation. You can export your briefs at any time as HTML files. After the retention period, data is securely deleted.</span>
+        </div>
+      </details>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- FOOTER -->
+<footer class="bg-[#1B2E5E] text-white py-10 px-6">
+  <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+    <div class="flex items-center gap-3">
+      <a href="/" class="text-xl font-black tracking-[-0.05em]">capt<span class="text-[#3B6FE8]">·</span>o</a>
+      <span class="text-[#6B7694] text-sm">
+        <span class="t-es">intake · brief · equipo</span><span class="t-en">intake · brief · team</span>
+      </span>
+    </div>
+    <p class="text-[#6B7694] text-sm">
+      © 2025 Captio.
+      <span class="t-es">Todos los derechos reservados.</span>
+      <span class="t-en">All rights reserved.</span>
+    </p>
+  </div>
+</footer>
+
+
+<script>
+  function toggleLang() {
+    document.body.classList.toggle('en');
+    document.documentElement.lang = document.body.classList.contains('en') ? 'en' : 'es';
+  }
+
+  const btnMonthly = document.getElementById('btn-monthly');
+  const btnAnnual  = document.getElementById('btn-annual');
+
+  function setPricing(type) {
+    if (type === 'annual') {
+      document.body.classList.add('annual');
+      btnAnnual.classList.add('bg-white', 'text-[#1B2E5E]', 'shadow-sm');
+      btnAnnual.classList.remove('text-[#6B7694]');
+      btnMonthly.classList.remove('bg-white', 'text-[#1B2E5E]', 'shadow-sm');
+      btnMonthly.classList.add('text-[#6B7694]');
+    } else {
+      document.body.classList.remove('annual');
+      btnMonthly.classList.add('bg-white', 'text-[#1B2E5E]', 'shadow-sm');
+      btnMonthly.classList.remove('text-[#6B7694]');
+      btnAnnual.classList.remove('bg-white', 'text-[#1B2E5E]', 'shadow-sm');
+      btnAnnual.classList.add('text-[#6B7694]');
+    }
+  }
+</script>
+
+</body>
+</html>

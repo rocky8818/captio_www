@@ -1,0 +1,59 @@
+---
+interface Props {
+  activePage: 'home' | 'pricing' | 'video';
+}
+const { activePage } = Astro.props;
+
+const base    = 'text-sm font-medium px-3 py-2 rounded-lg transition-colors';
+const active  = `${base} text-[#1B2E5E] bg-[#EEF1F8]`;
+const passive = `${base} text-[#6B7694] hover:text-[#1A1F36] hover:bg-[#EEF1F8]`;
+
+const howItWorksHref = activePage === 'home' ? '#how-it-works' : '/#how-it-works';
+---
+
+<nav class="fixed top-0 left-0 right-0 z-50 nav-blur bg-[#F8F9FC]/90 border-b border-[#EEF1F8]">
+  <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+
+    <a href="/" class="select-none" aria-label="Captio">
+      <span class="text-[22px] font-black tracking-[-0.05em] text-[#1B2E5E]">
+        capt<span class="text-[#3B6FE8]">·</span>o
+      </span>
+    </a>
+
+    <div class="hidden md:flex items-center gap-1">
+      <a href={howItWorksHref} class={activePage === 'home' ? active : passive}>
+        <span class="t-es">Cómo funciona</span>
+        <span class="t-en">How it works</span>
+      </a>
+      <a href="/video/" class={activePage === 'video' ? active : passive}>
+        <span class="t-es">Demo</span>
+        <span class="t-en">Demo</span>
+      </a>
+      <a href="/pricing/" class={activePage === 'pricing' ? active : passive}>
+        <span class="t-es">Precios</span>
+        <span class="t-en">Pricing</span>
+      </a>
+    </div>
+
+    <div class="flex items-center gap-3">
+      <button
+        onclick="toggleLang()"
+        class="text-sm font-semibold text-[#6B7694] hover:text-[#1A1F36] px-3 py-1.5 rounded-lg hover:bg-[#EEF1F8] transition-colors"
+      >
+        <span class="t-es">EN</span>
+        <span class="t-en">ES</span>
+      </button>
+      <a
+        href="/pricing/#trial"
+        class="hidden sm:inline-flex items-center gap-1.5 bg-[#3B6FE8] hover:bg-[#2d5fd4] text-white text-sm font-semibold px-4 py-2 rounded-lg transition-all hover:shadow-md hover:shadow-[#3B6FE8]/30"
+      >
+        <span class="t-es">Solicitar acceso</span>
+        <span class="t-en">Request access</span>
+        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+        </svg>
+      </a>
+    </div>
+
+  </div>
+</nav>
