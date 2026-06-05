@@ -1,0 +1,302 @@
+{
+  "/home/atenas/Documents/Development/ClaudeCode/captio/captio_www/.astro/settings.json": {
+    "mtime": 1780616466.8042479,
+    "ast_hash": "68c5946cda14f836f3b4ee3ccc30eaa3",
+    "semantic_hash": "68c5946cda14f836f3b4ee3ccc30eaa3"
+  },
+  "/home/atenas/Documents/Development/ClaudeCode/captio/captio_www/.astro/types.d.ts": {
+    "mtime": 1780621335.9165206,
+    "ast_hash": "72c584e3bd8b5f007b2beb870517b437",
+    "semantic_hash": "72c584e3bd8b5f007b2beb870517b437"
+  },
+  "/home/atenas/Documents/Development/ClaudeCode/captio/captio_www/.claude/settings.local.json": {
+    "mtime": 1780626475.0048783,
+    "ast_hash": "3e00c185018c42db23d7b14a5330eaed",
+    "semantic_hash": "3e00c185018c42db23d7b14a5330eaed"
+  },
+  "/home/atenas/Documents/Development/ClaudeCode/captio/captio_www/astro.config.mjs": {
+    "mtime": 1780615958.0675354,
+    "ast_hash": "369cc4deb1548ef4f95d67dba0d777ec",
+    "semantic_hash": "369cc4deb1548ef4f95d67dba0d777ec"
+  },
+  "/home/atenas/Documents/Development/ClaudeCode/captio/captio_www/package.json": {
+    "mtime": 1780615957.017551,
+    "ast_hash": "22cdcb19af51e8b971c3f2cf5ce513b9",
+    "semantic_hash": "22cdcb19af51e8b971c3f2cf5ce513b9"
+  },
+  "/home/atenas/Documents/Development/ClaudeCode/captio/captio_www/src/components/Footer.astro": {
+    "mtime": 1780615992.3480303,
+    "ast_hash": "467dc4c3a0c9a6e7186d41f9018b35e4",
+    "semantic_hash": "467dc4c3a0c9a6e7186d41f9018b35e4"
+  },
+  "/home/atenas/Documents/Development/ClaudeCode/captio/captio_www/src/components/Nav.astro": {
+    "mtime": 1780621478.7222414,
+    "ast_hash": "c743a729ac8b578922f2ffbf87174c31",
+    "semantic_hash": "c743a729ac8b578922f2ffbf87174c31"
+  },
+  "/home/atenas/Documents/Development/ClaudeCode/captio/captio_www/src/env.d.ts": {
+    "mtime": 1780616407.9500732,
+    "ast_hash": "1dd7153244f921edac1f1d04155b52b1",
+    "semantic_hash": "1dd7153244f921edac1f1d04155b52b1"
+  },
+  "/home/atenas/Documents/Development/ClaudeCode/captio/captio_www/src/layouts/Layout.astro": {
+    "mtime": 1780615977.294252,
+    "ast_hash": "07acd0b928d17536e4bcfeec52abb79e",
+    "semantic_hash": "07acd0b928d17536e4bcfeec52abb79e"
+  },
+  "/home/atenas/Documents/Development/ClaudeCode/captio/captio_www/src/pages/index.astro": {
+    "mtime": 1780616145.808799,
+    "ast_hash": "2a0221b5fa04e48b592685fa10c3cdbb",
+    "semantic_hash": "2a0221b5fa04e48b592685fa10c3cdbb"
+  },
+  "/home/atenas/Documents/Development/ClaudeCode/captio/captio_www/src/pages/pricing/index.astro": {
+    "mtime": 1780616215.109805,
+    "ast_hash": "656285a3b3c074d589b4869b0c0a8cb3",
+    "semantic_hash": "656285a3b3c074d589b4869b0c0a8cb3"
+  },
+  "/home/atenas/Documents/Development/ClaudeCode/captio/captio_www/src/pages/video/index.astro": {
+    "mtime": 1780616321.387294,
+    "ast_hash": "12b9f1642dfb02e9df338e2b9aac18dd",
+    "semantic_hash": "12b9f1642dfb02e9df338e2b9aac18dd"
+  },
+  "/home/atenas/Documents/Development/ClaudeCode/captio/captio_www/tailwind.config.mjs": {
+    "mtime": 1780615959.10452,
+    "ast_hash": "1c6657eba0e2f1411fed675bd0c5a389",
+    "semantic_hash": "1c6657eba0e2f1411fed675bd0c5a389"
+  },
+  "/home/atenas/Documents/Development/ClaudeCode/captio/captio_www/tsconfig.json": {
+    "mtime": 1780615960.1375048,
+    "ast_hash": "c4f796a3e134f5ae2c1eff55001c83aa",
+    "semantic_hash": "c4f796a3e134f5ae2c1eff55001c83aa"
+  },
+  "/home/atenas/Documents/Development/ClaudeCode/captio/captio_www/CAPTIO_BRAND.md": {
+    "mtime": 1780608482.2944396,
+    "ast_hash": "c18f5af4224224682b91dc47c0ff747e",
+    "semantic_hash": "c18f5af4224224682b91dc47c0ff747e"
+  },
+  "/home/atenas/Documents/Development/ClaudeCode/captio/captio_www/index.html": {
+    "mtime": 1780621377.8970573,
+    "ast_hash": "da7f90a390797ac2dc98d46569db9556",
+    "semantic_hash": "da7f90a390797ac2dc98d46569db9556"
+  },
+  "/home/atenas/Documents/Development/ClaudeCode/captio/captio_www/pricing/index.html": {
+    "mtime": 1780615298.5587854,
+    "ast_hash": "d31ed946dcaa094a124864c39a61c07c",
+    "semantic_hash": "d31ed946dcaa094a124864c39a61c07c"
+  },
+  "/home/atenas/Documents/Development/ClaudeCode/captio/captio_www/video/index.html": {
+    "mtime": 1780615469.6435208,
+    "ast_hash": "64b10b37099b6e8ea80cf3caba703e30",
+    "semantic_hash": "64b10b37099b6e8ea80cf3caba703e30"
+  },
+  "/home/atenas/Documents/Development/ClaudeCode/captio/captio_www/captio-en/case/Screenshot from 2026-06-04 13-22-28.png": {
+    "mtime": 1780613657.7481284,
+    "ast_hash": "235bf9a0e95ab456405a2cdcac5c8b5f",
+    "semantic_hash": "235bf9a0e95ab456405a2cdcac5c8b5f"
+  },
+  "/home/atenas/Documents/Development/ClaudeCode/captio/captio_www/captio-en/case/Screenshot from 2026-06-04 13-22-43.png": {
+    "mtime": 1780613657.7484188,
+    "ast_hash": "ba1394c4935e76d2897573541422c7a1",
+    "semantic_hash": "ba1394c4935e76d2897573541422c7a1"
+  },
+  "/home/atenas/Documents/Development/ClaudeCode/captio/captio_www/captio-en/case/Screenshot from 2026-06-04 13-23-01.png": {
+    "mtime": 1780613657.7483335,
+    "ast_hash": "682aad37a39bcdabf8f51b91ada41b9c",
+    "semantic_hash": "682aad37a39bcdabf8f51b91ada41b9c"
+  },
+  "/home/atenas/Documents/Development/ClaudeCode/captio/captio_www/captio-en/case/Screenshot from 2026-06-04 13-23-12.png": {
+    "mtime": 1780613657.74826,
+    "ast_hash": "ac22794dcf9827425fa42f7de1a871ee",
+    "semantic_hash": "ac22794dcf9827425fa42f7de1a871ee"
+  },
+  "/home/atenas/Documents/Development/ClaudeCode/captio/captio_www/captio-en/case/Screenshot from 2026-06-04 13-23-41.png": {
+    "mtime": 1780613657.7482123,
+    "ast_hash": "8b949431df584582a173b4138113d724",
+    "semantic_hash": "8b949431df584582a173b4138113d724"
+  },
+  "/home/atenas/Documents/Development/ClaudeCode/captio/captio_www/captio-en/case/Screenshot from 2026-06-04 13-23-50.png": {
+    "mtime": 1780613657.7478938,
+    "ast_hash": "9d0769014acf90b8ce2630a5c05cd016",
+    "semantic_hash": "9d0769014acf90b8ce2630a5c05cd016"
+  },
+  "/home/atenas/Documents/Development/ClaudeCode/captio/captio_www/captio-en/case/Screenshot from 2026-06-04 14-45-58.png": {
+    "mtime": 1780613657.7485929,
+    "ast_hash": "812fe62e45632cc45d95672854791274",
+    "semantic_hash": "812fe62e45632cc45d95672854791274"
+  },
+  "/home/atenas/Documents/Development/ClaudeCode/captio/captio_www/captio-en/case/Screenshot from 2026-06-04 14-46-55.png": {
+    "mtime": 1780613657.7486935,
+    "ast_hash": "31d5a5bc70b308622316332944e5d1b7",
+    "semantic_hash": "31d5a5bc70b308622316332944e5d1b7"
+  },
+  "/home/atenas/Documents/Development/ClaudeCode/captio/captio_www/captio-en/case/Screenshot from 2026-06-04 14-47-43.png": {
+    "mtime": 1780613657.7480001,
+    "ast_hash": "a2c2f3eb13e573f35695b49468190104",
+    "semantic_hash": "a2c2f3eb13e573f35695b49468190104"
+  },
+  "/home/atenas/Documents/Development/ClaudeCode/captio/captio_www/captio-en/case/Screenshot from 2026-06-04 14-48-05.png": {
+    "mtime": 1780613657.7485218,
+    "ast_hash": "4c734ff1ec15a004c7703dc5061aebac",
+    "semantic_hash": "4c734ff1ec15a004c7703dc5061aebac"
+  },
+  "/home/atenas/Documents/Development/ClaudeCode/captio/captio_www/captio-en/case/Screenshot from 2026-06-04 14-48-32.png": {
+    "mtime": 1780613657.74882,
+    "ast_hash": "f0cbe1fcb1b18b892fff232458bec235",
+    "semantic_hash": "f0cbe1fcb1b18b892fff232458bec235"
+  },
+  "/home/atenas/Documents/Development/ClaudeCode/captio/captio_www/captio-en/home/Screenshot from 2026-06-04 12-46-56.png": {
+    "mtime": 1780613657.7470849,
+    "ast_hash": "771920657d854f246c2298598daa7cce",
+    "semantic_hash": "771920657d854f246c2298598daa7cce"
+  },
+  "/home/atenas/Documents/Development/ClaudeCode/captio/captio_www/captio-en/home/Screenshot from 2026-06-04 12-52-26.png": {
+    "mtime": 1780613657.7472847,
+    "ast_hash": "0d6abbdf18033586a65a0533034bf6e2",
+    "semantic_hash": "0d6abbdf18033586a65a0533034bf6e2"
+  },
+  "/home/atenas/Documents/Development/ClaudeCode/captio/captio_www/captio-en/home/Screenshot from 2026-06-04 13-02-21.png": {
+    "mtime": 1780613657.74719,
+    "ast_hash": "df22481c3db3364d6aaecd25c292ffdf",
+    "semantic_hash": "df22481c3db3364d6aaecd25c292ffdf"
+  },
+  "/home/atenas/Documents/Development/ClaudeCode/captio/captio_www/captio-en/home/Screenshot from 2026-06-04 13-02-35.png": {
+    "mtime": 1780613657.7474816,
+    "ast_hash": "d83a2259407fe0fe46f8360f03c25e8e",
+    "semantic_hash": "d83a2259407fe0fe46f8360f03c25e8e"
+  },
+  "/home/atenas/Documents/Development/ClaudeCode/captio/captio_www/captio-en/home/Screenshot from 2026-06-04 13-02-46.png": {
+    "mtime": 1780613657.7473896,
+    "ast_hash": "ce204a2a9183786d51f3ff8f262c8b77",
+    "semantic_hash": "ce204a2a9183786d51f3ff8f262c8b77"
+  },
+  "/home/atenas/Documents/Development/ClaudeCode/captio/captio_www/captio-en/home/Screenshot from 2026-06-04 13-02-58.png": {
+    "mtime": 1780613657.747555,
+    "ast_hash": "4a3325c7076ac90d8c5fe7d2e4b581e2",
+    "semantic_hash": "4a3325c7076ac90d8c5fe7d2e4b581e2"
+  },
+  "/home/atenas/Documents/Development/ClaudeCode/captio/captio_www/captio-en/home/Screenshot from 2026-06-04 13-03-09.png": {
+    "mtime": 1780613657.747637,
+    "ast_hash": "3f1899e8caeaac50732b4151121dc7d4",
+    "semantic_hash": "3f1899e8caeaac50732b4151121dc7d4"
+  },
+  "/home/atenas/Documents/Development/ClaudeCode/captio/captio_www/captio-en/login/Screenshot from 2026-06-04 12-50-29.png": {
+    "mtime": 1780613657.7477708,
+    "ast_hash": "9e9a071552d68c6be30fcf374728c146",
+    "semantic_hash": "9e9a071552d68c6be30fcf374728c146"
+  },
+  "/home/atenas/Documents/Development/ClaudeCode/captio/captio_www/captio-en/notes/Screenshot from 2026-06-04 14-51-17.png": {
+    "mtime": 1780613657.748936,
+    "ast_hash": "a36458462251b61936382ce106102d1f",
+    "semantic_hash": "a36458462251b61936382ce106102d1f"
+  },
+  "/home/atenas/Documents/Development/ClaudeCode/captio/captio_www/captio-en/notes/Screenshot from 2026-06-04 14-51-31.png": {
+    "mtime": 1780613657.749025,
+    "ast_hash": "f7fd4bfcf9c04d54bb2c60c59fcb2729",
+    "semantic_hash": "f7fd4bfcf9c04d54bb2c60c59fcb2729"
+  },
+  "/home/atenas/Documents/Development/ClaudeCode/captio/captio_www/captio-en/notes/Screenshot from 2026-06-04 14-52-42.png": {
+    "mtime": 1780613657.7491608,
+    "ast_hash": "925dac742555e6e196f098ec4eefd913",
+    "semantic_hash": "925dac742555e6e196f098ec4eefd913"
+  },
+  "/home/atenas/Documents/Development/ClaudeCode/captio/captio_www/captio-en/notes/Screenshot from 2026-06-04 14-53-02.png": {
+    "mtime": 1780613657.749085,
+    "ast_hash": "790e841869dfe6a053bba91619827d07",
+    "semantic_hash": "790e841869dfe6a053bba91619827d07"
+  },
+  "/home/atenas/Documents/Development/ClaudeCode/captio/captio_www/captio-es/caso/Screenshot from 2026-06-04 13-08-43.png": {
+    "mtime": 1780613667.4114914,
+    "ast_hash": "efe697a1233ff3c557b58f5710a60f86",
+    "semantic_hash": "efe697a1233ff3c557b58f5710a60f86"
+  },
+  "/home/atenas/Documents/Development/ClaudeCode/captio/captio_www/captio-es/caso/Screenshot from 2026-06-04 13-09-16.png": {
+    "mtime": 1780613667.4114108,
+    "ast_hash": "60c6f628ad6b6accf7536824c1c44708",
+    "semantic_hash": "60c6f628ad6b6accf7536824c1c44708"
+  },
+  "/home/atenas/Documents/Development/ClaudeCode/captio/captio_www/captio-es/caso/Screenshot from 2026-06-04 13-09-37.png": {
+    "mtime": 1780613667.4116385,
+    "ast_hash": "517e58aee29e0b11bdc8b2c423fdf5d7",
+    "semantic_hash": "517e58aee29e0b11bdc8b2c423fdf5d7"
+  },
+  "/home/atenas/Documents/Development/ClaudeCode/captio/captio_www/captio-es/caso/Screenshot from 2026-06-04 13-10-03.png": {
+    "mtime": 1780613667.4118545,
+    "ast_hash": "140a94a7830119b096957e1ec1577a80",
+    "semantic_hash": "140a94a7830119b096957e1ec1577a80"
+  },
+  "/home/atenas/Documents/Development/ClaudeCode/captio/captio_www/captio-es/caso/Screenshot from 2026-06-04 13-10-56.png": {
+    "mtime": 1780613667.4112387,
+    "ast_hash": "e6de1555a965d184efd033f2a9c4ba2b",
+    "semantic_hash": "e6de1555a965d184efd033f2a9c4ba2b"
+  },
+  "/home/atenas/Documents/Development/ClaudeCode/captio/captio_www/captio-es/caso/Screenshot from 2026-06-04 13-12-39.png": {
+    "mtime": 1780613667.4119318,
+    "ast_hash": "4e4ae5fd369c069fedcdfda2d2e07fe8",
+    "semantic_hash": "4e4ae5fd369c069fedcdfda2d2e07fe8"
+  },
+  "/home/atenas/Documents/Development/ClaudeCode/captio/captio_www/captio-es/caso/Screenshot from 2026-06-04 13-12-55.png": {
+    "mtime": 1780613667.4121375,
+    "ast_hash": "f60bd8316395ad85d163aadd39518a48",
+    "semantic_hash": "f60bd8316395ad85d163aadd39518a48"
+  },
+  "/home/atenas/Documents/Development/ClaudeCode/captio/captio_www/captio-es/caso/Screenshot from 2026-06-04 13-13-41.png": {
+    "mtime": 1780613667.4120698,
+    "ast_hash": "51a5de49207c5a7ad708e69c2aefcd2f",
+    "semantic_hash": "51a5de49207c5a7ad708e69c2aefcd2f"
+  },
+  "/home/atenas/Documents/Development/ClaudeCode/captio/captio_www/captio-es/caso/Screenshot from 2026-06-04 13-14-10.png": {
+    "mtime": 1780613667.4117286,
+    "ast_hash": "4ddff996ad3d26e7527f7b173e80adb7",
+    "semantic_hash": "4ddff996ad3d26e7527f7b173e80adb7"
+  },
+  "/home/atenas/Documents/Development/ClaudeCode/captio/captio_www/captio-es/home/Screenshot from 2026-06-04 13-04-07.png": {
+    "mtime": 1780613667.4103935,
+    "ast_hash": "cb751c88bb0d891e3880dde040285e01",
+    "semantic_hash": "cb751c88bb0d891e3880dde040285e01"
+  },
+  "/home/atenas/Documents/Development/ClaudeCode/captio/captio_www/captio-es/home/Screenshot from 2026-06-04 13-04-19.png": {
+    "mtime": 1780613667.4105158,
+    "ast_hash": "c2359d06902ad6ce4b35157da9306a86",
+    "semantic_hash": "c2359d06902ad6ce4b35157da9306a86"
+  },
+  "/home/atenas/Documents/Development/ClaudeCode/captio/captio_www/captio-es/home/Screenshot from 2026-06-04 13-04-33.png": {
+    "mtime": 1780613667.4106312,
+    "ast_hash": "5720fdbfcc647bee981a50014c59d2d7",
+    "semantic_hash": "5720fdbfcc647bee981a50014c59d2d7"
+  },
+  "/home/atenas/Documents/Development/ClaudeCode/captio/captio_www/captio-es/home/Screenshot from 2026-06-04 13-06-44.png": {
+    "mtime": 1780613667.4108303,
+    "ast_hash": "471a88e3a261e69e41985dccca120c96",
+    "semantic_hash": "471a88e3a261e69e41985dccca120c96"
+  },
+  "/home/atenas/Documents/Development/ClaudeCode/captio/captio_www/captio-es/home/Screenshot from 2026-06-04 13-07-39.png": {
+    "mtime": 1780613667.4109251,
+    "ast_hash": "f46612dabc08e673f2030ce7d0cd8cc7",
+    "semantic_hash": "f46612dabc08e673f2030ce7d0cd8cc7"
+  },
+  "/home/atenas/Documents/Development/ClaudeCode/captio/captio_www/captio-es/home/Screenshot from 2026-06-04 13-07-50.png": {
+    "mtime": 1780613667.4107232,
+    "ast_hash": "068d3462074091c1a5d7df5bf25ab965",
+    "semantic_hash": "068d3462074091c1a5d7df5bf25ab965"
+  },
+  "/home/atenas/Documents/Development/ClaudeCode/captio/captio_www/captio-es/login/Screenshot from 2026-06-04 12-50-04.png": {
+    "mtime": 1780613667.4110873,
+    "ast_hash": "6ffc1e13e626c5756a1279306bba5311",
+    "semantic_hash": "6ffc1e13e626c5756a1279306bba5311"
+  },
+  "/home/atenas/Documents/Development/ClaudeCode/captio/captio_www/captio-es/notas/Screenshot from 2026-06-04 13-16-49.png": {
+    "mtime": 1780613667.4123483,
+    "ast_hash": "5f21db6d34525f73087790545dae264c",
+    "semantic_hash": "5f21db6d34525f73087790545dae264c"
+  },
+  "/home/atenas/Documents/Development/ClaudeCode/captio/captio_www/captio-es/notas/Screenshot from 2026-06-04 13-17-07.png": {
+    "mtime": 1780613667.412554,
+    "ast_hash": "25e2d81f92e992b2935c7e4dff228d14",
+    "semantic_hash": "25e2d81f92e992b2935c7e4dff228d14"
+  },
+  "/home/atenas/Documents/Development/ClaudeCode/captio/captio_www/captio-es/notas/Screenshot from 2026-06-04 13-18-41.png": {
+    "mtime": 1780613667.4124634,
+    "ast_hash": "b57bc2a4888ebc24502f47b243982375",
+    "semantic_hash": "b57bc2a4888ebc24502f47b243982375"
+  }
+}
