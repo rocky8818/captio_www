@@ -11,3 +11,4 @@ graphify-out/manifest.json    # se basa en tiempos de archivo, se rompe tras un 
 graphify-out/cost.json        # solo local
 captio-en
 captio-es
+.vercel
