@@ -10,7 +10,7 @@ interface Props {
 
 const {
   title,
-  description = 'Captio convierte el primer contacto con un cliente en un proceso estructurado. El cliente llena el formulario. La IA genera el brief. El abogado llega listo.',
+  description = 'Captio convierte el primer contacto con un cliente en un proceso estructurado. El cliente llena el formulario. La IA genera el portafolio. El abogado llega listo.',
   activePage = 'home',
 } = Astro.props;
 ---
@@ -20,6 +20,7 @@ const {
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <title>{title}</title>
   <meta name="description" content={description} />
   <link rel="preconnect" href="https://fonts.googleapis.com" />

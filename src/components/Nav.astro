@@ -12,30 +12,30 @@ const howItWorksHref = activePage === 'home' ? '#how-it-works' : '/#how-it-works
 ---
 
 <nav class="fixed top-0 left-0 right-0 z-50 nav-blur bg-[#F8F9FC]/90 border-b border-[#EEF1F8]">
-  <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+  <div class="max-w-6xl mx-auto px-6 h-16 grid grid-cols-3 items-center">
 
     <a href="/" class="select-none" aria-label="Captio">
-      <span class="text-[22px] font-black tracking-[-0.05em] text-[#1B2E5E]">
-        capt<span class="text-[#3B6FE8]">·</span>o
+      <span class="text-[32px] font-black tracking-[-0.05em] text-[#1B2E5E]">
+        capti<span class="text-[#3B6FE8]">·</span>o
       </span>
     </a>
 
-    <div class="hidden md:flex items-center gap-1">
+    <div class="hidden md:flex items-center justify-center gap-1">
       <a href={howItWorksHref} class={activePage === 'home' ? active : passive}>
-        <span class="t-es">Cómo funciona</span>
-        <span class="t-en">How it works</span>
-      </a>
-      <a href="/video/" class={activePage === 'video' ? active : passive}>
-        <span class="t-es">Demo</span>
-        <span class="t-en">Demo</span>
+        <span class="t-es">Inicio</span>
+        <span class="t-en">Home</span>
       </a>
       <a href="/pricing/" class={activePage === 'pricing' ? active : passive}>
         <span class="t-es">Precios</span>
         <span class="t-en">Pricing</span>
       </a>
+      <a href="/video/" class={activePage === 'video' ? active : passive}>
+        <span class="t-es">Video</span>
+        <span class="t-en">Video</span>
+      </a>
     </div>
 
-    <div class="flex items-center gap-3">
+    <div class="flex items-center gap-3 justify-end">
       <button
         onclick="toggleLang()"
         class="text-sm font-semibold text-[#6B7694] hover:text-[#1A1F36] px-3 py-1.5 rounded-lg hover:bg-[#EEF1F8] transition-colors"
