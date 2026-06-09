@@ -4,7 +4,7 @@ import Layout from '../../layouts/Layout.astro';
 
 <Layout
   title="Captio — Precios"
-  description="Dos planes para despachos legales. Plan Pequeño desde $700/mes (hasta 5 abogados) y Plan Firma desde $1,100/mes (hasta 15 usuarios)."
+  description="Dos planes para despachos legales. Plan Equpo desde $700/mes (hasta 5 abogados) y Plan Firma desde $1,100/mes (hasta 15 usuarios)."
   activePage="pricing"
 >
 
@@ -59,12 +59,12 @@ import Layout from '../../layouts/Layout.astro';
   <div class="max-w-4xl mx-auto">
     <div id="plans-grid" data-billing="monthly" class="grid md:grid-cols-2 gap-6">
 
-      <!-- Plan Pequeño -->
+      <!-- Plan Equpo -->
       <div class="bg-white rounded-3xl border border-[#EEF1F8] p-8 shadow-sm hover:shadow-lg hover:shadow-[#3B6FE8]/5 transition-shadow relative overflow-hidden">
         <div class="absolute top-0 right-0 w-24 h-24 bg-[#F8F9FC] rounded-bl-full pointer-events-none"></div>
         <div class="mb-7">
           <p class="text-xs font-bold text-[#6B7694] uppercase tracking-widest mb-1">
-            <span class="t-es">Plan Pequeño</span><span class="t-en">Small Firm</span>
+            <span class="t-es">Plan Equpo</span><span class="t-en">Small Firm</span>
           </p>
           <p class="text-sm text-[#A0A8BF] mb-4">
             <span class="t-es">Hasta 5 abogados</span>
@@ -114,7 +114,6 @@ import Layout from '../../layouts/Layout.astro';
             ['Portafolio con IA — 10 secciones',  'AI brief — 10 sections'],
             ['Línea de tiempo y notas de caso',   'Case timeline and notes'],
             ['Español e inglés',                  'Spanish and English'],
-            ['Sin contrato anual',                'No annual contract'],
           ].map(([es, en]) => (
             <li class="flex items-start gap-2.5 text-sm text-[#1A1F36]">
               <svg class="w-4 h-4 text-[#22C55E] mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20">
@@ -264,16 +263,16 @@ import Layout from '../../layouts/Layout.astro';
           <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20">
             <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/>
           </svg>
-          <span class="t-es">Trial gratuito · 7 días</span>
-          <span class="t-en">Free trial · 7 days</span>
+          <span class="t-es">Trial gratuito · 3 días</span>
+          <span class="t-en">Free trial · 3 days</span>
         </div>
 
         <h2 class="text-3xl sm:text-4xl font-black tracking-[-0.03em] mb-4">
-          <span class="t-es">¿No estás seguro aún?<br>Pruébalo durante 7 días.</span>
-          <span class="t-en">Not sure yet?<br>Try it for 7 days.</span>
+          <span class="t-es">¿No estás seguro aún?<br>Pruébalo durante 3 días.</span>
+          <span class="t-en">Not sure yet?<br>Try it for 3 days.</span>
         </h2>
         <p class="text-white/70 text-lg mb-8 max-w-xl mx-auto">
-          <span class="t-es">Agenda una demo de 20 minutos y te activamos un trial completo de 7 días para tu firma. Sin tarjeta de crédito. Sin compromiso.</span>
+          <span class="t-es">Agenda una demo de 20 minutos y te activamos un trial completo de 3 días para tu firma. Sin tarjeta de crédito. Sin compromiso.</span>
           <span class="t-en">Schedule a 20-minute demo and we'll activate a full 7-day trial for your firm. No credit card. No commitment.</span>
         </p>
 
@@ -294,7 +293,7 @@ import Layout from '../../layouts/Layout.astro';
             ['Sin tarjeta de crédito', 'No credit card'],
             ['Sin compromiso',         'No commitment'],
             ['Demo de 20 min',         '20 min demo'],
-            ['Acceso completo 7 días', 'Full access 7 days'],
+            ['Acceso completo 3 días', 'Full access 3 days'],
           ].map(([es, en]) => (
             <span class="flex items-center gap-1.5">
               <svg class="w-4 h-4 text-[#22C55E]" fill="currentColor" viewBox="0 0 20 20">
@@ -325,7 +324,7 @@ import Layout from '../../layouts/Layout.astro';
         {
           qEs: '¿Cuántos usuarios incluye cada plan?',
           qEn: 'How many users does each plan include?',
-          aEs: 'Depende del plan. El Plan Pequeño incluye hasta 5 usuarios; el Plan Firma, hasta 15. El precio es por firma, no por usuario — abogados titulares, asociados, asistentes y recepcionistas pueden usar Captio sin costo adicional dentro del límite de tu plan.',
+          aEs: 'Depende del plan. El Plan Equpo incluye hasta 5 usuarios; el Plan Firma, hasta 15. El precio es por firma, no por usuario — abogados titulares, asociados, asistentes y recepcionistas pueden usar Captio sin costo adicional dentro del límite de tu plan.',
           aEn: 'It depends on the plan. The Small Firm plan includes up to 5 users; the Firm plan, up to 15. The price is per firm, not per user — partners, associates, assistants, and receptionists can all use Captio at no extra cost within your plan\'s limit.',
         },
         {
@@ -335,10 +334,10 @@ import Layout from '../../layouts/Layout.astro';
           aEn: 'Yes. You can switch at any time and the 25% discount applies from the next billing cycle.',
         },
         {
-          qEs: '¿Qué incluye el trial de 7 días?',
+          qEs: '¿Qué incluye el trial de 3 días?',
           qEn: 'What does the 7-day trial include?',
-          aEs: 'Acceso completo a todas las funciones — sin restricciones. Casos ilimitados, portafolio con IA, todos los miembros del equipo. Al finalizar los 7 días puedes elegir el plan o cancelar sin cargo.',
-          aEn: 'Full access to all features — no restrictions. Unlimited cases, AI briefs, all team members. After 7 days you can choose a plan or cancel with no charge.',
+          aEs: 'Acceso completo a todas las funciones — sin restricciones. Casos ilimitados, portafolio con IA, todos los miembros del equipo. Al finalizar los 3 días puedes elegir el plan o cancelar sin cargo.',
+          aEn: 'Full access to all features — no restrictions. Unlimited cases, AI briefs, all team members. After 3 days you can choose a plan or cancel with no charge.',
         },
         {
           qEs: '¿Qué pasa con mis datos si cancelo?',

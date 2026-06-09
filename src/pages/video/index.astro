@@ -116,8 +116,8 @@ import Layout from '../../layouts/Layout.astro';
         <span class="t-en">Every feature, explained</span>
       </h2>
       <p class="text-[#6B7694] text-lg">
-        <span class="t-es">Ocho herramientas diseñadas para el flujo de trabajo del abogado.</span>
-        <span class="t-en">Eight tools designed for the lawyer's workflow.</span>
+        <span class="t-es">Nueve herramientas diseñadas para el flujo de trabajo del abogado.</span>
+        <span class="t-en">Nine tools designed for the lawyer's workflow.</span>
       </p>
     </div>
 
@@ -325,7 +325,40 @@ import Layout from '../../layouts/Layout.astro';
         </div>
       </div>
 
-      <!-- 6–8: Timeline, Notes, Reference files (compact row) -->
+      <!-- 6. Notification board -->
+      <div class="bg-white rounded-2xl border border-[#EEF1F8] shadow-sm hover:shadow-md hover:shadow-[#3B6FE8]/5 transition-shadow p-7 grid md:grid-cols-[auto_1fr] gap-6 items-start">
+        <div class="w-12 h-12 rounded-2xl bg-[#3B6FE8]/10 flex items-center justify-center shrink-0">
+          <svg class="w-6 h-6 text-[#3B6FE8]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z"/>
+          </svg>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold text-[#1B2E5E] mb-2">
+            <span class="t-es">Tablón de notificaciones</span>
+            <span class="t-en">Notification board</span>
+          </h3>
+          <p class="text-[#6B7694] text-sm leading-relaxed mb-4">
+            <span class="t-es">Canal de comunicación interno del despacho. Cualquier miembro del equipo puede publicar un aviso en el tablón desde un caso, portafolio, nota o línea de tiempo — y todos los usuarios del despacho lo ven en tiempo real.</span>
+            <span class="t-en">The firm's internal communication channel. Any team member can post a notice to the board from a case, brief, note, or timeline — and all firm users see it in real time.</span>
+          </p>
+          <div class="flex flex-wrap gap-2">
+            {[
+              ['Desde el encabezado del caso', 'From the case header'],
+              ['Desde los botones de estado', 'From status buttons'],
+              ['Desde la barra del portafolio', 'From the brief toolbar'],
+              ['Desde la línea de tiempo', 'From the timeline'],
+              ['Desde el visor de notas', 'From the notes viewer'],
+            ].map(([es, en]) => (
+              <span class="inline-flex items-center gap-1.5 text-xs font-medium text-[#6B7694] bg-[#F8F9FC] border border-[#EEF1F8] rounded-lg px-3 py-1.5">
+                <svg class="w-3.5 h-3.5 text-[#22C55E]" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <span class="t-es">{es}</span><span class="t-en">{en}</span>
+              </span>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <!-- 7–9: Timeline, Notes, Reference files (compact row) -->
       <div class="grid md:grid-cols-3 gap-5">
         {[
           {
