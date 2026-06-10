@@ -61,7 +61,7 @@ jobs:
         run: |
           ssh -i ~/.ssh/id_ed25519 \
             -o StrictHostKeyChecking=no \
-            deploy@${{ secrets.DROPLET_IP }} \
+            root@${{ secrets.DROPLET_IP }} \
             "echo 'SSH OK'"
 
       # 7. Deploy al Droplet
@@ -70,4 +70,4 @@ jobs:
           rsync -avz --delete \
             -e "ssh -i ~/.ssh/id_ed25519 -o StrictHostKeyChecking=no" \
             ./dist/ \
-            deploy@${{ secrets.DROPLET_IP }}:/var/www/captio.tech/html/
+            root@${{ secrets.DROPLET_IP }}:/var/www/captio.tech/html/
