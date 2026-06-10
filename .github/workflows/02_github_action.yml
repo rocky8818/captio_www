@@ -46,19 +46,21 @@ jobs:
           echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_ed25519
           chmod 600 ~/.ssh/id_ed25519
           ssh-keyscan -H ${{ secrets.DROPLET_IP }} >> ~/.ssh/known_hosts
+          # Verificar que la llave tiene el formato correcto
+          ssh-keygen -l -f ~/.ssh/id_ed25519
 
-      # 6. Subir /dist al droplet con rsync
+      # 6. Probar conexión SSH antes de rsync
+      - name: Probar conexión SSH
+        run: |
+          ssh -i ~/.ssh/id_ed25519 \
+            -o StrictHostKeyChecking=no \
+            deploy@${{ secrets.DROPLET_IP }} \
+            "echo 'SSH OK'"
+
+      # 7. Deploy al Droplet
       - name: Deploy al Droplet
         run: |
           rsync -avz --delete \
             -e "ssh -i ~/.ssh/id_ed25519 -o StrictHostKeyChecking=no" \
             ./dist/ \
             deploy@${{ secrets.DROPLET_IP }}:/var/www/captio.tech/html/
-
-      # 7. Recargar Nginx (opcional, normalmente no hace falta)
-      - name: Recargar Nginx
-        run: |
-          ssh -i ~/.ssh/id_ed25519 \
-            -o StrictHostKeyChecking=no \
-            deploy@${{ secrets.DROPLET_IP }} \
-            "sudo systemctl reload nginx || true"
