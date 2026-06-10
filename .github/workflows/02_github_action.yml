@@ -39,6 +39,13 @@ jobs:
       - name: Build Astro
         run: npm run build
 
+      - name: Verificar llave
+        run: |
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > /tmp/test_key
+          chmod 600 /tmp/test_key
+          ssh-keygen -l -f /tmp/test_key
+          rm /tmp/test_key
+
       # 5. Configurar SSH
       - name: Configurar SSH
         run: |
