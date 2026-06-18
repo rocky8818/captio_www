@@ -4,7 +4,7 @@ import Layout from '../../layouts/Layout.astro';
 
 <Layout
   title="Captio — Precios"
-  description="Dos planes para despachos legales. Plan Equpo desde $700/mes (hasta 5 abogados) y Plan Firma desde $1,100/mes (hasta 15 usuarios)."
+  description="Tres planes para despachos legales, en dólares. Solo desde $79, Firm desde $179, Agency desde $279 al mes."
   activePage="pricing"
 >
 
@@ -26,8 +26,8 @@ import Layout from '../../layouts/Layout.astro';
       <span class="t-en">Simple pricing.<br>No surprises.</span>
     </h1>
     <p class="text-lg text-[#6B7694] mb-10 fade-up d2">
-      <span class="t-es">Dos planes. Elige según el tamaño de tu despacho.</span>
-      <span class="t-en">Two plans. Choose based on your firm's size.</span>
+      <span class="t-es">Tres planes. Elige según el tamaño de tu despacho.</span>
+      <span class="t-en">Three plans. Choose based on your firm's size.</span>
     </p>
 
     <!-- Billing toggle -->
@@ -57,24 +57,21 @@ import Layout from '../../layouts/Layout.astro';
 ═══════════════════════════════════════════ -->
 <section class="pb-16 px-6">
   <div class="max-w-4xl mx-auto">
-    <div id="plans-grid" data-billing="monthly" class="grid md:grid-cols-2 gap-6">
+    <div id="plans-grid" data-billing="monthly" class="grid md:grid-cols-3 gap-6">
 
-      <!-- Plan Equpo -->
+      <!-- Solo -->
       <div class="bg-white rounded-3xl border border-[#EEF1F8] p-8 shadow-sm hover:shadow-lg hover:shadow-[#3B6FE8]/5 transition-shadow relative overflow-hidden">
         <div class="absolute top-0 right-0 w-24 h-24 bg-[#F8F9FC] rounded-bl-full pointer-events-none"></div>
         <div class="mb-7">
-          <p class="text-xs font-bold text-[#6B7694] uppercase tracking-widest mb-1">
-            <span class="t-es">Plan Equpo</span><span class="t-en">Small Firm</span>
-          </p>
+          <p class="text-xs font-bold text-[#6B7694] uppercase tracking-widest mb-1">Solo</p>
           <p class="text-sm text-[#A0A8BF] mb-4">
-            <span class="t-es">Hasta 5 abogados</span>
-            <span class="t-en">Up to 5 lawyers</span>
+            <span class="t-es">1–3 usuarios</span>
+            <span class="t-en">1–3 users</span>
           </p>
 
           <div data-billing-show="monthly">
             <div class="flex items-end gap-1 mb-1">
-              <span class="text-5xl font-black text-[#1B2E5E] tracking-tight t-es">$700</span>
-              <span class="text-5xl font-black text-[#1B2E5E] tracking-tight t-en">$40</span>
+              <span class="text-5xl font-black text-[#1B2E5E] tracking-tight">$79</span>
               <span class="text-[#6B7694] font-medium mb-2">
                 <span class="t-es">/ mes</span><span class="t-en">/ month</span>
               </span>
@@ -87,29 +84,27 @@ import Layout from '../../layouts/Layout.astro';
 
           <div data-billing-show="annual">
             <div class="flex items-end gap-1 mb-1">
-              <span class="text-5xl font-black text-[#1B2E5E] tracking-tight t-es">$525</span>
-              <span class="text-5xl font-black text-[#1B2E5E] tracking-tight t-en">$30</span>
+              <span class="text-5xl font-black text-[#1B2E5E] tracking-tight">$59</span>
               <span class="text-[#6B7694] font-medium mb-2">
                 <span class="t-es">/ mes</span><span class="t-en">/ month</span>
               </span>
             </div>
             <div class="flex items-center gap-2 mb-1">
-              <span class="text-sm text-[#6B7694] line-through t-es">$700</span>
-              <span class="text-sm text-[#6B7694] line-through t-en">$40</span>
+              <span class="text-sm text-[#6B7694] line-through">$79</span>
               <span class="bg-[#22C55E]/15 text-[#16a34a] text-xs font-bold px-2 py-0.5 rounded-full">
-                <span class="t-es">Ahorras $2,100 / año</span><span class="t-en">Save $120 / year</span>
+                <span class="t-es">Ahorras $240 / año</span><span class="t-en">Save $240 / year</span>
               </span>
             </div>
             <p class="text-sm text-[#A0A8BF]">
-              <span class="t-es">$6,300 facturado anualmente</span>
-              <span class="t-en">$360 billed annually</span>
+              <span class="t-es">$708 facturado anualmente</span>
+              <span class="t-en">$708 billed annually</span>
             </p>
           </div>
         </div>
 
         <ul class="space-y-3 mb-8">
           {[
-            ['Hasta 5 usuarios en el equipo',    'Up to 5 team members'],
+            ['Hasta 3 usuarios en el equipo',    'Up to 3 team members'],
             ['Casos y portafolio ilimitados',     'Unlimited cases and briefs'],
             ['Portafolio con IA — 10 secciones',  'AI brief — 10 sections'],
             ['Línea de tiempo y notas de caso',   'Case timeline and notes'],
@@ -127,25 +122,25 @@ import Layout from '../../layouts/Layout.astro';
 
         <div data-billing-show="monthly">
           <a
-            href="mailto:rickyglz.1318@gmail.com?subject=Solicitud%20de%20acceso%20a%20Captio%20%E2%80%94%20Plan%20Peque%C3%B1o%20mensual"
+            href="mailto:rickyglz.1318@gmail.com?subject=Solicitud%20de%20acceso%20a%20Captio%20%E2%80%94%20Plan%20Solo%20mensual"
             class="block w-full border-2 border-[#3B6FE8] text-[#3B6FE8] hover:bg-[#3B6FE8] hover:text-white font-bold py-3.5 rounded-xl text-center transition-all text-sm"
           >
-            <span class="t-es">Empezar — $700 / mes</span>
-            <span class="t-en">Get started — $40 / month</span>
+            <span class="t-es">Empezar — $79 / mes</span>
+            <span class="t-en">Get started — $79 / month</span>
           </a>
         </div>
         <div data-billing-show="annual">
           <a
-            href="mailto:rickyglz.1318@gmail.com?subject=Solicitud%20de%20acceso%20a%20Captio%20%E2%80%94%20Plan%20Peque%C3%B1o%20anual"
+            href="mailto:rickyglz.1318@gmail.com?subject=Solicitud%20de%20acceso%20a%20Captio%20%E2%80%94%20Plan%20Solo%20anual"
             class="block w-full border-2 border-[#3B6FE8] text-[#3B6FE8] hover:bg-[#3B6FE8] hover:text-white font-bold py-3.5 rounded-xl text-center transition-all text-sm"
           >
-            <span class="t-es">Empezar — $6,300 / año</span>
-            <span class="t-en">Get started — $360 / year</span>
+            <span class="t-es">Empezar — $708 / año</span>
+            <span class="t-en">Get started — $708 / year</span>
           </a>
         </div>
       </div>
 
-      <!-- Plan Firma -->
+      <!-- Firm -->
       <div class="bg-[#1B2E5E] rounded-3xl border border-[#1B2E5E] p-8 shadow-2xl shadow-[#1B2E5E]/30 relative overflow-hidden">
         <div class="absolute top-5 right-5 bg-[#3B6FE8] text-white text-xs font-bold px-3 py-1 rounded-full">
           <span class="t-es">Más popular</span><span class="t-en">Most popular</span>
@@ -153,9 +148,7 @@ import Layout from '../../layouts/Layout.astro';
         <div class="absolute -bottom-10 -right-10 w-48 h-48 rounded-full bg-[#3B6FE8]/10 pointer-events-none"></div>
 
         <div class="mb-7">
-          <p class="text-xs font-bold text-[#6B7694] uppercase tracking-widest mb-1">
-            <span class="t-es">Plan Firma</span><span class="t-en">Firm Plan</span>
-          </p>
+          <p class="text-xs font-bold text-[#6B7694] uppercase tracking-widest mb-1">Firm</p>
           <p class="text-sm text-[#A0A8BF] mb-4">
             <span class="t-es">Hasta 15 usuarios</span>
             <span class="t-en">Up to 15 users</span>
@@ -163,8 +156,7 @@ import Layout from '../../layouts/Layout.astro';
 
           <div data-billing-show="monthly">
             <div class="flex items-end gap-1 mb-1">
-              <span class="text-5xl font-black text-white tracking-tight t-es">$1,100</span>
-              <span class="text-5xl font-black text-white tracking-tight t-en">$60</span>
+              <span class="text-5xl font-black text-white tracking-tight">$179</span>
               <span class="text-[#6B7694] font-medium mb-2">
                 <span class="t-es">/ mes</span><span class="t-en">/ month</span>
               </span>
@@ -177,22 +169,20 @@ import Layout from '../../layouts/Layout.astro';
 
           <div data-billing-show="annual">
             <div class="flex items-end gap-1 mb-1">
-              <span class="text-5xl font-black text-white tracking-tight t-es">$825</span>
-              <span class="text-5xl font-black text-white tracking-tight t-en">$45</span>
+              <span class="text-5xl font-black text-white tracking-tight">$134</span>
               <span class="text-[#6B7694] font-medium mb-2">
                 <span class="t-es">/ mes</span><span class="t-en">/ month</span>
               </span>
             </div>
             <div class="flex items-center gap-2 mb-1">
-              <span class="text-sm text-[#6B7694] line-through t-es">$1,100</span>
-              <span class="text-sm text-[#6B7694] line-through t-en">$60</span>
+              <span class="text-sm text-[#6B7694] line-through">$179</span>
               <span class="bg-[#22C55E]/15 text-[#22C55E] text-xs font-bold px-2 py-0.5 rounded-full">
-                <span class="t-es">Ahorras $3,300 / año</span><span class="t-en">Save $180 / year</span>
+                <span class="t-es">Ahorras $540 / año</span><span class="t-en">Save $540 / year</span>
               </span>
             </div>
             <p class="text-sm text-[#6B7694]">
-              <span class="t-es">$9,900 facturado anualmente</span>
-              <span class="t-en">$540 billed annually</span>
+              <span class="t-es">$1,608 facturado anualmente</span>
+              <span class="t-en">$1,608 billed annually</span>
             </p>
           </div>
         </div>
@@ -207,7 +197,6 @@ import Layout from '../../layouts/Layout.astro';
             ['Archivos de referencia del despacho',      'Firm reference files'],
             ['Soporte prioritario',                      'Priority support'],
             ['Onboarding personalizado para el equipo',  'Personalized onboarding for your team'],
-            ['Sin contrato anual',                       'No annual contract'],
           ].map(([es, en]) => (
             <li class="flex items-start gap-2.5 text-sm text-white/80">
               <svg class="w-4 h-4 text-[#22C55E] mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20">
@@ -221,28 +210,113 @@ import Layout from '../../layouts/Layout.astro';
 
         <div data-billing-show="monthly">
           <a
-            href="mailto:rickyglz.1318@gmail.com?subject=Solicitud%20de%20acceso%20a%20Captio%20%E2%80%94%20Plan%20Firma%20mensual"
+            href="mailto:rickyglz.1318@gmail.com?subject=Solicitud%20de%20acceso%20a%20Captio%20%E2%80%94%20Plan%20Firm%20mensual"
             class="block w-full bg-[#3B6FE8] hover:bg-[#2d5fd4] text-white font-bold py-3.5 rounded-xl text-center transition-all hover:shadow-xl hover:shadow-[#3B6FE8]/40 text-sm"
           >
-            <span class="t-es">Empezar — $1,100 / mes</span>
-            <span class="t-en">Get started — $60 / month</span>
+            <span class="t-es">Empezar — $179 / mes</span>
+            <span class="t-en">Get started — $179 / month</span>
           </a>
         </div>
         <div data-billing-show="annual">
           <a
-            href="mailto:rickyglz.1318@gmail.com?subject=Solicitud%20de%20acceso%20a%20Captio%20%E2%80%94%20Plan%20Firma%20anual"
+            href="mailto:rickyglz.1318@gmail.com?subject=Solicitud%20de%20acceso%20a%20Captio%20%E2%80%94%20Plan%20Firm%20anual"
             class="block w-full bg-[#3B6FE8] hover:bg-[#2d5fd4] text-white font-bold py-3.5 rounded-xl text-center transition-all hover:shadow-xl hover:shadow-[#3B6FE8]/40 text-sm"
           >
-            <span class="t-es">Empezar — $9,900 / año</span>
-            <span class="t-en">Get started — $540 / year</span>
+            <span class="t-es">Empezar — $1,608 / año</span>
+            <span class="t-en">Get started — $1,608 / year</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Agency -->
+      <div class="bg-white rounded-3xl border border-[#EEF1F8] p-8 shadow-sm hover:shadow-lg hover:shadow-[#3B6FE8]/5 transition-shadow relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-24 h-24 bg-[#F8F9FC] rounded-bl-full pointer-events-none"></div>
+        <div class="mb-7">
+          <p class="text-xs font-bold text-[#6B7694] uppercase tracking-widest mb-1">Agency</p>
+          <p class="text-sm text-[#A0A8BF] mb-4">
+            <span class="t-es">Hasta 30 usuarios</span>
+            <span class="t-en">Up to 30 users</span>
+          </p>
+
+          <div data-billing-show="monthly">
+            <div class="flex items-end gap-1 mb-1">
+              <span class="text-5xl font-black text-[#1B2E5E] tracking-tight">$279</span>
+              <span class="text-[#6B7694] font-medium mb-2">
+                <span class="t-es">/ mes</span><span class="t-en">/ month</span>
+              </span>
+            </div>
+            <p class="text-sm text-[#A0A8BF]">
+              <span class="t-es">Facturado mensualmente · Cancela cuando quieras</span>
+              <span class="t-en">Billed monthly · Cancel anytime</span>
+            </p>
+          </div>
+
+          <div data-billing-show="annual">
+            <div class="flex items-end gap-1 mb-1">
+              <span class="text-5xl font-black text-[#1B2E5E] tracking-tight">$209</span>
+              <span class="text-[#6B7694] font-medium mb-2">
+                <span class="t-es">/ mes</span><span class="t-en">/ month</span>
+              </span>
+            </div>
+            <div class="flex items-center gap-2 mb-1">
+              <span class="text-sm text-[#6B7694] line-through">$279</span>
+              <span class="bg-[#22C55E]/15 text-[#16a34a] text-xs font-bold px-2 py-0.5 rounded-full">
+                <span class="t-es">Ahorras $840 / año</span><span class="t-en">Save $840 / year</span>
+              </span>
+            </div>
+            <p class="text-sm text-[#A0A8BF]">
+              <span class="t-es">$2,508 facturado anualmente</span>
+              <span class="t-en">$2,508 billed annually</span>
+            </p>
+          </div>
+        </div>
+
+        <ul class="space-y-3 mb-8">
+          {[
+            ['Hasta 30 usuarios en el equipo',           'Up to 30 team members'],
+            ['Casos y portafolio ilimitados',             'Unlimited cases and briefs'],
+            ['Portafolio con IA — 10 secciones',          'AI brief — 10 sections'],
+            ['Línea de tiempo y notas de caso',           'Case timeline and notes'],
+            ['Español e inglés',                          'Spanish and English'],
+            ['Archivos de referencia del despacho',       'Firm reference files'],
+            ['Soporte dedicado',                          'Dedicated support'],
+            ['Onboarding personalizado para el equipo',   'Personalized onboarding for your team'],
+            ['Sin contrato anual',                        'No annual contract'],
+          ].map(([es, en]) => (
+            <li class="flex items-start gap-2.5 text-sm text-[#1A1F36]">
+              <svg class="w-4 h-4 text-[#22C55E] mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+              </svg>
+              <span class="t-es">{es}</span>
+              <span class="t-en">{en}</span>
+            </li>
+          ))}
+        </ul>
+
+        <div data-billing-show="monthly">
+          <a
+            href="mailto:rickyglz.1318@gmail.com?subject=Solicitud%20de%20acceso%20a%20Captio%20%E2%80%94%20Plan%20Agency%20mensual"
+            class="block w-full border-2 border-[#3B6FE8] text-[#3B6FE8] hover:bg-[#3B6FE8] hover:text-white font-bold py-3.5 rounded-xl text-center transition-all text-sm"
+          >
+            <span class="t-es">Empezar — $279 / mes</span>
+            <span class="t-en">Get started — $279 / month</span>
+          </a>
+        </div>
+        <div data-billing-show="annual">
+          <a
+            href="mailto:rickyglz.1318@gmail.com?subject=Solicitud%20de%20acceso%20a%20Captio%20%E2%80%94%20Plan%20Agency%20anual"
+            class="block w-full border-2 border-[#3B6FE8] text-[#3B6FE8] hover:bg-[#3B6FE8] hover:text-white font-bold py-3.5 rounded-xl text-center transition-all text-sm"
+          >
+            <span class="t-es">Empezar — $2,508 / año</span>
+            <span class="t-en">Get started — $2,508 / year</span>
           </a>
         </div>
       </div>
 
     </div>
     <p class="text-center text-sm text-[#A0A8BF] mt-6">
-      <span class="t-es">¿Tu firma supera los 15 usuarios? <a href="mailto:rickyglz.1318@gmail.com" class="text-[#3B6FE8] hover:underline">Escríbenos</a> para un plan personalizado.</span>
-      <span class="t-en">Firm larger than 15 users? <a href="mailto:rickyglz.1318@gmail.com" class="text-[#3B6FE8] hover:underline">Contact us</a> for a custom plan.</span>
+      <span class="t-es">¿Tu firma supera los 30 usuarios? <a href="mailto:rickyglz.1318@gmail.com" class="text-[#3B6FE8] hover:underline">Escríbenos</a> para un plan personalizado.</span>
+      <span class="t-en">Firm larger than 30 users? <a href="mailto:rickyglz.1318@gmail.com" class="text-[#3B6FE8] hover:underline">Contact us</a> for a custom plan.</span>
     </p>
   </div>
 </section>
@@ -263,17 +337,17 @@ import Layout from '../../layouts/Layout.astro';
           <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20">
             <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/>
           </svg>
-          <span class="t-es">Trial gratuito · 3 días</span>
-          <span class="t-en">Free trial · 3 days</span>
+          <span class="t-es">Demo primero · Trial activado por Captio</span>
+          <span class="t-en">Demo first · Trial activated by Captio</span>
         </div>
 
         <h2 class="text-3xl sm:text-4xl font-black tracking-[-0.03em] mb-4">
-          <span class="t-es">¿No estás seguro aún?<br>Pruébalo durante 3 días.</span>
-          <span class="t-en">Not sure yet?<br>Try it for 3 days.</span>
+          <span class="t-es">¿No estás seguro aún?<br>Agenda una demo.</span>
+          <span class="t-en">Not sure yet?<br>Schedule a demo.</span>
         </h2>
         <p class="text-white/70 text-lg mb-8 max-w-xl mx-auto">
-          <span class="t-es">Agenda una demo de 20 minutos y te activamos un trial completo de 3 días para tu firma. Sin tarjeta de crédito. Sin compromiso.</span>
-          <span class="t-en">Schedule a 20-minute demo and we'll activate a full 7-day trial for your firm. No credit card. No commitment.</span>
+          <span class="t-es">Agenda una demo de 20 minutos. Si Captio encaja con tu despacho, te activamos el acceso. Sin tarjeta de crédito. Sin compromiso.</span>
+          <span class="t-en">Schedule a 20-minute demo. If Captio fits your firm, we'll activate your access. No credit card. No commitment.</span>
         </p>
 
         <!-- Replace with your Calendly / cal.com link -->
@@ -292,10 +366,10 @@ import Layout from '../../layouts/Layout.astro';
 
         <div class="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 mt-6 text-sm text-white/60">
           {[
-            ['Sin tarjeta de crédito', 'No credit card'],
-            ['Sin compromiso',         'No commitment'],
-            ['Demo de 20 min',         '20 min demo'],
-            ['Acceso completo 3 días', 'Full access 3 days'],
+            ['Sin tarjeta de crédito',       'No credit card'],
+            ['Sin compromiso',               'No commitment'],
+            ['Demo de 20 min',               '20 min demo'],
+            ['Activación manual por Captio', 'Manual activation by Captio'],
           ].map(([es, en]) => (
             <span class="flex items-center gap-1.5">
               <svg class="w-4 h-4 text-[#22C55E]" fill="currentColor" viewBox="0 0 20 20">
@@ -326,8 +400,8 @@ import Layout from '../../layouts/Layout.astro';
         {
           qEs: '¿Cuántos usuarios incluye cada plan?',
           qEn: 'How many users does each plan include?',
-          aEs: 'Depende del plan. El Plan Equpo incluye hasta 5 usuarios; el Plan Firma, hasta 15. El precio es por firma, no por usuario — abogados titulares, asociados, asistentes y recepcionistas pueden usar Captio sin costo adicional dentro del límite de tu plan.',
-          aEn: 'It depends on the plan. The Small Firm plan includes up to 5 users; the Firm plan, up to 15. The price is per firm, not per user — partners, associates, assistants, and receptionists can all use Captio at no extra cost within your plan\'s limit.',
+          aEs: 'Hay tres planes. Solo (hasta 3 usuarios, $79/mes), Firm (hasta 15 usuarios, $179/mes) y Agency (hasta 30 usuarios, $279/mes). El precio es por firma, no por usuario.',
+          aEn: 'There are three plans. Solo (up to 3 users, $79/mo), Firm (up to 15 users, $179/mo), and Agency (up to 30 users, $279/mo). Price is per firm, not per user.',
         },
         {
           qEs: '¿Puedo cambiar de mensual a anual después?',
@@ -336,10 +410,10 @@ import Layout from '../../layouts/Layout.astro';
           aEn: 'Yes. You can switch at any time and the 25% discount applies from the next billing cycle.',
         },
         {
-          qEs: '¿Qué incluye el trial de 3 días?',
-          qEn: 'What does the 7-day trial include?',
-          aEs: 'Acceso completo a todas las funciones — sin restricciones. Casos ilimitados, portafolio con IA, todos los miembros del equipo. Al finalizar los 3 días puedes elegir el plan o cancelar sin cargo.',
-          aEn: 'Full access to all features — no restrictions. Unlimited cases, AI briefs, all team members. After 3 days you can choose a plan or cancel with no charge.',
+          qEs: '¿Cómo funciona el acceso de prueba?',
+          qEn: 'How does trial access work?',
+          aEs: 'Agenda una demo de 20 minutos. Si el producto encaja con tu despacho, el equipo de Captio activa tu acceso. Tendrás acceso completo a todas las funciones — sin tarjeta, sin compromiso.',
+          aEn: "Schedule a 20-minute demo. If the product fits your firm, the Captio team activates your access. You'll have full access to all features — no card, no commitment.",
         },
         {
           qEs: '¿Qué pasa con mis datos si cancelo?',

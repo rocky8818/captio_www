@@ -118,8 +118,8 @@ import Layout from '../../layouts/Layout.astro';
         <span class="t-en">Every feature, explained</span>
       </h2>
       <p class="text-[#6B7694] text-lg">
-        <span class="t-es">Nueve herramientas diseñadas para el flujo de trabajo del abogado.</span>
-        <span class="t-en">Nine tools designed for the lawyer's workflow.</span>
+        <span class="t-es">Herramientas diseñadas para el flujo de trabajo del abogado.</span>
+        <span class="t-en">Tools designed for the lawyer's workflow.</span>
       </p>
     </div>
 
@@ -360,7 +360,45 @@ import Layout from '../../layouts/Layout.astro';
         </div>
       </div>
 
-      <!-- 7–9: Timeline, Notes, Reference files (compact row) -->
+      <!-- 7. Contacts directory -->
+      <div class="bg-white rounded-2xl border border-[#EEF1F8] shadow-sm hover:shadow-md hover:shadow-[#3B6FE8]/5 transition-shadow p-7 grid md:grid-cols-[auto_1fr] gap-6 items-start">
+        <div class="w-12 h-12 rounded-2xl bg-[#3B6FE8]/10 flex items-center justify-center shrink-0">
+          <svg class="w-6 h-6 text-[#3B6FE8]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+          </svg>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold text-[#1B2E5E] mb-2">
+            <span class="t-es">Directorio de contactos</span>
+            <span class="t-en">Contacts directory</span>
+          </h3>
+          <p class="text-[#6B7694] text-sm leading-relaxed">
+            <span class="t-es">Directorio de personas y organizaciones del despacho. Guarda clientes, contrapartes, testigos y jueces con sus datos de contacto. Vinculable a casos.</span>
+            <span class="t-en">Directory of people and organizations for the firm. Store clients, opposing parties, witnesses, and judges with their contact details. Linkable to cases.</span>
+          </p>
+        </div>
+      </div>
+
+      <!-- 8. Tasks -->
+      <div class="bg-white rounded-2xl border border-[#EEF1F8] shadow-sm hover:shadow-md hover:shadow-[#3B6FE8]/5 transition-shadow p-7 grid md:grid-cols-[auto_1fr] gap-6 items-start">
+        <div class="w-12 h-12 rounded-2xl bg-[#3B6FE8]/10 flex items-center justify-center shrink-0">
+          <svg class="w-6 h-6 text-[#3B6FE8]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"/>
+          </svg>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold text-[#1B2E5E] mb-2">
+            <span class="t-es">Tareas</span>
+            <span class="t-en">Tasks</span>
+          </h3>
+          <p class="text-[#6B7694] text-sm leading-relaxed">
+            <span class="t-es">Tablero de tareas del despacho. Asigna, prioriza y da seguimiento a pendientes vinculados a casos o al equipo.</span>
+            <span class="t-en">Firm task board. Assign, prioritize, and track pending items linked to cases or team members.</span>
+          </p>
+        </div>
+      </div>
+
+      <!-- 9–11: Timeline, Notes, Reference files (compact row) -->
       <div class="grid md:grid-cols-3 gap-5">
         {[
           {
@@ -416,8 +454,8 @@ import Layout from '../../layouts/Layout.astro';
       <span class="t-en">Ready for the first call without surprises?</span>
     </h2>
     <p class="text-[#6B7694] text-lg mb-8">
-      <span class="t-es">Agenda una demo de 20 minutos y activa tu trial de 3 días gratis.</span>
-      <span class="t-en">Schedule a 20-minute demo and activate your free 3-day trial.</span>
+      <span class="t-es">Agenda una demo de 20 minutos. Captio activa tu acceso sin tarjeta.</span>
+      <span class="t-en">Schedule a 20-minute demo. Captio activates your access with no card required.</span>
     </p>
     <div class="flex flex-col sm:flex-row gap-3 justify-center">
       <a
