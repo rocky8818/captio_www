@@ -270,10 +270,10 @@ import Layout from '../layouts/Layout.astro';
       {[
         {
           icon: 'M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1',
-          es: 'Enlace de intake',
-          en: 'Intake link',
-          descEs: 'Genera un enlace único por cliente en un clic. Sin cuentas, sin fricción. Cualquier miembro del equipo puede enviarlo.',
-          descEn: 'Generate a unique link per client in one click. No accounts, no friction. Any team member can send it.',
+          es: 'Crear un caso — 4 formas',
+          en: 'Create a case — 4 ways',
+          descEs: 'Enlace al cliente, formulario manual, importar datos de un expediente existente o redactar la narrativa en modo libre. El caso llega al panel del abogado sin importar el método.',
+          descEn: 'Client link, manual form, import from an existing file, or draft the narrative in free-text mode. The case reaches the lawyer\'s dashboard regardless of the method.',
         },
         {
           icon: 'M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4',
@@ -293,8 +293,8 @@ import Layout from '../layouts/Layout.astro';
           icon: 'M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z',
           es: 'Línea de tiempo del caso',
           en: 'Case timeline',
-          descEs: 'Historial cronológico por caso. Los eventos clave se registran automáticamente; el equipo puede agregar notas en cualquier momento.',
-          descEn: 'Chronological history per case. Key events are logged automatically; the team can add notes at any time.',
+          descEs: 'Log operativo del expediente: primera consulta, recolección de documentos, escritos presentados, notificaciones del juzgado, audiencias. Todo el equipo ve el historial en tiempo real.',
+          descEn: 'Operational case log: first consultation, document collection, filings submitted, court notifications, hearings. The entire team sees the history in real time.',
         },
         {
           icon: 'M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z',
@@ -330,6 +330,13 @@ import Layout from '../layouts/Layout.astro';
           en: 'Legal Research',
           descEs: 'Busca tesis y jurisprudencias del Semanario Judicial de la Federación directo desde el expediente. Captio extrae las keywords del portafolio y presenta los 5 resultados más relevantes con enlace a la SCJN.',
           descEn: 'Search for tesis and jurisprudencias from the Semanario Judicial de la Federación directly from the case file. Captio extracts keywords from the brief and shows the 5 most relevant results with a link to the SCJN.',
+        },
+        {
+          icon: 'M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z',
+          es: 'Casos Demo',
+          en: 'Demo Cases',
+          descEs: 'Explora Captio con tres expedientes completos — portafolio generado, línea de tiempo, notas vinculadas y docs relacionados — sin necesidad de clientes reales. Ideal para conocer el producto antes de empezar.',
+          descEn: 'Explore Captio with three complete case files — generated brief, timeline, linked notes, and related docs — without needing real clients. Ideal for getting to know the product before you start.',
         },
       ].map(({ icon, es, en, descEs, descEn }) => (
         <div class="bg-[#F8F9FC] rounded-2xl p-6 border border-[#EEF1F8] hover:border-[#3B6FE8]/30 hover:shadow-md hover:shadow-[#3B6FE8]/5 transition-all">

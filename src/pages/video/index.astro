@@ -125,7 +125,7 @@ import Layout from '../../layouts/Layout.astro';
 
     <div class="space-y-5">
 
-      <!-- 1. Intake link -->
+      <!-- 1. Case creation — 4 ways -->
       <div class="bg-white rounded-2xl border border-[#EEF1F8] shadow-sm hover:shadow-md hover:shadow-[#3B6FE8]/5 transition-shadow p-7 grid md:grid-cols-[auto_1fr] gap-6 items-start">
         <div class="w-12 h-12 rounded-2xl bg-[#3B6FE8]/10 flex items-center justify-center shrink-0">
           <svg class="w-6 h-6 text-[#3B6FE8]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -135,23 +135,22 @@ import Layout from '../../layouts/Layout.astro';
         <div>
           <div class="flex items-center gap-3 mb-2">
             <h3 class="text-lg font-bold text-[#1B2E5E]">
-              <span class="t-es">Enlace de intake para el cliente</span>
-              <span class="t-en">Client intake link</span>
+              <span class="t-es">Crear un caso — 4 formas</span>
+              <span class="t-en">Create a case — 4 ways</span>
             </h3>
-            
           </div>
           <p class="text-[#6B7694] text-sm leading-relaxed mb-4">
-            <span class="t-es">El abogado genera un enlace único por cliente nuevo desde la sección "Nuevo Cliente". El enlace se puede enviar por correo, WhatsApp, SMS o cualquier canal. El cliente lo abre en su navegador sin necesidad de crear una cuenta ni descargar ninguna app. Una vez enviado el formulario, el caso aparece automáticamente en el panel del abogado.</span>
-            <span class="t-en">The lawyer generates a unique link per new client from the "New Client" section. The link can be sent by email, WhatsApp, SMS, or any channel. The client opens it in their browser without needing to create an account or download any app. Once the form is submitted, the case automatically appears in the lawyer's dashboard.</span>
+            <span class="t-es">El botón "+ Crear caso" abre un menú con cuatro opciones para adaptarse al flujo de cualquier despacho. <strong class="text-[#1B2E5E]">Enlace:</strong> genera un enlace único y el cliente llena el formulario desde su dispositivo, sin cuenta. <strong class="text-[#1B2E5E]">Manual:</strong> el abogado llena el formulario de 6 secciones él mismo, con autocompletado desde el directorio de clientes. <strong class="text-[#1B2E5E]">Importar:</strong> trae datos de un expediente existente sin volver a capturar. <strong class="text-[#1B2E5E]">Redactar:</strong> el abogado escribe la narrativa del caso en modo libre — ideal para capturar la información de una reunión inicial sin formularios.</span>
+            <span class="t-en">The "+ Create case" button opens a menu with four options to fit any firm's workflow. <strong class="text-[#1B2E5E]">Link:</strong> generate a unique link and the client fills the form from their device, no account needed. <strong class="text-[#1B2E5E]">Manual:</strong> the lawyer fills the 6-section form themselves, with autocomplete from the client directory. <strong class="text-[#1B2E5E]">Import:</strong> bring data from an existing file without re-entering it. <strong class="text-[#1B2E5E]">Draft:</strong> the lawyer writes the case narrative in free-text mode — ideal for capturing information from an initial meeting without forms.</span>
           </p>
           <div class="flex flex-wrap gap-2">
             {[
-              ['Sin cuenta para el cliente', 'No client account'],
-              ['Cualquier miembro del equipo puede generarlo', 'Any team member can generate it'],
-              ['Panel de enlaces pendientes', 'Pending links panel'],
+              ['🔗 Enlace al cliente', '🔗 Client link'],
+              ['✍ Manual (6 secciones)', '✍ Manual (6 sections)'],
+              ['📄 Importar expediente', '📄 Import case file'],
+              ['✏️ Redactar en modo libre', '✏️ Draft in free-text mode'],
             ].map(([es, en]) => (
               <span class="inline-flex items-center gap-1.5 text-xs font-medium text-[#6B7694] bg-[#F8F9FC] border border-[#EEF1F8] rounded-lg px-3 py-1.5">
-                <svg class="w-3.5 h-3.5 text-[#22C55E]" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
                 <span class="t-es">{es}</span><span class="t-en">{en}</span>
               </span>
             ))}
@@ -417,6 +416,38 @@ import Layout from '../../layouts/Layout.astro';
         </div>
       </div>
 
+      <!-- Casos Demo -->
+      <div class="bg-white rounded-2xl border border-[#EEF1F8] shadow-sm hover:shadow-md hover:shadow-[#3B6FE8]/5 transition-shadow p-7 grid md:grid-cols-[auto_1fr] gap-6 items-start">
+        <div class="w-12 h-12 rounded-2xl bg-[#3B6FE8]/10 flex items-center justify-center shrink-0">
+          <svg class="w-6 h-6 text-[#3B6FE8]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/>
+          </svg>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold text-[#1B2E5E] mb-2">
+            <span class="t-es">Casos Demo</span>
+            <span class="t-en">Demo Cases</span>
+          </h3>
+          <p class="text-[#6B7694] text-sm leading-relaxed mb-4">
+            <span class="t-es">Para explorar Captio sin necesidad de clientes reales. La sección Casos Demo incluye tres expedientes completos con portafolio generado por IA, línea de tiempo con eventos operativos, notas internas y documentos relacionados. En diez minutos se entiende exactamente cómo va a funcionar el despacho dentro de Captio.</span>
+            <span class="t-en">To explore Captio without needing real clients. The Demo Cases section includes three complete case files with AI-generated briefs, timeline with operational events, internal notes, and related documents. In ten minutes you'll know exactly how your firm will work inside Captio.</span>
+          </p>
+          <div class="flex flex-wrap gap-2">
+            {[
+              ['3 expedientes completos listos', '3 complete case files ready'],
+              ['Portafolio IA generado', 'AI-generated brief included'],
+              ['Línea de tiempo operativa', 'Operational timeline'],
+              ['Notas y docs relacionados', 'Notes and related docs'],
+            ].map(([es, en]) => (
+              <span class="inline-flex items-center gap-1.5 text-xs font-medium text-[#6B7694] bg-[#F8F9FC] border border-[#EEF1F8] rounded-lg px-3 py-1.5">
+                <svg class="w-3.5 h-3.5 text-[#22C55E]" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <span class="t-es">{es}</span><span class="t-en">{en}</span>
+              </span>
+            ))}
+          </div>
+        </div>
+      </div>
+
       <!-- 9–11: Timeline, Notes, Reference files (compact row) -->
       <div class="grid md:grid-cols-3 gap-5">
         {[
@@ -424,8 +455,8 @@ import Layout from '../../layouts/Layout.astro';
             icon: 'M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z',
             es: 'Línea de tiempo',
             en: 'Case timeline',
-            descEs: 'Historial cronológico por caso. Eventos automáticos + notas manuales del equipo. Ideal para delegar sin perder contexto.',
-            descEn: 'Chronological history per case. Automatic events + manual team notes. Ideal for delegating without losing context.',
+            descEs: 'Log operativo del expediente: primera consulta, documentos recolectados, escritos enviados, notificaciones del juzgado, audiencias. El equipo agrega eventos en texto libre con fecha y hora automáticos.',
+            descEn: 'Operational case log: first consultation, documents collected, filings sent, court notifications, hearings. The team adds events in free text with automatic date and time.',
           },
           {
             icon: 'M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253',
