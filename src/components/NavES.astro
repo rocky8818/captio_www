@@ -8,42 +8,42 @@ const base    = 'text-sm font-medium px-3 py-2 rounded-lg transition-colors';
 const active  = `${base} text-[#1B2E5E] bg-[#EEF1F8]`;
 const passive = `${base} text-[#6B7694] hover:text-[#1A1F36] hover:bg-[#EEF1F8]`;
 
-const mobileBase   = 'text-base font-medium px-4 py-3 rounded-xl transition-colors';
-const mobileActive = `${mobileBase} text-[#1B2E5E] bg-[#EEF1F8]`;
+const mobileBase    = 'text-base font-medium px-4 py-3 rounded-xl transition-colors';
+const mobileActive  = `${mobileBase} text-[#1B2E5E] bg-[#EEF1F8]`;
 const mobilePassive = `${mobileBase} text-[#6B7694] hover:text-[#1A1F36] hover:bg-[#EEF1F8]`;
 
-const homeHref = activePage === 'home' ? '' : '/';
+const homeHref = activePage === 'home' ? '' : '/es/';
 ---
 
 <nav class="fixed top-0 left-0 right-0 z-50 nav-blur bg-[#F8F9FC]/90 border-b border-[#EEF1F8]">
   <div class="max-w-6xl mx-auto px-6 h-16 flex items-center">
 
-    <a href="/" class="select-none shrink-0" aria-label="Captio">
+    <a href="/es/" class="select-none shrink-0" aria-label="Captio">
       <span class="text-[32px] font-black tracking-[-0.05em] text-[#1B2E5E]">
         capti<span class="text-[#3B6FE8]">·</span>o
       </span>
     </a>
 
     <div class="hidden md:flex flex-1 items-center justify-center gap-1">
-      <a href={homeHref} class={activePage === 'home' ? active : passive}>Home</a>
-      <a href="/pricing/" class={activePage === 'pricing' ? active : passive}>Pricing</a>
+      <a href={homeHref} class={activePage === 'home' ? active : passive}>Inicio</a>
+      <a href="/es/pricing/" class={activePage === 'pricing' ? active : passive}>Precios</a>
       <a href="/video/" class={activePage === 'video' ? active : passive}>Video</a>
     </div>
 
     <div class="flex items-center gap-3 ml-auto">
       <a
-        href="/pricing/#trial"
+        href="/es/pricing/#trial"
         class="hidden sm:inline-flex items-center gap-1.5 bg-[#3B6FE8] hover:bg-[#2d5fd4] text-white text-sm font-semibold px-4 py-2 rounded-lg transition-all hover:shadow-md hover:shadow-[#3B6FE8]/30"
       >
-        Request access
+        Solicitar acceso
         <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
         </svg>
       </a>
 
       <button
-        id="menu-toggle"
-        aria-label="Open menu"
+        id="menu-toggle-es"
+        aria-label="Abrir menú"
         aria-expanded="false"
         class="md:hidden flex flex-col justify-center items-center w-9 h-9 rounded-lg hover:bg-[#EEF1F8] transition-colors gap-1.5"
       >
@@ -56,19 +56,19 @@ const homeHref = activePage === 'home' ? '' : '/';
   </div>
 
   <div
-    id="mobile-menu"
+    id="mobile-menu-es"
     class="md:hidden overflow-hidden max-h-0 transition-[max-height] duration-300 ease-in-out border-t border-[#EEF1F8]/0"
   >
     <div class="px-4 py-3 flex flex-col gap-1">
-      <a href={homeHref} class={activePage === 'home' ? mobileActive : mobilePassive}>Home</a>
-      <a href="/pricing/" class={activePage === 'pricing' ? mobileActive : mobilePassive}>Pricing</a>
+      <a href={homeHref} class={activePage === 'home' ? mobileActive : mobilePassive}>Inicio</a>
+      <a href="/es/pricing/" class={activePage === 'pricing' ? mobileActive : mobilePassive}>Precios</a>
       <a href="/video/" class={activePage === 'video' ? mobileActive : mobilePassive}>Video</a>
       <div class="pt-2 pb-1">
         <a
-          href="/pricing/#trial"
+          href="/es/pricing/#trial"
           class="flex items-center justify-center gap-1.5 bg-[#3B6FE8] hover:bg-[#2d5fd4] text-white text-sm font-semibold px-4 py-3 rounded-xl transition-all"
         >
-          Request access
+          Solicitar acceso
           <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
           </svg>
@@ -79,8 +79,8 @@ const homeHref = activePage === 'home' ? '' : '/';
 </nav>
 
 <script>
-  const toggle = document.getElementById('menu-toggle')!;
-  const menu   = document.getElementById('mobile-menu')!;
+  const toggle = document.getElementById('menu-toggle-es')!;
+  const menu   = document.getElementById('mobile-menu-es')!;
   const lines  = toggle.querySelectorAll<HTMLElement>('.hamburger-line');
 
   toggle.addEventListener('click', () => {

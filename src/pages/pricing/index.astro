@@ -3,8 +3,8 @@ import Layout from '../../layouts/Layout.astro';
 ---
 
 <Layout
-  title="Captio — Precios"
-  description="Tres planes para despachos legales, en dólares. Solo desde $79, Firm desde $179, Agency desde $279 al mes."
+  title="Captio — Pricing"
+  description="Three plans for law firms, in USD. Solo from $79, Firm from $179, Agency from $279 per month."
   activePage="pricing"
 >
 
@@ -18,16 +18,13 @@ import Layout from '../../layouts/Layout.astro';
   <div class="max-w-3xl mx-auto relative">
     <div class="inline-flex items-center gap-2 bg-[#EEF1F8] text-[#3B6FE8] text-xs font-bold px-3 py-1.5 rounded-full mb-6 fade-up">
       <span class="w-1.5 h-1.5 rounded-full bg-[#3B6FE8]"></span>
-      <span class="t-es">Precio por firma, no por usuario</span>
-      <span class="t-en">Price per firm, not per user</span>
+      Price per firm, not per user · USD
     </div>
     <h1 class="text-4xl sm:text-5xl font-black tracking-[-0.04em] text-[#1B2E5E] mb-4 fade-up d1">
-      <span class="t-es">Pricing simple.<br>Sin sorpresas.</span>
-      <span class="t-en">Simple pricing.<br>No surprises.</span>
+      Simple pricing.<br>No surprises.
     </h1>
     <p class="text-lg text-[#6B7694] mb-10 fade-up d2">
-      <span class="t-es">Tres planes. Elige según el tamaño de tu despacho.</span>
-      <span class="t-en">Three plans. Choose based on your firm's size.</span>
+      Three plans. Choose based on your firm's size.
     </p>
 
     <!-- Billing toggle -->
@@ -37,14 +34,14 @@ import Layout from '../../layouts/Layout.astro';
         onclick="setPricing('monthly')"
         class="px-5 py-2 rounded-lg text-sm font-semibold transition-all bg-white text-[#1B2E5E] shadow-sm"
       >
-        <span class="t-es">Mensual</span><span class="t-en">Monthly</span>
+        Monthly
       </button>
       <button
         id="btn-annual"
         onclick="setPricing('annual')"
         class="px-5 py-2 rounded-lg text-sm font-semibold transition-all text-[#6B7694] flex items-center gap-2"
       >
-        <span class="t-es">Anual</span><span class="t-en">Annual</span>
+        Annual
         <span class="bg-[#22C55E]/15 text-[#16a34a] text-xs font-bold px-2 py-0.5 rounded-full">-25%</span>
       </button>
     </div>
@@ -64,171 +61,133 @@ import Layout from '../../layouts/Layout.astro';
         <div class="absolute top-0 right-0 w-24 h-24 bg-[#F8F9FC] rounded-bl-full pointer-events-none"></div>
         <div class="mb-7">
           <p class="text-xs font-bold text-[#6B7694] uppercase tracking-widest mb-1">Solo</p>
-          <p class="text-sm text-[#A0A8BF] mb-4">
-            <span class="t-es">1–3 usuarios</span>
-            <span class="t-en">1–3 users</span>
-          </p>
+          <p class="text-sm text-[#A0A8BF] mb-4">1–3 users</p>
 
           <div data-billing-show="monthly">
             <div class="flex items-end gap-1 mb-1">
               <span class="text-5xl font-black text-[#1B2E5E] tracking-tight">$79</span>
-              <span class="text-[#6B7694] font-medium mb-2">
-                <span class="t-es">/ mes</span><span class="t-en">/ month</span>
-              </span>
+              <span class="text-[#6B7694] font-medium mb-2">/ month</span>
             </div>
-            <p class="text-sm text-[#A0A8BF]">
-              <span class="t-es">Facturado mensualmente · Cancela cuando quieras</span>
-              <span class="t-en">Billed monthly · Cancel anytime</span>
-            </p>
+            <p class="text-sm text-[#A0A8BF]">Billed monthly · Cancel anytime</p>
           </div>
 
           <div data-billing-show="annual">
             <div class="flex items-end gap-1 mb-1">
               <span class="text-5xl font-black text-[#1B2E5E] tracking-tight">$59</span>
-              <span class="text-[#6B7694] font-medium mb-2">
-                <span class="t-es">/ mes</span><span class="t-en">/ month</span>
-              </span>
+              <span class="text-[#6B7694] font-medium mb-2">/ month</span>
             </div>
             <div class="flex items-center gap-2 mb-1">
               <span class="text-sm text-[#6B7694] line-through">$79</span>
-              <span class="bg-[#22C55E]/15 text-[#16a34a] text-xs font-bold px-2 py-0.5 rounded-full">
-                <span class="t-es">Ahorras $240 / año</span><span class="t-en">Save $240 / year</span>
-              </span>
+              <span class="bg-[#22C55E]/15 text-[#16a34a] text-xs font-bold px-2 py-0.5 rounded-full">Save $240 / year</span>
             </div>
-            <p class="text-sm text-[#A0A8BF]">
-              <span class="t-es">$708 facturado anualmente</span>
-              <span class="t-en">$708 billed annually</span>
-            </p>
+            <p class="text-sm text-[#A0A8BF]">$708 billed annually</p>
           </div>
         </div>
 
         <ul class="space-y-3 mb-8">
           {[
-            ['Hasta 3 usuarios en el equipo',            'Up to 3 team members'],
-            ['Casos y portafolio ilimitados',             'Unlimited cases and briefs'],
-            ['Portafolio con IA — 10 secciones',          'AI brief — 10 sections'],
-            ['4 formas de crear un caso',                 '4 ways to create a case'],
-            ['Línea de tiempo y notas de caso',           'Case timeline and notes'],
-            ['Investigación Jurídica (SCJN)',              'Legal Research (SCJN)'],
-            ['Español e inglés',                          'Spanish and English'],
-          ].map(([es, en]) => (
+            'Up to 3 team members',
+            'Unlimited cases and briefs',
+            'AI brief — 10 sections',
+            '5 ways to create a case',
+            'Case timeline and notes',
+            'Legal Research (SCJN)',
+            'Spanish and English',
+          ].map((feat) => (
             <li class="flex items-start gap-2.5 text-sm text-[#1A1F36]">
               <svg class="w-4 h-4 text-[#22C55E] mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
               </svg>
-              <span class="t-es">{es}</span>
-              <span class="t-en">{en}</span>
+              {feat}
             </li>
           ))}
         </ul>
 
         <div data-billing-show="monthly">
           <a
-            href="mailto:rickyglz.1318@gmail.com?subject=Solicitud%20de%20acceso%20a%20Captio%20%E2%80%94%20Plan%20Solo%20mensual"
+            href="mailto:rickyglz.1318@gmail.com?subject=Access%20request%20%E2%80%94%20Solo%20monthly"
             class="block w-full border-2 border-[#3B6FE8] text-[#3B6FE8] hover:bg-[#3B6FE8] hover:text-white font-bold py-3.5 rounded-xl text-center transition-all text-sm"
           >
-            <span class="t-es">Empezar — $79 / mes</span>
-            <span class="t-en">Get started — $79 / month</span>
+            Get started — $79 / month
           </a>
         </div>
         <div data-billing-show="annual">
           <a
-            href="mailto:rickyglz.1318@gmail.com?subject=Solicitud%20de%20acceso%20a%20Captio%20%E2%80%94%20Plan%20Solo%20anual"
+            href="mailto:rickyglz.1318@gmail.com?subject=Access%20request%20%E2%80%94%20Solo%20annual"
             class="block w-full border-2 border-[#3B6FE8] text-[#3B6FE8] hover:bg-[#3B6FE8] hover:text-white font-bold py-3.5 rounded-xl text-center transition-all text-sm"
           >
-            <span class="t-es">Empezar — $708 / año</span>
-            <span class="t-en">Get started — $708 / year</span>
+            Get started — $708 / year
           </a>
         </div>
       </div>
 
       <!-- Firm -->
       <div class="bg-[#1B2E5E] rounded-3xl border border-[#1B2E5E] p-8 shadow-2xl shadow-[#1B2E5E]/30 relative overflow-hidden">
-        <div class="absolute top-5 right-5 bg-[#3B6FE8] text-white text-xs font-bold px-3 py-1 rounded-full">
-          <span class="t-es">Más popular</span><span class="t-en">Most popular</span>
-        </div>
+        <div class="absolute top-5 right-5 bg-[#3B6FE8] text-white text-xs font-bold px-3 py-1 rounded-full">Most popular</div>
         <div class="absolute -bottom-10 -right-10 w-48 h-48 rounded-full bg-[#3B6FE8]/10 pointer-events-none"></div>
 
         <div class="mb-7">
           <p class="text-xs font-bold text-[#6B7694] uppercase tracking-widest mb-1">Firm</p>
-          <p class="text-sm text-[#A0A8BF] mb-4">
-            <span class="t-es">Hasta 15 usuarios</span>
-            <span class="t-en">Up to 15 users</span>
-          </p>
+          <p class="text-sm text-[#A0A8BF] mb-4">Up to 15 users</p>
 
           <div data-billing-show="monthly">
             <div class="flex items-end gap-1 mb-1">
               <span class="text-5xl font-black text-white tracking-tight">$179</span>
-              <span class="text-[#6B7694] font-medium mb-2">
-                <span class="t-es">/ mes</span><span class="t-en">/ month</span>
-              </span>
+              <span class="text-[#6B7694] font-medium mb-2">/ month</span>
             </div>
-            <p class="text-sm text-[#6B7694]">
-              <span class="t-es">Facturado mensualmente · Cancela cuando quieras</span>
-              <span class="t-en">Billed monthly · Cancel anytime</span>
-            </p>
+            <p class="text-sm text-[#6B7694]">Billed monthly · Cancel anytime</p>
           </div>
 
           <div data-billing-show="annual">
             <div class="flex items-end gap-1 mb-1">
               <span class="text-5xl font-black text-white tracking-tight">$134</span>
-              <span class="text-[#6B7694] font-medium mb-2">
-                <span class="t-es">/ mes</span><span class="t-en">/ month</span>
-              </span>
+              <span class="text-[#6B7694] font-medium mb-2">/ month</span>
             </div>
             <div class="flex items-center gap-2 mb-1">
               <span class="text-sm text-[#6B7694] line-through">$179</span>
-              <span class="bg-[#22C55E]/15 text-[#22C55E] text-xs font-bold px-2 py-0.5 rounded-full">
-                <span class="t-es">Ahorras $540 / año</span><span class="t-en">Save $540 / year</span>
-              </span>
+              <span class="bg-[#22C55E]/15 text-[#22C55E] text-xs font-bold px-2 py-0.5 rounded-full">Save $540 / year</span>
             </div>
-            <p class="text-sm text-[#6B7694]">
-              <span class="t-es">$1,608 facturado anualmente</span>
-              <span class="t-en">$1,608 billed annually</span>
-            </p>
+            <p class="text-sm text-[#6B7694]">$1,608 billed annually</p>
           </div>
         </div>
 
         <ul class="space-y-3 mb-8">
           {[
-            ['Hasta 15 usuarios en el equipo',           'Up to 15 team members'],
-            ['Casos y portafolio ilimitados',             'Unlimited cases and briefs'],
-            ['Portafolio con IA — 10 secciones',          'AI brief — 10 sections'],
-            ['4 formas de crear un caso',                 '4 ways to create a case'],
-            ['Línea de tiempo y notas de caso',           'Case timeline and notes'],
-            ['Investigación Jurídica (SCJN)',              'Legal Research (SCJN)'],
-            ['Español e inglés',                          'Spanish and English'],
-            ['Archivos de referencia del despacho',       'Firm reference files'],
-            ['Casos Demo para onboarding',                'Demo Cases for onboarding'],
-            ['Soporte prioritario',                       'Priority support'],
-            ['Onboarding personalizado para el equipo',   'Personalized onboarding for your team'],
-          ].map(([es, en]) => (
+            'Up to 15 team members',
+            'Unlimited cases and briefs',
+            'AI brief — 10 sections',
+            '5 ways to create a case',
+            'Case timeline and notes',
+            'Legal Research (SCJN)',
+            'Spanish and English',
+            'Firm reference files',
+            'Demo Cases for onboarding',
+            'Priority support',
+            'Personalized onboarding for your team',
+          ].map((feat) => (
             <li class="flex items-start gap-2.5 text-sm text-white/80">
               <svg class="w-4 h-4 text-[#22C55E] mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
               </svg>
-              <span class="t-es">{es}</span>
-              <span class="t-en">{en}</span>
+              {feat}
             </li>
           ))}
         </ul>
 
         <div data-billing-show="monthly">
           <a
-            href="mailto:rickyglz.1318@gmail.com?subject=Solicitud%20de%20acceso%20a%20Captio%20%E2%80%94%20Plan%20Firm%20mensual"
+            href="mailto:rickyglz.1318@gmail.com?subject=Access%20request%20%E2%80%94%20Firm%20monthly"
             class="block w-full bg-[#3B6FE8] hover:bg-[#2d5fd4] text-white font-bold py-3.5 rounded-xl text-center transition-all hover:shadow-xl hover:shadow-[#3B6FE8]/40 text-sm"
           >
-            <span class="t-es">Empezar — $179 / mes</span>
-            <span class="t-en">Get started — $179 / month</span>
+            Get started — $179 / month
           </a>
         </div>
         <div data-billing-show="annual">
           <a
-            href="mailto:rickyglz.1318@gmail.com?subject=Solicitud%20de%20acceso%20a%20Captio%20%E2%80%94%20Plan%20Firm%20anual"
+            href="mailto:rickyglz.1318@gmail.com?subject=Access%20request%20%E2%80%94%20Firm%20annual"
             class="block w-full bg-[#3B6FE8] hover:bg-[#2d5fd4] text-white font-bold py-3.5 rounded-xl text-center transition-all hover:shadow-xl hover:shadow-[#3B6FE8]/40 text-sm"
           >
-            <span class="t-es">Empezar — $1,608 / año</span>
-            <span class="t-en">Get started — $1,608 / year</span>
+            Get started — $1,608 / year
           </a>
         </div>
       </div>
@@ -238,93 +197,74 @@ import Layout from '../../layouts/Layout.astro';
         <div class="absolute top-0 right-0 w-24 h-24 bg-[#F8F9FC] rounded-bl-full pointer-events-none"></div>
         <div class="mb-7">
           <p class="text-xs font-bold text-[#6B7694] uppercase tracking-widest mb-1">Agency</p>
-          <p class="text-sm text-[#A0A8BF] mb-4">
-            <span class="t-es">Hasta 30 usuarios</span>
-            <span class="t-en">Up to 30 users</span>
-          </p>
+          <p class="text-sm text-[#A0A8BF] mb-4">Up to 30 users</p>
 
           <div data-billing-show="monthly">
             <div class="flex items-end gap-1 mb-1">
               <span class="text-5xl font-black text-[#1B2E5E] tracking-tight">$279</span>
-              <span class="text-[#6B7694] font-medium mb-2">
-                <span class="t-es">/ mes</span><span class="t-en">/ month</span>
-              </span>
+              <span class="text-[#6B7694] font-medium mb-2">/ month</span>
             </div>
-            <p class="text-sm text-[#A0A8BF]">
-              <span class="t-es">Facturado mensualmente · Cancela cuando quieras</span>
-              <span class="t-en">Billed monthly · Cancel anytime</span>
-            </p>
+            <p class="text-sm text-[#A0A8BF]">Billed monthly · Cancel anytime</p>
           </div>
 
           <div data-billing-show="annual">
             <div class="flex items-end gap-1 mb-1">
               <span class="text-5xl font-black text-[#1B2E5E] tracking-tight">$209</span>
-              <span class="text-[#6B7694] font-medium mb-2">
-                <span class="t-es">/ mes</span><span class="t-en">/ month</span>
-              </span>
+              <span class="text-[#6B7694] font-medium mb-2">/ month</span>
             </div>
             <div class="flex items-center gap-2 mb-1">
               <span class="text-sm text-[#6B7694] line-through">$279</span>
-              <span class="bg-[#22C55E]/15 text-[#16a34a] text-xs font-bold px-2 py-0.5 rounded-full">
-                <span class="t-es">Ahorras $840 / año</span><span class="t-en">Save $840 / year</span>
-              </span>
+              <span class="bg-[#22C55E]/15 text-[#16a34a] text-xs font-bold px-2 py-0.5 rounded-full">Save $840 / year</span>
             </div>
-            <p class="text-sm text-[#A0A8BF]">
-              <span class="t-es">$2,508 facturado anualmente</span>
-              <span class="t-en">$2,508 billed annually</span>
-            </p>
+            <p class="text-sm text-[#A0A8BF]">$2,508 billed annually</p>
           </div>
         </div>
 
         <ul class="space-y-3 mb-8">
           {[
-            ['Hasta 30 usuarios en el equipo',            'Up to 30 team members'],
-            ['Casos y portafolio ilimitados',              'Unlimited cases and briefs'],
-            ['Portafolio con IA — 10 secciones',           'AI brief — 10 sections'],
-            ['4 formas de crear un caso',                  '4 ways to create a case'],
-            ['Línea de tiempo y notas de caso',            'Case timeline and notes'],
-            ['Investigación Jurídica (SCJN)',               'Legal Research (SCJN)'],
-            ['Español e inglés',                           'Spanish and English'],
-            ['Archivos de referencia del despacho',        'Firm reference files'],
-            ['Casos Demo para onboarding',                 'Demo Cases for onboarding'],
-            ['Soporte dedicado',                           'Dedicated support'],
-            ['Onboarding personalizado para el equipo',    'Personalized onboarding for your team'],
-            ['Sin contrato anual',                         'No annual contract'],
-          ].map(([es, en]) => (
+            'Up to 30 team members',
+            'Unlimited cases and briefs',
+            'AI brief — 10 sections',
+            '5 ways to create a case',
+            'Case timeline and notes',
+            'Legal Research (SCJN)',
+            'Spanish and English',
+            'Firm reference files',
+            'Demo Cases for onboarding',
+            'Dedicated support',
+            'Personalized onboarding for your team',
+            'No annual contract',
+          ].map((feat) => (
             <li class="flex items-start gap-2.5 text-sm text-[#1A1F36]">
               <svg class="w-4 h-4 text-[#22C55E] mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
               </svg>
-              <span class="t-es">{es}</span>
-              <span class="t-en">{en}</span>
+              {feat}
             </li>
           ))}
         </ul>
 
         <div data-billing-show="monthly">
           <a
-            href="mailto:rickyglz.1318@gmail.com?subject=Solicitud%20de%20acceso%20a%20Captio%20%E2%80%94%20Plan%20Agency%20mensual"
+            href="mailto:rickyglz.1318@gmail.com?subject=Access%20request%20%E2%80%94%20Agency%20monthly"
             class="block w-full border-2 border-[#3B6FE8] text-[#3B6FE8] hover:bg-[#3B6FE8] hover:text-white font-bold py-3.5 rounded-xl text-center transition-all text-sm"
           >
-            <span class="t-es">Empezar — $279 / mes</span>
-            <span class="t-en">Get started — $279 / month</span>
+            Get started — $279 / month
           </a>
         </div>
         <div data-billing-show="annual">
           <a
-            href="mailto:rickyglz.1318@gmail.com?subject=Solicitud%20de%20acceso%20a%20Captio%20%E2%80%94%20Plan%20Agency%20anual"
+            href="mailto:rickyglz.1318@gmail.com?subject=Access%20request%20%E2%80%94%20Agency%20annual"
             class="block w-full border-2 border-[#3B6FE8] text-[#3B6FE8] hover:bg-[#3B6FE8] hover:text-white font-bold py-3.5 rounded-xl text-center transition-all text-sm"
           >
-            <span class="t-es">Empezar — $2,508 / año</span>
-            <span class="t-en">Get started — $2,508 / year</span>
+            Get started — $2,508 / year
           </a>
         </div>
       </div>
 
     </div>
     <p class="text-center text-sm text-[#A0A8BF] mt-6">
-      <span class="t-es">¿Tu firma supera los 30 usuarios? <a href="mailto:rickyglz.1318@gmail.com" class="text-[#3B6FE8] hover:underline">Escríbenos</a> para un plan personalizado.</span>
-      <span class="t-en">Firm larger than 30 users? <a href="mailto:rickyglz.1318@gmail.com" class="text-[#3B6FE8] hover:underline">Contact us</a> for a custom plan.</span>
+      Firm larger than 30 users? <a href="mailto:rickyglz.1318@gmail.com" class="text-[#3B6FE8] hover:underline">Contact us</a> for a custom plan.
     </p>
   </div>
 </section>
@@ -345,20 +285,16 @@ import Layout from '../../layouts/Layout.astro';
           <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20">
             <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/>
           </svg>
-          <span class="t-es">Demo primero · Trial activado por Captio</span>
-          <span class="t-en">Demo first · Trial activated by Captio</span>
+          Demo first · Trial activated by Captio
         </div>
 
         <h2 class="text-3xl sm:text-4xl font-black tracking-[-0.03em] mb-4">
-          <span class="t-es">¿No estás seguro aún?<br>Agenda una demo.</span>
-          <span class="t-en">Not sure yet?<br>Schedule a demo.</span>
+          Not sure yet?<br>Schedule a demo.
         </h2>
         <p class="text-white/70 text-lg mb-8 max-w-xl mx-auto">
-          <span class="t-es">Agenda una demo de 20 minutos. Si Captio encaja con tu despacho, te activamos el acceso. Sin tarjeta de crédito. Sin compromiso.</span>
-          <span class="t-en">Schedule a 20-minute demo. If Captio fits your firm, we'll activate your access. No credit card. No commitment.</span>
+          Schedule a 20-minute demo. If Captio fits your firm, we'll activate your access. No credit card. No commitment.
         </p>
 
-        <!-- Replace with your Calendly / cal.com link -->
         <a
           href="https://cal.com/captio.tech"
           target="_blank"
@@ -368,23 +304,21 @@ import Layout from '../../layouts/Layout.astro';
           <svg class="w-5 h-5 text-[#3B6FE8] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
           </svg>
-          <span class="t-es">Agendar demo y empezar trial</span>
-          <span class="t-en">Schedule demo and start trial</span>
+          Schedule demo and start trial
         </a>
 
         <div class="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 mt-6 text-sm text-white/60">
           {[
-            ['Sin tarjeta de crédito',       'No credit card'],
-            ['Sin compromiso',               'No commitment'],
-            ['Demo de 20 min',               '20 min demo'],
-            ['Activación manual por Captio', 'Manual activation by Captio'],
-          ].map(([es, en]) => (
+            'No credit card',
+            'No commitment',
+            '20 min demo',
+            'Manual activation by Captio',
+          ].map((item) => (
             <span class="flex items-center gap-1.5">
               <svg class="w-4 h-4 text-[#22C55E]" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
               </svg>
-              <span class="t-es">{es}</span>
-              <span class="t-en">{en}</span>
+              {item}
             </span>
           ))}
         </div>
@@ -400,48 +334,35 @@ import Layout from '../../layouts/Layout.astro';
 <section class="py-12 pb-20 px-6 bg-white">
   <div class="max-w-2xl mx-auto">
     <h2 class="text-2xl font-black tracking-[-0.03em] text-[#1B2E5E] mb-8 text-center">
-      <span class="t-es">Preguntas sobre facturación</span>
-      <span class="t-en">Billing questions</span>
+      Billing questions
     </h2>
     <div class="space-y-3">
       {[
         {
-          qEs: '¿Cuántos usuarios incluye cada plan?',
-          qEn: 'How many users does each plan include?',
-          aEs: 'Hay tres planes. Solo (hasta 3 usuarios, $79/mes), Firm (hasta 15 usuarios, $179/mes) y Agency (hasta 30 usuarios, $279/mes). El precio es por firma, no por usuario.',
-          aEn: 'There are three plans. Solo (up to 3 users, $79/mo), Firm (up to 15 users, $179/mo), and Agency (up to 30 users, $279/mo). Price is per firm, not per user.',
+          q: 'How many users does each plan include?',
+          a: 'There are three plans. Solo (up to 3 users, $79/mo), Firm (up to 15 users, $179/mo), and Agency (up to 30 users, $279/mo). Price is per firm, not per user.',
         },
         {
-          qEs: '¿Puedo cambiar de mensual a anual después?',
-          qEn: 'Can I switch from monthly to annual later?',
-          aEs: 'Sí. Puedes hacer el cambio en cualquier momento y el descuento del 25% se aplica desde el siguiente ciclo de facturación.',
-          aEn: 'Yes. You can switch at any time and the 25% discount applies from the next billing cycle.',
+          q: 'Can I switch from monthly to annual later?',
+          a: 'Yes. You can switch at any time and the 25% discount applies from the next billing cycle.',
         },
         {
-          qEs: '¿Cómo funciona el acceso de prueba?',
-          qEn: 'How does trial access work?',
-          aEs: 'Agenda una demo de 20 minutos. Si el producto encaja con tu despacho, el equipo de Captio activa tu acceso. Tendrás acceso completo a todas las funciones — sin tarjeta, sin compromiso.',
-          aEn: "Schedule a 20-minute demo. If the product fits your firm, the Captio team activates your access. You'll have full access to all features — no card, no commitment.",
+          q: 'How does trial access work?',
+          a: "Schedule a 20-minute demo. If the product fits your firm, the Captio team activates your access. You'll have full access to all features — no card, no commitment.",
         },
         {
-          qEs: '¿Qué pasa con mis datos si cancelo?',
-          qEn: 'What happens to my data if I cancel?',
-          aEs: 'Tus datos permanecen disponibles durante 30 días después de la cancelación. Puedes exportar tus portafolio en cualquier momento como archivos HTML.',
-          aEn: 'Your data remains available for 30 days after cancellation. You can export your briefs at any time as HTML files.',
+          q: 'What happens to my data if I cancel?',
+          a: 'Your data remains available for 30 days after cancellation. You can export your briefs at any time as HTML files.',
         },
-      ].map(({ qEs, qEn, aEs, aEn }) => (
+      ].map(({ q, a }) => (
         <details class="bg-[#F8F9FC] rounded-2xl border border-[#EEF1F8] overflow-hidden">
           <summary class="flex items-center justify-between gap-4 p-5 font-semibold text-[#1B2E5E] hover:text-[#3B6FE8] transition-colors">
-            <span class="t-es">{qEs}</span>
-            <span class="t-en">{qEn}</span>
+            {q}
             <svg class="icon w-5 h-5 text-[#6B7694] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/>
             </svg>
           </summary>
-          <div class="px-5 pb-5 text-[#6B7694] text-sm leading-relaxed border-t border-[#EEF1F8] pt-4">
-            <span class="t-es">{aEs}</span>
-            <span class="t-en">{aEn}</span>
-          </div>
+          <div class="px-5 pb-5 text-[#6B7694] text-sm leading-relaxed border-t border-[#EEF1F8] pt-4">{a}</div>
         </details>
       ))}
     </div>
@@ -451,10 +372,7 @@ import Layout from '../../layouts/Layout.astro';
 </Layout>
 
 <style is:global>
-  /* Pricing toggle button states */
   #btn-monthly, #btn-annual { cursor: pointer; }
-
-  /* Billing period visibility */
   #plans-grid[data-billing="monthly"] [data-billing-show="annual"] { display: none; }
   #plans-grid[data-billing="annual"] [data-billing-show="monthly"] { display: none; }
 </style>

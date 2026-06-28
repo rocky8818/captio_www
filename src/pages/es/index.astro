@@ -1,10 +1,10 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import LayoutES from '../../layouts/LayoutES.astro';
 ---
 
-<Layout
-  title="Captio — intake · brief · team"
-  description="Captio turns the first client contact into a structured process that ends with an AI-generated brief ready for the lawyer — before the first call."
+<LayoutES
+  title="Captio — consulta · portafolio · equipo"
+  description="Captio convierte el primer contacto con un cliente en un proceso estructurado. El cliente llena el formulario. La IA genera el portafolio. El abogado llega listo."
   activePage="home"
 >
 
@@ -23,40 +23,39 @@ import Layout from '../layouts/Layout.astro';
       <div>
         <div class="inline-flex items-center gap-2 bg-[#EEF1F8] text-[#3B6FE8] text-xs font-bold px-3 py-1.5 rounded-full mb-7 fade-up">
           <span class="w-1.5 h-1.5 rounded-full bg-[#3B6FE8] animate-pulse"></span>
-          intake · brief · team
+          consulta · portafolio · equipo
         </div>
 
         <h1 class="text-5xl sm:text-6xl font-black tracking-[-0.04em] text-[#1B2E5E] leading-[1.05] mb-6 fade-up d1">
-          Client fills.<br>Lawyer arrives<br><span class="text-[#3B6FE8]">prepared.</span>
+          El cliente llena.<br>El abogado<br><span class="text-[#3B6FE8]">llega listo.</span>
         </h1>
 
         <p class="text-lg text-[#6B7694] leading-relaxed mb-8 max-w-md fade-up d2">
-          Captio turns the first client contact into a structured process that ends with an AI-generated summary ready for the lawyer — before the first call.
+          Captio convierte el primer contacto con un cliente en un proceso estructurado que termina con un resumen de IA listo para el abogado — antes de la primera llamada.
         </p>
 
         <div class="flex flex-wrap gap-3 fade-up d3">
-          <a href="/pricing/#trial" class="inline-flex items-center gap-2 bg-[#3B6FE8] hover:bg-[#2d5fd4] text-white font-bold px-7 py-3.5 rounded-xl transition-all hover:shadow-xl hover:shadow-[#3B6FE8]/30 text-base">
-            Request access
+          <a href="/es/pricing/#trial" class="inline-flex items-center gap-2 bg-[#3B6FE8] hover:bg-[#2d5fd4] text-white font-bold px-7 py-3.5 rounded-xl transition-all hover:shadow-xl hover:shadow-[#3B6FE8]/30 text-base">
+            Solicitar acceso
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
           </a>
           <a href="#how-it-works" class="inline-flex items-center gap-2 text-[#1B2E5E] font-semibold px-7 py-3.5 rounded-xl border border-[#d4daf0] hover:bg-white hover:border-[#3B6FE8]/40 transition-all text-base">
-            See how it works
+            Ver cómo funciona
           </a>
         </div>
 
         <p class="mt-5 text-sm text-[#A0A8BF] fade-up d4">
-          From $79 / month · Per firm, not per user
+          Planes desde $840 MXN / mes · Según el tamaño de tu equipo
         </p>
       </div>
 
-      <!-- Dashboard screenshot -->
       <div class="hidden lg:block fade-up d2">
         <div class="relative img-float">
           <div class="absolute inset-4 bg-[#3B6FE8]/12 rounded-3xl blur-2xl"></div>
           <img
-            src="https://res.cloudinary.com/do144qmdb/image/upload/v1780959549/captio/en/tutorial_lytudg.webp"
-            alt="Captio — client history"
-            class="relative w-full rounded-2xl border-4 border-white shadow-2xl shadow-[#1B2E5E]/30 ring-1 ring-[#d4daf0]"
+            src="https://res.cloudinary.com/do144qmdb/image/upload/v1781027990/captio/es/tutoriales_nakpbm.webp"
+            alt="Captio — historial de clientes"
+            class="w-full rounded-2xl border-4 border-white shadow-2xl shadow-[#1B2E5E]/30 ring-1 ring-[#d4daf0]"
           />
         </div>
       </div>
@@ -69,14 +68,14 @@ import Layout from '../layouts/Layout.astro';
 <!-- ═══════════════════════════════════════════
      PROBLEM
 ═══════════════════════════════════════════ -->
-<section id="problems" class="py-20 px-6 bg-white">
+<section id="problemas" class="py-20 px-6 bg-white">
   <div class="max-w-6xl mx-auto">
     <div class="text-center mb-12">
       <h2 class="text-3xl sm:text-4xl font-black tracking-[-0.03em] text-[#1B2E5E] mb-4">
-        The problems most firms<br class="hidden sm:block"> carry without fixing
+        Los problemas que arrastra<br class="hidden sm:block"> casi todo despacho
       </h2>
       <p class="text-[#6B7694] text-lg max-w-xl mx-auto">
-        These aren't failures of the lawyers. They're failures of the process. Captio puts the process in order.
+        No son fallas de los abogados. Son fallas del proceso. Captio pone el proceso en orden.
       </p>
     </div>
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -87,9 +86,9 @@ import Layout from '../layouts/Layout.astro';
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
           </svg>
         </div>
-        <h3 class="font-bold text-[#1B2E5E] mb-2 text-[15px]">Intake is improvised</h3>
+        <h3 class="font-bold text-[#1B2E5E] mb-2 text-[15px]">El intake se improvisa</h3>
         <p class="text-[#6B7694] text-sm leading-relaxed">
-          There's no standard process for the first consultation. Every lawyer handles it differently and information arrives incomplete — in formats only they understand. The first client meeting becomes data collection instead of strategy.
+          No hay proceso estándar para la primera consulta. Cada abogado la maneja distinto y la información llega incompleta — en formatos que solo él entiende. La primera reunión con el cliente se convierte en recopilación de datos, no en estrategia.
         </p>
       </div>
 
@@ -99,9 +98,9 @@ import Layout from '../layouts/Layout.astro';
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h10M4 18h6"/>
           </svg>
         </div>
-        <h3 class="font-bold text-[#1B2E5E] mb-2 text-[15px]">Cases are scattered everywhere</h3>
+        <h3 class="font-bold text-[#1B2E5E] mb-2 text-[15px]">Los casos viven dispersos</h3>
         <p class="text-[#6B7694] text-sm leading-relaxed">
-          Emails, handwritten notes, WhatsApp threads, files in three different folders. Without a central case file, delegating means whoever takes over starts from zero — not knowing what was promised, what's missing, or what's already done.
+          Correos, notas de papel, mensajes de WhatsApp, archivos en tres carpetas distintas. Sin un expediente centralizado, delegar un caso significa que quien lo recibe empieza de cero — sin saber qué se prometió, qué falta ni qué ya se hizo.
         </p>
       </div>
 
@@ -111,9 +110,9 @@ import Layout from '../layouts/Layout.astro';
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/>
           </svg>
         </div>
-        <h3 class="font-bold text-[#1B2E5E] mb-2 text-[15px]">The team works out of sync</h3>
+        <h3 class="font-bold text-[#1B2E5E] mb-2 text-[15px]">El equipo trabaja sin sincronía</h3>
         <p class="text-[#6B7694] text-sm leading-relaxed">
-          Two lawyers ask the client the same questions. Case updates travel by WhatsApp or don't travel at all. Without shared real-time visibility, the team can't coordinate — only react.
+          Dos abogados le preguntan lo mismo al mismo cliente. Las actualizaciones del caso llegan por WhatsApp o no llegan. Sin visibilidad compartida en tiempo real, el equipo no puede coordinarse — solo reaccionar.
         </p>
       </div>
 
@@ -123,9 +122,9 @@ import Layout from '../layouts/Layout.astro';
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
           </svg>
         </div>
-        <h3 class="font-bold text-[#1B2E5E] mb-2 text-[15px]">Deadlines are tracked manually</h3>
+        <h3 class="font-bold text-[#1B2E5E] mb-2 text-[15px]">Los plazos se siguen a mano</h3>
         <p class="text-[#6B7694] text-sm leading-relaxed">
-          Someone has to log into the court system, check for updates, and alert the lawyer. One missed notification can lose the case. A missed deadline through oversight creates liability — and there's no process to prevent it.
+          Alguien tiene que entrar al sistema del juzgado, revisar si hubo movimientos y avisarle al abogado. Un olvido puede costar el caso. Un plazo vencido por descuido genera responsabilidad — y no hay proceso que lo evite.
         </p>
       </div>
 
@@ -135,9 +134,9 @@ import Layout from '../layouts/Layout.astro';
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
           </svg>
         </div>
-        <h3 class="font-bold text-[#1B2E5E] mb-2 text-[15px]">Firm management operates blind</h3>
+        <h3 class="font-bold text-[#1B2E5E] mb-2 text-[15px]">La dirección opera a ciegas</h3>
         <p class="text-[#6B7694] text-sm leading-relaxed">
-          How many active cases are there? Which ones are stalled? What is each lawyer working on this week? Without a dashboard, firm management is reactive — problems surface only when it's too late to act.
+          ¿Cuántos casos activos hay? ¿Cuáles están atascados? ¿Qué está haciendo cada abogado esta semana? Sin un dashboard, la gestión del despacho es reactiva — los problemas se detectan cuando ya es tarde.
         </p>
       </div>
 
@@ -147,9 +146,9 @@ import Layout from '../layouts/Layout.astro';
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/>
           </svg>
         </div>
-        <h3 class="font-bold text-[#1B2E5E] mb-2 text-[15px]">Information gets lost between apps</h3>
+        <h3 class="font-bold text-[#1B2E5E] mb-2 text-[15px]">La información se pierde entre apps</h3>
         <p class="text-[#6B7694] text-sm leading-relaxed">
-          Strategy notes live in a separate doc. Research sits in a bookmark. Call notes are somewhere else entirely. Nothing reaches the case file where it belongs — and when you need it, nobody knows where it is.
+          Las tesis de la SCJN quedan en un bookmark. Los resúmenes de estrategia viven en un doc aparte. Las notas de la llamada están en otro lugar. Nada llega al expediente donde debería estar — y cuando se necesita, nadie sabe dónde está.
         </p>
       </div>
 
@@ -165,10 +164,10 @@ import Layout from '../layouts/Layout.astro';
   <div class="max-w-6xl mx-auto">
     <div class="text-center mb-14">
       <h2 class="text-3xl sm:text-4xl font-black tracking-[-0.03em] text-[#1B2E5E] mb-4">
-        Your entire firm,<br class="hidden sm:block"> managed in one place
+        Todo el despacho,<br class="hidden sm:block"> gestionado desde un solo lugar
       </h2>
       <p class="text-[#6B7694] text-lg max-w-2xl mx-auto">
-        Captio connects intake, case files, your team, and your clients — without switching between apps or losing context.
+        Captio conecta el intake, el expediente, el equipo y los clientes. Sin saltar entre apps ni perder el hilo.
       </p>
     </div>
 
@@ -180,9 +179,9 @@ import Layout from '../layouts/Layout.astro';
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
           </svg>
         </div>
-        <h3 class="font-bold text-[#1B2E5E] text-lg mb-2">AI Intake</h3>
+        <h3 class="font-bold text-[#1B2E5E] text-lg mb-2">Intake con IA</h3>
         <p class="text-[#6B7694] text-sm leading-relaxed">
-          The client fills the form from their device and AI generates a structured 10-section brief in seconds. Five ways to start a case: client link, manual entry, import from document, guided interview, or free write — whichever fits the situation.
+          El cliente llena el formulario desde su dispositivo y la IA genera un portafolio estructurado de 10 secciones en segundos. Cinco formas de iniciar un caso: enlace al cliente, manual, importar desde documento, entrevistar sección por sección o redactar libremente.
         </p>
       </div>
 
@@ -192,9 +191,9 @@ import Layout from '../layouts/Layout.astro';
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
           </svg>
         </div>
-        <h3 class="font-bold text-[#1B2E5E] text-lg mb-2">The complete case file</h3>
+        <h3 class="font-bold text-[#1B2E5E] text-lg mb-2">El expediente completo</h3>
         <p class="text-[#6B7694] text-sm leading-relaxed">
-          Each case has its own operational timeline, notes notebook, related documents, legal research from Mexico's SCJN, and federal court monitoring. Every thread of the case in one place — visible to the entire team in real time.
+          Cada caso tiene su línea de tiempo operativa, cuaderno de notas, documentos relacionados, investigación jurídica en el Semanario Judicial de la Federación y monitoreo de expedientes ante el Poder Judicial. Todo el hilo del caso en un solo lugar, visible para todo el equipo.
         </p>
       </div>
 
@@ -204,9 +203,9 @@ import Layout from '../layouts/Layout.astro';
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/>
           </svg>
         </div>
-        <h3 class="font-bold text-[#1B2E5E] text-lg mb-2">Team in sync</h3>
+        <h3 class="font-bold text-[#1B2E5E] text-lg mb-2">El equipo en sincronía</h3>
         <p class="text-[#6B7694] text-sm leading-relaxed">
-          Real-time notification board, task manager linked to cases, and four distinct roles — firm admin, lawyer, and assistant. Every team member sees exactly what they need. No update gets lost between a call and the office.
+          Tablón de notificaciones en tiempo real, gestor de tareas vinculado a casos y cuatro roles diferenciados — firmAdmin, abogado y asistente. Cada miembro del equipo ve lo que le corresponde. Ningún avance se pierde.
         </p>
       </div>
 
@@ -216,9 +215,9 @@ import Layout from '../layouts/Layout.astro';
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
           </svg>
         </div>
-        <h3 class="font-bold text-[#1B2E5E] text-lg mb-2">Firm overview</h3>
+        <h3 class="font-bold text-[#1B2E5E] text-lg mb-2">La vista del despacho</h3>
         <p class="text-[#6B7694] text-sm leading-relaxed">
-          Dashboard with key firm metrics, client directory linked to their cases, and a full team activity log. Everything you need to run the firm — without opening a spreadsheet.
+          Dashboard con métricas generales del despacho, directorio de clientes con sus casos vinculados y registro de actividad del equipo. Todo lo que necesitas para operar el despacho, sin abrir una hoja de cálculo.
         </p>
       </div>
 
@@ -234,68 +233,68 @@ import Layout from '../layouts/Layout.astro';
   <div class="max-w-6xl mx-auto">
     <div class="text-center mb-12">
       <h2 class="text-3xl sm:text-4xl font-black tracking-[-0.03em] text-[#1B2E5E] mb-4">
-        Everything the firm needs
+        Todo lo que el despacho necesita
       </h2>
       <p class="text-[#6B7694] text-lg max-w-xl mx-auto">
-        From the first contact to case notes — in one place.
+        Desde el primer contacto hasta el seguimiento en juzgado — en un solo lugar.
       </p>
     </div>
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
       {[
         {
           icon: 'M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1',
-          title: 'Create a case — 5 ways',
-          desc: "Client link, manual form, import from a document, interview the client section by section, or write freely. The case reaches the lawyer's dashboard regardless of the method.",
+          title: 'Crear un caso — 5 formas',
+          desc: 'Enlace al cliente, formulario manual, importar desde documento, entrevistar sección por sección o redactar libremente. El caso llega al panel del abogado sin importar el método.',
         },
         {
           icon: 'M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4',
-          title: '6-section intake form',
-          desc: 'Captures everything relevant: facts, goals, documents, parties, and conflict of interest. With contextual guidance in each field.',
+          title: 'Formulario de 6 secciones',
+          desc: 'Captura todo lo relevante: hechos, objetivos, documentos, partes y conflicto de interés. Con guía contextual en cada campo.',
         },
         {
           icon: 'M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z',
-          title: 'AI-generated brief',
-          desc: 'Claude (Anthropic) generates the brief in seconds. 10 sections. Faithful to the answers — never fabricates.',
+          title: 'Portafolio generado por IA',
+          desc: 'Claude (Anthropic) genera el portafolio en segundos. 10 secciones. Fiel a las respuestas — nunca inventa.',
         },
         {
           icon: 'M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z',
-          title: 'Case timeline',
-          desc: 'Operational case log: first consultation, document collection, filings submitted, court notifications, hearings. The entire team sees the history in real time.',
+          title: 'Línea de tiempo del caso',
+          desc: 'Log operativo del expediente: primera consulta, recolección de documentos, escritos presentados, notificaciones del juzgado, audiencias. Todo el equipo ve el historial en tiempo real.',
         },
         {
           icon: 'M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z',
-          title: 'Case notes',
-          desc: 'Notebook linked to the case file. Supports hierarchical notes for strategy, hearings, and follow-up.',
+          title: 'Notas del caso',
+          desc: 'Cuaderno de notas vinculado al expediente. Soporta jerarquía de notas para estrategia, audiencias y seguimiento.',
         },
         {
           icon: 'M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z',
-          title: 'Notification board',
-          desc: 'Internal firm communication channel. Post notices from a case, brief, note, or timeline. The entire team sees it in real time.',
+          title: 'Tablón de notificaciones',
+          desc: 'Canal de comunicación interno del despacho. Publica avisos desde un caso, portafolio, nota o línea de tiempo. Todo el equipo lo ve en tiempo real.',
         },
         {
           icon: 'M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z',
-          title: 'Client directory',
-          desc: 'Complete profile for each client with their linked cases. From the case file you assign the client in one click; from the profile you navigate directly to any of their cases.',
+          title: 'Directorio de clientes',
+          desc: 'Perfil completo de cada cliente con sus casos vinculados. Desde el expediente asignas el cliente en un clic; desde el perfil navegas directo a cualquiera de sus casos.',
         },
         {
           icon: 'M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01',
-          title: 'Tasks',
-          desc: 'Firm task board. Assign, prioritize, and track pending items linked to cases or team members.',
+          title: 'Tareas',
+          desc: 'Tablero de tareas personal. Crea pendientes vinculados a casos específicos — nunca pierdas el contexto de por qué existe una tarea.',
         },
         {
           icon: 'M3 6l3-1m0 0l-3 9a5.002 5.002 0 006.001 0M6 5l3 9M6 5l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 5l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3',
-          title: 'Legal Research (SCJN)',
-          desc: "Search for tesis and jurisprudencias from Mexico's Semanario Judicial de la Federación directly from the case file. Captio extracts keywords from the brief and shows the 5 most relevant results.",
+          title: 'Investigación Jurídica — SCJN',
+          desc: 'Busca tesis y jurisprudencias del Semanario Judicial de la Federación directo desde el expediente. Captio extrae las keywords del portafolio y presenta los 5 resultados más relevantes con enlace a la SCJN.',
         },
         {
           icon: 'M15 12a3 3 0 11-6 0 3 3 0 016 0zM2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z',
-          title: 'Judicial case monitoring',
-          desc: "Register cases before Mexico's federal judiciary and detect changes automatically. AI reads the latest acuerdo and extracts hearings, procedural deadlines, and terms — with the action required from the lawyer.",
+          title: 'Monitoreo de expedientes',
+          desc: 'Registra expedientes ante el Poder Judicial de la Federación y detecta cambios automáticamente. La IA lee el último acuerdo y extrae audiencias, términos procesales y plazos — con la acción que corresponde al abogado.',
         },
         {
           icon: 'M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z',
-          title: 'Demo Cases',
-          desc: 'Explore Captio with three complete case files — generated brief, timeline, linked notes, and related docs — without needing real clients. Ideal for getting to know the product before you start.',
+          title: 'Casos Demo',
+          desc: 'Explora Captio con tres expedientes completos — portafolio generado, línea de tiempo, notas vinculadas y docs relacionados — sin necesidad de clientes reales.',
         },
       ].map(({ icon, title, desc }) => (
         <div class="bg-[#F8F9FC] rounded-2xl p-6 border border-[#EEF1F8] hover:border-[#3B6FE8]/30 hover:shadow-md hover:shadow-[#3B6FE8]/5 transition-all">
@@ -323,30 +322,26 @@ import Layout from '../layouts/Layout.astro';
   </div>
   <div class="max-w-6xl mx-auto relative">
     <div class="text-center mb-12">
-      <h2 class="text-3xl sm:text-4xl font-black tracking-[-0.03em] mb-4">
-        What makes Captio different
-      </h2>
-      <p class="text-[#A0A8BF] text-lg">
-        Not a generic summary. A structured file built for lawyers.
-      </p>
+      <h2 class="text-3xl sm:text-4xl font-black tracking-[-0.03em] mb-4">Lo que hace a Captio diferente</h2>
+      <p class="text-[#A0A8BF] text-lg">No es un resumen genérico. Es un expediente estructurado para abogados.</p>
     </div>
     <div class="grid md:grid-cols-2 gap-5">
       {[
         {
-          title: 'The form is for the client, not the lawyer',
-          desc: "The lawyer fills nothing. The client fills the form on their device, in their language, at their pace.",
+          title: 'El formulario es para el cliente, no para el abogado',
+          desc: 'El abogado no llena nada. El cliente llena el formulario en su dispositivo, en su idioma, a su ritmo.',
         },
         {
-          title: "The brief speaks the lawyer's language",
-          desc: 'Not a generic summary. Follows the structure of a legal file: conflict of interest, key risks, internal legal considerations.',
+          title: 'El portafolio habla el lenguaje del abogado',
+          desc: 'No es un resumen genérico. Sigue la estructura de un expediente legal: conflicto de interés, riesgos clave, consideraciones legales internas.',
         },
         {
-          title: 'Faithful to the answers — never fabricates',
-          desc: "AI never fills in what it doesn't know. If information is missing, it marks it clearly. The lawyer always knows what they have and what's lacking.",
+          title: 'Fiel a las respuestas — nunca inventa',
+          desc: 'La IA nunca rellena lo que no sabe. Si falta información, lo marca claramente. El abogado siempre sabe qué tiene y qué le falta.',
         },
         {
-          title: 'Privacy by design',
-          desc: "Each firm's data is isolated. Captio doesn't share data between firms or use it to train AI models.",
+          title: 'Privacidad por diseño',
+          desc: 'Los datos de cada despacho están aislados. Captio no comparte datos entre firmas ni los usa para entrenar modelos de IA.',
         },
       ].map(({ title, desc }) => (
         <div class="bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/8 transition-colors">
@@ -374,43 +369,38 @@ import Layout from '../layouts/Layout.astro';
 <section class="py-20 px-6 bg-[#F8F9FC]">
   <div class="max-w-4xl mx-auto">
     <div class="text-center mb-10">
-      <h2 class="text-3xl font-black tracking-[-0.03em] text-[#1B2E5E] mb-3">
-        Three plans. No surprises.
-      </h2>
-      <p class="text-[#6B7694]">Per firm, not per user.</p>
+      <h2 class="text-3xl font-black tracking-[-0.03em] text-[#1B2E5E] mb-3">Cuatro planes. Sin sorpresas.</h2>
+      <p class="text-[#6B7694]">Tres planes según el tamaño de tu equipo. En pesos mexicanos.</p>
     </div>
     <div class="grid sm:grid-cols-3 gap-4 mb-5">
-      <!-- Solo -->
       <div class="bg-white rounded-2xl border border-[#EEF1F8] p-6 shadow-sm">
-        <p class="text-xs font-bold text-[#6B7694] uppercase tracking-widest mb-1">Solo</p>
-        <p class="text-xs text-[#A0A8BF] mb-3">1–3 users</p>
+        <p class="text-xs font-bold text-[#6B7694] uppercase tracking-widest mb-1">Starter</p>
+        <p class="text-xs text-[#A0A8BF] mb-3">1 abogado + 1 asistente</p>
         <div class="flex items-end gap-1">
-          <span class="text-3xl font-black text-[#1B2E5E] tracking-tight">$79</span>
-          <span class="text-[#6B7694] text-sm font-medium mb-1">/ mo</span>
+          <span class="text-3xl font-black text-[#1B2E5E] tracking-tight">$840</span>
+          <span class="text-[#6B7694] text-sm font-medium mb-1">MXN / mes</span>
         </div>
       </div>
-      <!-- Firm -->
       <div class="bg-[#1B2E5E] rounded-2xl p-6 shadow-sm relative overflow-hidden">
-        <div class="absolute top-3 right-3 bg-[#3B6FE8] text-white text-xs font-bold px-2 py-0.5 rounded-full">Most popular</div>
-        <p class="text-xs font-bold text-[#6B7694] uppercase tracking-widest mb-1">Firm</p>
-        <p class="text-xs text-[#A0A8BF] mb-3">Up to 15 users</p>
+        <div class="absolute top-3 right-3 bg-[#3B6FE8] text-white text-xs font-bold px-2 py-0.5 rounded-full">Más popular</div>
+        <p class="text-xs font-bold text-[#6B7694] uppercase tracking-widest mb-1">Despacho</p>
+        <p class="text-xs text-[#A0A8BF] mb-3">2–5 abogados + 1 asistente</p>
         <div class="flex items-end gap-1">
-          <span class="text-3xl font-black text-white tracking-tight">$179</span>
-          <span class="text-[#6B7694] text-sm font-medium mb-1">/ mo</span>
+          <span class="text-3xl font-black text-white tracking-tight">$1,140</span>
+          <span class="text-[#6B7694] text-sm font-medium mb-1">MXN / mes</span>
         </div>
       </div>
-      <!-- Agency -->
       <div class="bg-white rounded-2xl border border-[#EEF1F8] p-6 shadow-sm">
-        <p class="text-xs font-bold text-[#6B7694] uppercase tracking-widest mb-1">Agency</p>
-        <p class="text-xs text-[#A0A8BF] mb-3">Up to 30 users</p>
+        <p class="text-xs font-bold text-[#6B7694] uppercase tracking-widest mb-1">Firma</p>
+        <p class="text-xs text-[#A0A8BF] mb-3">6–13 abogados + 3 asistentes</p>
         <div class="flex items-end gap-1">
-          <span class="text-3xl font-black text-[#1B2E5E] tracking-tight">$279</span>
-          <span class="text-[#6B7694] text-sm font-medium mb-1">/ mo</span>
+          <span class="text-3xl font-black text-[#1B2E5E] tracking-tight">$1,500</span>
+          <span class="text-[#6B7694] text-sm font-medium mb-1">MXN / mes</span>
         </div>
       </div>
     </div>
-    <a href="/pricing/" class="block w-full bg-[#3B6FE8] hover:bg-[#2d5fd4] text-white font-bold py-3.5 rounded-xl text-center transition-all hover:shadow-lg hover:shadow-[#3B6FE8]/30">
-      See full plans and pricing
+    <a href="/es/pricing/" class="block w-full bg-[#3B6FE8] hover:bg-[#2d5fd4] text-white font-bold py-3.5 rounded-xl text-center transition-all hover:shadow-lg hover:shadow-[#3B6FE8]/30">
+      Ver planes y precios completos
     </a>
   </div>
 </section>
@@ -422,27 +412,29 @@ import Layout from '../layouts/Layout.astro';
 <section class="py-20 px-6 bg-white">
   <div class="max-w-2xl mx-auto">
     <div class="text-center mb-12">
-      <h2 class="text-3xl sm:text-4xl font-black tracking-[-0.03em] text-[#1B2E5E] mb-4">
-        Frequently asked questions
-      </h2>
+      <h2 class="text-3xl sm:text-4xl font-black tracking-[-0.03em] text-[#1B2E5E] mb-4">Preguntas frecuentes</h2>
     </div>
     <div class="space-y-3">
       {[
         {
-          q: 'Does the client need to create an account?',
-          a: "No. The client only needs the link. No registration, no password, no app to download. They open the link in any browser and that's it.",
+          q: '¿El cliente necesita crear una cuenta?',
+          a: 'No. El cliente solo necesita el enlace. Sin registro, sin contraseña, sin app que descargar. Abre el enlace en cualquier navegador y listo.',
         },
         {
-          q: 'What language is the brief generated in?',
-          a: 'In the same language the form was filled out in. If the client filled it in English, the brief is in English.',
+          q: '¿En qué idioma se genera el portafolio?',
+          a: 'En el mismo idioma en que se llenó el formulario. Si el cliente llenó en inglés, el portafolio es en inglés.',
         },
         {
-          q: "Can I edit the brief after it's generated?",
-          a: 'Yes. The inline editor lets you modify any part of the text, highlight in 5 colors, and save changes. You can also download the brief as HTML.',
+          q: '¿Puedo editar el portafolio después de generarlo?',
+          a: 'Sí. El editor inline permite modificar cualquier parte del texto, resaltar en 5 colores y guardar los cambios. También puedes descargar el portafolio como HTML.',
         },
         {
-          q: 'Is my data secure?',
-          a: "Yes. Each firm's data is isolated. Captio doesn't share data between firms or use it to train AI models.",
+          q: '¿Mis datos están seguros?',
+          a: 'Sí. Los datos de cada despacho están aislados. Captio no comparte datos entre firmas ni los usa para entrenar modelos de IA.',
+        },
+        {
+          q: '¿La Investigación Jurídica y el Monitoreo de Expedientes están disponibles en mi plan?',
+          a: 'Sí. Ambas funciones están incluidas en todos los planes para despachos en México. La Investigación Jurídica busca tesis y jurisprudencias de la SCJN; el Monitoreo detecta cambios en expedientes ante el Poder Judicial de la Federación.',
         },
       ].map(({ q, a }) => (
         <details class="bg-[#F8F9FC] rounded-2xl border border-[#EEF1F8] overflow-hidden">
@@ -466,16 +458,18 @@ import Layout from '../layouts/Layout.astro';
 <section class="py-20 px-6 bg-[#F8F9FC]">
   <div class="max-w-2xl mx-auto text-center">
     <h2 class="text-3xl sm:text-4xl font-black tracking-[-0.03em] text-[#1B2E5E] mb-4">
-      First call without surprises
+      Primera llamada sin sorpresas
     </h2>
     <p class="text-[#6B7694] text-lg mb-8 max-w-md mx-auto">
-      Everything you need to know before meeting the client — ready before the phone rings.
+      Todo lo que necesitas saber antes de conocer al cliente — listo antes de que suene el teléfono.
     </p>
-    <a href="/pricing/#trial" class="inline-flex items-center gap-2 bg-[#3B6FE8] hover:bg-[#2d5fd4] text-white font-bold px-8 py-4 rounded-xl transition-all hover:shadow-xl hover:shadow-[#3B6FE8]/30 text-lg">
-      Request access — from $79 / month
+    <a href="/es/pricing/#trial" class="inline-flex items-center gap-2 bg-[#3B6FE8] hover:bg-[#2d5fd4] text-white font-bold px-8 py-4 rounded-xl transition-all hover:shadow-xl hover:shadow-[#3B6FE8]/30 text-lg">
+      Solicitar acceso — desde $840 MXN / mes
       <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
     </a>
-    <p class="text-sm text-[#A0A8BF] mt-4">Demo required · No card · Up to 30 users</p>
+    <p class="text-sm text-[#A0A8BF] mt-4">
+      Demo requerida · Sin tarjeta · Plan anual con 2 meses gratis
+    </p>
   </div>
 </section>
 
@@ -488,4 +482,4 @@ import Layout from '../layouts/Layout.astro';
     animation: float 5s ease-in-out infinite;
   }
 </style>
-</Layout>
+</LayoutES>

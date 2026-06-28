@@ -1,5 +1,5 @@
 ---
-import Nav from '../components/Nav.astro';
+import NavES from '../components/NavES.astro';
 import Footer from '../components/Footer.astro';
 
 interface Props {
@@ -10,13 +10,13 @@ interface Props {
 
 const {
   title,
-  description = 'Captio turns the first client contact into a structured process that ends with an AI-generated brief ready for the lawyer — before the first call.',
+  description = 'Captio convierte el primer contacto con un cliente en un proceso estructurado. El cliente llena el formulario. La IA genera el portafolio. El abogado llega listo.',
   activePage = 'home',
 } = Astro.props;
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -28,7 +28,7 @@ const {
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
 </head>
 <body class="bg-[#F8F9FC] text-[#1A1F36] antialiased">
-  <Nav activePage={activePage} />
+  <NavES activePage={activePage} />
   <slot />
   <Footer />
 </body>

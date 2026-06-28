@@ -1,0 +1,382 @@
+---
+import LayoutES from '../../../layouts/LayoutES.astro';
+---
+
+<LayoutES
+  title="Captio — Precios para México"
+  description="Cuatro planes en pesos mexicanos para despachos de abogados. Starter desde $840 MXN/mes, Despacho $1,140, Firma $1,500. Elige el plan para el tamaño de tu equipo."
+  activePage="pricing"
+>
+
+<!-- ═══════════════════════════════════════════
+     HERO
+═══════════════════════════════════════════ -->
+<section class="pt-32 pb-12 px-6 text-center relative overflow-hidden">
+  <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
+    <div class="absolute -top-40 left-1/2 -translate-x-1/2 w-[800px] h-[400px] rounded-full bg-[#3B6FE8]/5 blur-3xl"></div>
+  </div>
+  <div class="max-w-3xl mx-auto relative">
+    <div class="inline-flex items-center gap-2 bg-[#EEF1F8] text-[#3B6FE8] text-xs font-bold px-3 py-1.5 rounded-full mb-6 fade-up">
+      <span class="w-1.5 h-1.5 rounded-full bg-[#3B6FE8]"></span>
+      Pesos mexicanos · Elige el plan para tu equipo
+    </div>
+    <h1 class="text-4xl sm:text-5xl font-black tracking-[-0.04em] text-[#1B2E5E] mb-4 fade-up d1">
+      Precios simples.<br>Sin sorpresas.
+    </h1>
+    <p class="text-lg text-[#6B7694] mb-10 fade-up d2">
+      Cuatro planes según el tamaño de tu equipo. El perfil de asistente tiene acceso limitado — puede crear y editar, pero no borrar.
+    </p>
+
+    <!-- Billing toggle -->
+    <div class="inline-flex items-center bg-[#EEF1F8] rounded-xl p-1 gap-1 fade-up d3" role="group">
+      <button
+        id="btn-monthly"
+        onclick="setPricing('monthly')"
+        class="px-5 py-2 rounded-lg text-sm font-semibold transition-all bg-white text-[#1B2E5E] shadow-sm"
+      >
+        Mensual
+      </button>
+      <button
+        id="btn-annual"
+        onclick="setPricing('annual')"
+        class="px-5 py-2 rounded-lg text-sm font-semibold transition-all text-[#6B7694] flex items-center gap-2"
+      >
+        Anual
+        <span class="bg-[#22C55E]/15 text-[#16a34a] text-xs font-bold px-2 py-0.5 rounded-full">2 meses gratis</span>
+      </button>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     PLANS
+═══════════════════════════════════════════ -->
+<section class="pb-16 px-6">
+  <div class="max-w-5xl mx-auto">
+    <div id="plans-grid" data-billing="monthly" class="grid md:grid-cols-3 gap-6">
+
+      <!-- Starter -->
+      <div class="bg-white rounded-3xl border border-[#EEF1F8] p-8 shadow-sm hover:shadow-lg hover:shadow-[#3B6FE8]/5 transition-shadow relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-24 h-24 bg-[#F8F9FC] rounded-bl-full pointer-events-none"></div>
+        <div class="mb-7">
+          <p class="text-xs font-bold text-[#6B7694] uppercase tracking-widest mb-1">Starter</p>
+          <p class="text-sm text-[#A0A8BF] mb-1">1 abogado + 1 asistente</p>
+          <p class="text-xs text-[#A0A8BF] mb-4">2 usuarios en total</p>
+
+          <div data-billing-show="monthly">
+            <div class="flex items-end gap-1 mb-1">
+              <span class="text-5xl font-black text-[#1B2E5E] tracking-tight">$840</span>
+              <span class="text-[#6B7694] font-medium mb-2">MXN / mes</span>
+            </div>
+            <p class="text-sm text-[#A0A8BF]">Facturado mensualmente · Cancela cuando quieras</p>
+          </div>
+
+          <div data-billing-show="annual">
+            <div class="flex items-end gap-1 mb-1">
+              <span class="text-5xl font-black text-[#1B2E5E] tracking-tight">$700</span>
+              <span class="text-[#6B7694] font-medium mb-2">MXN / mes</span>
+            </div>
+            <div class="flex items-center gap-2 mb-1">
+              <span class="text-sm text-[#6B7694] line-through">$840</span>
+              <span class="bg-[#22C55E]/15 text-[#16a34a] text-xs font-bold px-2 py-0.5 rounded-full">Ahorras $1,680 / año</span>
+            </div>
+            <p class="text-sm text-[#A0A8BF]">$8,400 MXN facturado anualmente</p>
+          </div>
+        </div>
+
+        <div class="border-t border-[#EEF1F8] my-6"></div>
+
+        <div data-billing-show="monthly">
+          <a href="mailto:rickyglz.1318@gmail.com?subject=Solicitud%20de%20acceso%20%E2%80%94%20Plan%20Starter%20mensual"
+            class="block w-full border-2 border-[#3B6FE8] text-[#3B6FE8] hover:bg-[#3B6FE8] hover:text-white font-bold py-3.5 rounded-xl text-center transition-all text-sm">
+            Empezar — $840 MXN / mes
+          </a>
+        </div>
+        <div data-billing-show="annual">
+          <a href="mailto:rickyglz.1318@gmail.com?subject=Solicitud%20de%20acceso%20%E2%80%94%20Plan%20Starter%20anual"
+            class="block w-full border-2 border-[#3B6FE8] text-[#3B6FE8] hover:bg-[#3B6FE8] hover:text-white font-bold py-3.5 rounded-xl text-center transition-all text-sm">
+            Empezar — $8,400 MXN / año
+          </a>
+        </div>
+      </div>
+
+      <!-- Despacho (Most popular) -->
+      <div class="bg-[#1B2E5E] rounded-3xl border border-[#1B2E5E] p-8 shadow-2xl shadow-[#1B2E5E]/30 relative overflow-hidden">
+        <div class="absolute top-5 right-5 bg-[#3B6FE8] text-white text-xs font-bold px-3 py-1 rounded-full">Más popular</div>
+        <div class="absolute -bottom-10 -right-10 w-48 h-48 rounded-full bg-[#3B6FE8]/10 pointer-events-none"></div>
+
+        <div class="mb-7">
+          <p class="text-xs font-bold text-[#6B7694] uppercase tracking-widest mb-1">Despacho</p>
+          <p class="text-sm text-[#A0A8BF] mb-1">2–5 abogados + 1 asistente</p>
+          <p class="text-xs text-[#A0A8BF] mb-4">Hasta 6 usuarios en total</p>
+
+          <div data-billing-show="monthly">
+            <div class="flex items-end gap-1 mb-1">
+              <span class="text-5xl font-black text-white tracking-tight">$1,140</span>
+              <span class="text-[#6B7694] font-medium mb-2">MXN / mes</span>
+            </div>
+            <p class="text-sm text-[#6B7694]">Facturado mensualmente · Cancela cuando quieras</p>
+          </div>
+
+          <div data-billing-show="annual">
+            <div class="flex items-end gap-1 mb-1">
+              <span class="text-5xl font-black text-white tracking-tight">$950</span>
+              <span class="text-[#6B7694] font-medium mb-2">MXN / mes</span>
+            </div>
+            <div class="flex items-center gap-2 mb-1">
+              <span class="text-sm text-[#6B7694] line-through">$1,140</span>
+              <span class="bg-[#22C55E]/15 text-[#22C55E] text-xs font-bold px-2 py-0.5 rounded-full">Ahorras $2,280 / año</span>
+            </div>
+            <p class="text-sm text-[#6B7694]">$11,400 MXN facturado anualmente</p>
+          </div>
+        </div>
+
+        <div class="border-t border-white/10 my-6"></div>
+
+        <div data-billing-show="monthly">
+          <a href="mailto:rickyglz.1318@gmail.com?subject=Solicitud%20de%20acceso%20%E2%80%94%20Plan%20Despacho%20mensual"
+            class="block w-full bg-[#3B6FE8] hover:bg-[#2d5fd4] text-white font-bold py-3.5 rounded-xl text-center transition-all hover:shadow-xl hover:shadow-[#3B6FE8]/40 text-sm">
+            Empezar — $1,140 MXN / mes
+          </a>
+        </div>
+        <div data-billing-show="annual">
+          <a href="mailto:rickyglz.1318@gmail.com?subject=Solicitud%20de%20acceso%20%E2%80%94%20Plan%20Despacho%20anual"
+            class="block w-full bg-[#3B6FE8] hover:bg-[#2d5fd4] text-white font-bold py-3.5 rounded-xl text-center transition-all hover:shadow-xl hover:shadow-[#3B6FE8]/40 text-sm">
+            Empezar — $11,400 MXN / año
+          </a>
+        </div>
+      </div>
+
+      <!-- Firma -->
+      <div class="bg-white rounded-3xl border border-[#EEF1F8] p-8 shadow-sm hover:shadow-lg hover:shadow-[#3B6FE8]/5 transition-shadow relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-24 h-24 bg-[#F8F9FC] rounded-bl-full pointer-events-none"></div>
+        <div class="mb-7">
+          <p class="text-xs font-bold text-[#6B7694] uppercase tracking-widest mb-1">Firma</p>
+          <p class="text-sm text-[#A0A8BF] mb-1">6–13 abogados + 3 asistentes</p>
+          <p class="text-xs text-[#A0A8BF] mb-4">Hasta 16 usuarios en total</p>
+
+          <div data-billing-show="monthly">
+            <div class="flex items-end gap-1 mb-1">
+              <span class="text-5xl font-black text-[#1B2E5E] tracking-tight">$1,500</span>
+              <span class="text-[#6B7694] font-medium mb-2">MXN / mes</span>
+            </div>
+            <p class="text-sm text-[#A0A8BF]">Facturado mensualmente · Cancela cuando quieras</p>
+          </div>
+
+          <div data-billing-show="annual">
+            <div class="flex items-end gap-1 mb-1">
+              <span class="text-5xl font-black text-[#1B2E5E] tracking-tight">$1,250</span>
+              <span class="text-[#6B7694] font-medium mb-2">MXN / mes</span>
+            </div>
+            <div class="flex items-center gap-2 mb-1">
+              <span class="text-sm text-[#6B7694] line-through">$1,500</span>
+              <span class="bg-[#22C55E]/15 text-[#16a34a] text-xs font-bold px-2 py-0.5 rounded-full">Ahorras $3,000 / año</span>
+            </div>
+            <p class="text-sm text-[#A0A8BF]">$15,000 MXN facturado anualmente</p>
+          </div>
+        </div>
+
+        <div class="border-t border-[#EEF1F8] my-6"></div>
+
+        <div data-billing-show="monthly">
+          <a href="mailto:rickyglz.1318@gmail.com?subject=Solicitud%20de%20acceso%20%E2%80%94%20Plan%20Firma%20mensual"
+            class="block w-full border-2 border-[#3B6FE8] text-[#3B6FE8] hover:bg-[#3B6FE8] hover:text-white font-bold py-3.5 rounded-xl text-center transition-all text-sm">
+            Empezar — $1,500 MXN / mes
+          </a>
+        </div>
+        <div data-billing-show="annual">
+          <a href="mailto:rickyglz.1318@gmail.com?subject=Solicitud%20de%20acceso%20%E2%80%94%20Plan%20Firma%20anual"
+            class="block w-full border-2 border-[#3B6FE8] text-[#3B6FE8] hover:bg-[#3B6FE8] hover:text-white font-bold py-3.5 rounded-xl text-center transition-all text-sm">
+            Empezar — $15,000 MXN / año
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Enterprise -->
+    <div class="mt-6 bg-white rounded-2xl border border-[#EEF1F8] p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div>
+        <p class="font-bold text-[#1B2E5E] text-sm">Enterprise — 14+ abogados</p>
+        <p class="text-sm text-[#6B7694] mt-0.5">Precio personalizado · Usuarios y asistentes a convenir · Soporte dedicado</p>
+      </div>
+      <a
+        href="mailto:rickyglz.1318@gmail.com?subject=Solicitud%20Enterprise%20%E2%80%94%20Captio"
+        class="shrink-0 border-2 border-[#1B2E5E] text-[#1B2E5E] hover:bg-[#1B2E5E] hover:text-white font-bold px-5 py-2.5 rounded-xl text-sm transition-all"
+      >
+        Hablar con el equipo →
+      </a>
+    </div>
+
+    <!-- Todos los planes incluyen -->
+    <div class="mt-12 bg-white rounded-3xl border border-[#EEF1F8] p-8 shadow-sm">
+      <p class="text-xs font-bold text-[#A0A8BF] uppercase tracking-widest mb-6 text-center">
+        Todos los planes incluyen
+      </p>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-3">
+        {[
+          'Casos y portafolios ilimitados',
+          'Portafolio con IA — 10 secciones',
+          '5 formas de crear un caso',
+          'Línea de tiempo por caso',
+          'Notas vinculadas al expediente',
+          'Directorio de clientes (CRM)',
+          'Gestor de tareas del equipo',
+          'Tablón de notificaciones en tiempo real',
+          'Investigación Jurídica (SCJN)',
+          'Monitoreo de expedientes judiciales',
+          'Archivos de referencia del despacho',
+          'Casos Demo para explorar el producto',
+          'Onboarding personalizado',
+          'Soporte incluido',
+          'Bilingüe — español e inglés',
+        ].map((feat) => (
+          <div class="flex items-center gap-2.5 text-sm text-[#1A1F36]">
+            <svg class="w-4 h-4 text-[#22C55E] shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+            </svg>
+            {feat}
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     TRIAL
+═══════════════════════════════════════════ -->
+<section id="trial" class="py-16 px-6">
+  <div class="max-w-4xl mx-auto">
+    <div class="bg-gradient-to-br from-[#3B6FE8] to-[#1B2E5E] rounded-3xl p-10 text-white text-center relative overflow-hidden shadow-2xl shadow-[#1B2E5E]/30">
+      <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
+        <div class="absolute -top-20 -right-20 w-64 h-64 rounded-full bg-white/5"></div>
+        <div class="absolute -bottom-16 -left-16 w-48 h-48 rounded-full bg-white/5"></div>
+      </div>
+      <div class="relative">
+        <div class="inline-flex items-center gap-2 bg-white/15 text-white text-xs font-bold px-3 py-1.5 rounded-full mb-5">
+          <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/>
+          </svg>
+          Demo primero · Trial activado por Captio
+        </div>
+
+        <h2 class="text-3xl sm:text-4xl font-black tracking-[-0.03em] mb-4">
+          ¿No estás seguro aún?<br>Agenda una demo.
+        </h2>
+        <p class="text-white/70 text-lg mb-8 max-w-xl mx-auto">
+          Agenda una demo de 20 minutos. Si Captio encaja con tu despacho, te activamos el acceso. Sin tarjeta de crédito. Sin compromiso.
+        </p>
+
+        <a
+          href="https://cal.com/captio.tech"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center justify-center gap-2 bg-white text-[#1B2E5E] font-bold px-7 py-3.5 rounded-xl transition-all hover:shadow-xl hover:scale-[1.02] text-base"
+        >
+          <svg class="w-5 h-5 text-[#3B6FE8] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+          </svg>
+          Agendar demo y empezar trial
+        </a>
+
+        <div class="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 mt-6 text-sm text-white/60">
+          {[
+            'Sin tarjeta de crédito',
+            'Sin compromiso',
+            'Demo de 20 min',
+            'Activación manual por Captio',
+          ].map((item) => (
+            <span class="flex items-center gap-1.5">
+              <svg class="w-4 h-4 text-[#22C55E]" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+              </svg>
+              {item}
+            </span>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     BILLING FAQ
+═══════════════════════════════════════════ -->
+<section class="py-12 pb-20 px-6 bg-white">
+  <div class="max-w-2xl mx-auto">
+    <h2 class="text-2xl font-black tracking-[-0.03em] text-[#1B2E5E] mb-8 text-center">
+      Preguntas sobre facturación
+    </h2>
+    <div class="space-y-3">
+      {[
+        {
+          q: '¿Cuántos usuarios incluye cada plan?',
+          a: 'Starter (1 abogado + 1 asistente = 2 usuarios, $840 MXN/mes), Despacho (2–5 abogados + 1 asistente = hasta 6 usuarios, $1,140 MXN/mes), Firma (6–13 abogados + 3 asistentes = hasta 16 usuarios, $1,500 MXN/mes) y Enterprise (14+ abogados, precio a convenir).',
+        },
+        {
+          q: '¿Qué diferencia hay entre un perfil de abogado y uno de asistente?',
+          a: 'El perfil de asistente puede crear casos, notas y tareas, y editar información — pero no puede borrar expedientes ni notas. Es ideal para personal de apoyo como secretarias o pasantes.',
+        },
+        {
+          q: '¿Puedo cambiar de mensual a anual después?',
+          a: 'Sí. Puedes cambiar en cualquier momento y el descuento de 2 meses gratis se aplica desde el siguiente ciclo de facturación.',
+        },
+        {
+          q: '¿Cómo funciona el acceso de prueba?',
+          a: 'Agenda una demo de 20 minutos. Si el producto encaja con tu despacho, el equipo de Captio activa tu acceso. Tendrás acceso completo a todas las funciones — sin tarjeta, sin compromiso.',
+        },
+        {
+          q: '¿Qué pasa con mis datos si cancelo?',
+          a: 'Tus datos permanecen disponibles durante 30 días después de la cancelación. Puedes exportar tus portafolios en cualquier momento como archivos HTML.',
+        },
+        {
+          q: '¿La Investigación Jurídica y el Monitoreo de Expedientes están incluidos en todos los planes?',
+          a: 'Sí. Ambas funciones están disponibles en todos los planes de Captio para despachos en México. Son funciones exclusivas del mercado mexicano.',
+        },
+      ].map(({ q, a }) => (
+        <details class="bg-[#F8F9FC] rounded-2xl border border-[#EEF1F8] overflow-hidden">
+          <summary class="flex items-center justify-between gap-4 p-5 font-semibold text-[#1B2E5E] hover:text-[#3B6FE8] transition-colors">
+            {q}
+            <svg class="icon w-5 h-5 text-[#6B7694] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/>
+            </svg>
+          </summary>
+          <div class="px-5 pb-5 text-[#6B7694] text-sm leading-relaxed border-t border-[#EEF1F8] pt-4">{a}</div>
+        </details>
+      ))}
+    </div>
+  </div>
+</section>
+
+</LayoutES>
+
+<style is:global>
+  #btn-monthly, #btn-annual { cursor: pointer; }
+  #plans-grid[data-billing="monthly"] [data-billing-show="annual"] { display: none; }
+  #plans-grid[data-billing="annual"] [data-billing-show="monthly"] { display: none; }
+</style>
+
+<script>
+  const btnMonthly = document.getElementById('btn-monthly') as HTMLButtonElement;
+  const btnAnnual  = document.getElementById('btn-annual')  as HTMLButtonElement;
+  const plansGrid  = document.getElementById('plans-grid')  as HTMLElement;
+
+  window.setPricing = function (type: string) {
+    if (type === 'annual') {
+      btnAnnual.classList.add('bg-white', 'text-[#1B2E5E]', 'shadow-sm');
+      btnAnnual.classList.remove('text-[#6B7694]');
+      btnMonthly.classList.remove('bg-white', 'text-[#1B2E5E]', 'shadow-sm');
+      btnMonthly.classList.add('text-[#6B7694]');
+    } else {
+      btnMonthly.classList.add('bg-white', 'text-[#1B2E5E]', 'shadow-sm');
+      btnMonthly.classList.remove('text-[#6B7694]');
+      btnAnnual.classList.remove('bg-white', 'text-[#1B2E5E]', 'shadow-sm');
+      btnAnnual.classList.add('text-[#6B7694]');
+    }
+    plansGrid.dataset.billing = type;
+  };
+</script>
