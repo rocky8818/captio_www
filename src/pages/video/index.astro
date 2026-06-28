@@ -448,6 +448,38 @@ import Layout from '../../layouts/Layout.astro';
         </div>
       </div>
 
+      <!-- Judicial monitoring -->
+      <div class="bg-white rounded-2xl border border-[#EEF1F8] shadow-sm hover:shadow-md hover:shadow-[#3B6FE8]/5 transition-shadow p-7 grid md:grid-cols-[auto_1fr] gap-6 items-start">
+        <div class="w-12 h-12 rounded-2xl bg-[#3B6FE8]/10 flex items-center justify-center shrink-0">
+          <svg class="w-6 h-6 text-[#3B6FE8]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0zM2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+          </svg>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold text-[#1B2E5E] mb-2">
+            <span class="t-es">Monitoreo de expedientes judiciales</span>
+            <span class="t-en">Judicial case monitoring</span>
+          </h3>
+          <p class="text-[#6B7694] text-sm leading-relaxed mb-4">
+            <span class="t-es">Registra los expedientes activos ante el Poder Judicial de la Federación. Captio detecta cambios en el portal del CJF (SISE) y, con un clic, la IA lee el último acuerdo y extrae los eventos procesales relevantes: audiencias programadas, términos que corren, plazos de contestación y la acción que corresponde al abogado. Todo vinculado al caso en Captio.</span>
+            <span class="t-en">Register active cases before Mexico's Federal Judiciary. Captio detects changes in the CJF portal (SISE) and, with one click, AI reads the latest acuerdo and extracts relevant procedural events: scheduled hearings, running terms, response deadlines, and the action required from the lawyer. All linked to the case in Captio.</span>
+          </p>
+          <div class="flex flex-wrap gap-2">
+            {[
+              ['Detección automática de cambios en SISE', 'Automatic change detection in SISE'],
+              ['Análisis del acuerdo con IA', 'AI-powered acuerdo analysis'],
+              ['Extrae audiencias, términos y plazos', 'Extracts hearings, terms, and deadlines'],
+              ['Vinculado al expediente en Captio', 'Linked to the Captio case file'],
+            ].map(([es, en]) => (
+              <span class="inline-flex items-center gap-1.5 text-xs font-medium text-[#6B7694] bg-[#F8F9FC] border border-[#EEF1F8] rounded-lg px-3 py-1.5">
+                <svg class="w-3.5 h-3.5 text-[#22C55E]" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <span class="t-es">{es}</span><span class="t-en">{en}</span>
+              </span>
+            ))}
+          </div>
+        </div>
+      </div>
+
       <!-- 9–11: Timeline, Notes, Reference files (compact row) -->
       <div class="grid md:grid-cols-3 gap-5">
         {[
