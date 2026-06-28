@@ -135,19 +135,20 @@ import Layout from '../../layouts/Layout.astro';
         <div>
           <div class="flex items-center gap-3 mb-2">
             <h3 class="text-lg font-bold text-[#1B2E5E]">
-              <span class="t-es">Crear un caso — 4 formas</span>
-              <span class="t-en">Create a case — 4 ways</span>
+              <span class="t-es">Crear un caso — 5 formas</span>
+              <span class="t-en">Create a case — 5 ways</span>
             </h3>
           </div>
           <p class="text-[#6B7694] text-sm leading-relaxed mb-4">
-            <span class="t-es">El botón "+ Crear caso" abre un menú con cuatro opciones para adaptarse al flujo de cualquier despacho. <strong class="text-[#1B2E5E]">Enlace:</strong> genera un enlace único y el cliente llena el formulario desde su dispositivo, sin cuenta. <strong class="text-[#1B2E5E]">Manual:</strong> el abogado llena el formulario de 6 secciones él mismo, con autocompletado desde el directorio de clientes. <strong class="text-[#1B2E5E]">Importar:</strong> trae datos de un expediente existente sin volver a capturar. <strong class="text-[#1B2E5E]">Redactar:</strong> el abogado escribe la narrativa del caso en modo libre — ideal para capturar la información de una reunión inicial sin formularios.</span>
-            <span class="t-en">The "+ Create case" button opens a menu with four options to fit any firm's workflow. <strong class="text-[#1B2E5E]">Link:</strong> generate a unique link and the client fills the form from their device, no account needed. <strong class="text-[#1B2E5E]">Manual:</strong> the lawyer fills the 6-section form themselves, with autocomplete from the client directory. <strong class="text-[#1B2E5E]">Import:</strong> bring data from an existing file without re-entering it. <strong class="text-[#1B2E5E]">Draft:</strong> the lawyer writes the case narrative in free-text mode — ideal for capturing information from an initial meeting without forms.</span>
+            <span class="t-es">El botón "+ Crear caso" abre un menú con cinco opciones para adaptarse al flujo de cualquier despacho. <strong class="text-[#1B2E5E]">Enlace:</strong> genera un enlace único y el cliente llena el formulario desde su dispositivo, sin cuenta. <strong class="text-[#1B2E5E]">Manual:</strong> el abogado llena el formulario de 6 secciones él mismo, con autocompletado desde el directorio de clientes. <strong class="text-[#1B2E5E]">Importar:</strong> trae datos de un expediente existente sin volver a capturar. <strong class="text-[#1B2E5E]">Entrevista:</strong> el abogado llena él mismo cada sección del portafolio, sin formulario del cliente ni IA. <strong class="text-[#1B2E5E]">Redactar:</strong> escribe el portafolio en un campo libre sin estructura fija.</span>
+            <span class="t-en">The "+ Create case" button opens a menu with five options to fit any firm's workflow. <strong class="text-[#1B2E5E]">Link:</strong> generate a unique link and the client fills the form from their device, no account needed. <strong class="text-[#1B2E5E]">Manual:</strong> the lawyer fills the 6-section form themselves, with autocomplete from the client directory. <strong class="text-[#1B2E5E]">Import:</strong> bring data from an existing file without re-entering it. <strong class="text-[#1B2E5E]">Interview:</strong> the lawyer fills in each brief section themselves, no client form, no AI. <strong class="text-[#1B2E5E]">Draft:</strong> write the brief in a single open field with no fixed structure.</span>
           </p>
           <div class="flex flex-wrap gap-2">
             {[
               ['🔗 Enlace al cliente', '🔗 Client link'],
               ['✍ Manual (6 secciones)', '✍ Manual (6 sections)'],
               ['📄 Importar expediente', '📄 Import case file'],
+              ['🎤 Entrevista al cliente', '🎤 Interview client'],
               ['✏️ Redactar en modo libre', '✏️ Draft in free-text mode'],
             ].map(([es, en]) => (
               <span class="inline-flex items-center gap-1.5 text-xs font-medium text-[#6B7694] bg-[#F8F9FC] border border-[#EEF1F8] rounded-lg px-3 py-1.5">
